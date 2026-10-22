@@ -1,5 +1,7 @@
 # 安装说明 / Installation guide — RC10
 
+正式包名 / Official package name: **Diablo II for RGDSplus.zip**。GitHub 自动规范的下载名 / GitHub-normalized download filename: `Diablo.II.for.RGDSplus.zip`。包内名称保持空格 / Internal names retain spaces.
+
 ## 前提 / Prerequisites
 
 本项目仅为 RGDSplus 双屏适配包，不含任何正版游戏资源。严禁盗版和内置游戏二次分发。需要兼容的 RGDSplus Linux/Wayland/PortMaster 固件和 Windows x64 PC；PC 导入器已附 Python/Pillow，不要求系统另装 Python。离线运行组件不替换固件或显示驱动。
@@ -21,7 +23,7 @@ The supplement is withheld because complete redistribution permission has not be
 Download the adapter ZIP and checksum from Releases, verify it, then extract into a new empty PC folder:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 '.\Diablo.II.for.RGDSplus.adapter.zip'
+Get-FileHash -Algorithm SHA256 '.\Diablo.II.for.RGDSplus.zip'
 ```
 
 应为 / Expected: `c72543438ae4a89a2d836c604eb6f373f917aec7e4ce778fbe2a1a133dc18c83`。

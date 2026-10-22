@@ -13,9 +13,13 @@ This is an unofficial device adaptation for the RGDSplus, its two 1024×768 disp
 
 ## 下载与当前基线 / Download and baseline
 
-从 [Releases](https://github.com/LPF970915/Diablo-II-for-RGDSplus/releases) 下载 **Diablo.II.for.RGDSplus.adapter.zip**、校验文件和双语安装说明。GitHub 自动生成的 Source code 压缩包仅是可公开源码快照，不能作为完整安装包使用。
+正式包名称为 **Diablo II for RGDSplus.zip**。GitHub 附件显示此名称，但平台自动将实际下载文件名中的空格替换为点号，得到 `Diablo.II.for.RGDSplus.zip`；两者内容相同。包内入口固定为 `Ports/Diablo II for RGDSplus.sh`，目录为 `Ports/Diablo II for RGDSplus/`。
 
-Download **Diablo.II.for.RGDSplus.adapter.zip**, its checksum and the bilingual installation guide from [Releases](https://github.com/LPF970915/Diablo-II-for-RGDSplus/releases). GitHub's automatic source archives contain the published source snapshot, not the complete adapter runtime package.
+The official package is **Diablo II for RGDSplus.zip**. GitHub displays that label but normalizes spaces to dots in the actual download filename, `Diablo.II.for.RGDSplus.zip`. Contents are identical. The internal launcher and directory retain the exact spaced names above.
+
+从 [Releases](https://github.com/LPF970915/Diablo-II-for-RGDSplus/releases) 下载 **Diablo.II.for.RGDSplus.zip**、校验文件和双语安装说明。GitHub 自动生成的 Source code 压缩包仅是可公开源码快照，不能作为完整安装包使用。
+
+Download **Diablo.II.for.RGDSplus.zip**, its checksum and the bilingual installation guide from [Releases](https://github.com/LPF970915/Diablo-II-for-RGDSplus/releases). GitHub's automatic source archives contain the published source snapshot, not the complete adapter runtime package.
 
 | 项目 / Item | 值 / Value |
 | --- | --- |
@@ -78,7 +82,7 @@ RC10 于 2026-10-23 经用户从正式入口人工运行后被指定为最新基
 
 RC10 was accepted by the user after manually running the normal launcher on 2026-10-23. Local import/regression and isolated device checks exist, but do not establish exhaustive gameplay, long-term stability, all firmware compatibility, every physical gesture/item drag, or measured end-to-end hardware latency. The cause of charging-related touch anomalies was not independently established; permanent elimination is not claimed.
 
-**`world_probe.so` 与 `indexed_gpu.so` 的完整精确源码及原始工具链未恢复。** 本仓库不以历史实验源码冒充它们，不承诺从源码完整重建所有二进制。已有 `retail_mpq.c`、`retail_probe.c` 按实际恢复状态提供。可用 `python tools/audit_public.py --archive "path/to/Diablo.II.for.RGDSplus.adapter.zip"` 检查固定产物；后续修改需要新 build ID 与相应验证，不能覆盖 RC10 并沿用旧验收结论。
+**`world_probe.so` 与 `indexed_gpu.so` 的完整精确源码及原始工具链未恢复。** 本仓库不以历史实验源码冒充它们，不承诺从源码完整重建所有二进制。已有 `retail_mpq.c`、`retail_probe.c` 按实际恢复状态提供。可用 `python tools/audit_public.py --archive "path/to/Diablo.II.for.RGDSplus.zip"` 检查固定产物；后续修改需要新 build ID 与相应验证，不能覆盖 RC10 并沿用旧验收结论。
 
 **The exact full sources/toolchain for `world_probe.so` and `indexed_gpu.so` were not recovered.** Historical prototypes are not passed off as those sources. Full binary reproducibility is not claimed. Available C files are supplied as recovered. Use the audit command above for the pinned artifact; future changes require a new build ID and appropriate validation.
 

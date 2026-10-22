@@ -1,6 +1,6 @@
 {
   "build": "20261023-player-rc10",
-  "archive": "Diablo II for RGDSplus adapter.zip",
+  "archive": "Diablo II for RGDSplus.zip",
   "sha256": "c72543438ae4a89a2d836c604eb6f373f917aec7e4ce778fbe2a1a133dc18c83",
   "files": {
     "Ports/Diablo II for RGDSplus.sh": {
