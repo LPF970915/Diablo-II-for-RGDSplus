@@ -1,0 +1,5 @@
+{
+  "source": "https://deb.debian.org/debian/pool/main/g/glibc/libc6_2.36-9+deb12u14_armhf.deb",
+  "packageSHA256": "758c68b92654747025b48476a45c315bf16df1321224abdd9be672bfd120be45",
+  "bundleSHA256": "ed34c3a15fdaa17710326d6f6ab7fe6f88a089424523ef2f6a57adba35d690f2"
+}

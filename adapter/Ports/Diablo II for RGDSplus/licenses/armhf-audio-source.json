@@ -1,0 +1,5 @@
+{
+  "source": "https://deb.debian.org/debian/pool/main/a/alsa-plugins/libasound2-plugins_1.2.7.1-1_armhf.deb",
+  "packageSHA256": "0699d22751a7ac93c27a9537087030fd7915ea693989df1b587fd542b6718f98",
+  "bundleSHA256": "f74234054a74646ad9a5ff37c3cbc04baf628db483ab502890d1e5754ea51af5"
+}

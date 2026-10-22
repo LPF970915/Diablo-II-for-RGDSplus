@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "pages": {
+    "title-screen": {
+      "background": "title-screen.bgra",
+      "originalSize": [
+        800,
+        600
+      ],
+      "lowerBackground": "title-screen-clean.bgra",
+      "logoErase": [
+        210,
+        0,
+        390,
+        248
+      ],
+      "upper": "title-upper-v2.bgra",
+      "upperSize": [
+        1448,
+        1086
+      ],
+      "upperOrigin": "new-extension-art-not-hidden-original-scenery"
+    },
+    "main-menu": {
+      "background": "main-menu.bgra",
+      "originalSize": [
+        800,
+        600
+      ],
+      "logoErase": [
+        210,
+        0,
+        380,
+        248
+      ],
+      "lowerBackground": "main-menu-clean.bgra",
+      "upper": "main-upper-v1.bgra",
+      "upperSize": [
+        1448,
+        1086
+      ],
+      "upperOrigin": "new-extension-art-not-hidden-original-scenery"
+    },
+    "character-select": {
+      "background": "character-select.bgra",
+      "originalSize": [
+        800,
+        600
+      ],
+      "upper": "main-upper-v1.bgra",
+      "upperSize": [
+        1448,
+        1086
+      ],
+      "upperOrigin": "new-extension-art-not-hidden-original-scenery"
+    },
+    "character-create": {
+      "background": "character-create.bgra",
+      "originalSize": [
+        800,
+        600
+      ],
+      "upper": "creation-upper-v2.bgra",
+      "upperSize": [
+        1448,
+        1086
+      ],
+      "upperOrigin": "new-extension-art-not-hidden-original-scenery"
+    }
+  },
+  "logo": {
+    "file": "logo.bgra",
+    "frames": 30,
+    "size": [
+      360,
+      171
+    ]
+  },
+  "subtitle": {
+    "file": "subtitle.bgra",
+    "size": [
+      330,
+      56
+    ],
+    "gap": 12
+  },
+  "credit": {
+    "file": "credit.bgra",
+    "size": [
+      174,
+      48
+    ],
+    "lines": [
+      "Diablo II for RGDSplus",
+      "移植by Blood_roc"
+    ],
+    "right": 20,
+    "top": 20
+  },
+  "privateDerivedResources": true,
+  "generatedBy": "tools/prepare-frontend-prototype.py",
+  "files": {
+    "character-create.bgra": "456af9d6b365d2068e5d3b298dda77c5bbfba5937b09e5d2740e2afce0f74b4e",
+    "character-select.bgra": "186fcb914f1ab12943da1ae4d918ee8539228bc7b8f0fa25acac0128d0046972",
+    "creation-upper-v2.bgra": "cf1dff8d35ad75d522c78e4fec0a15e6e723fd68f0db65c735fb8f9a990c2e37",
+    "credit.bgra": "528ca084c2065ecc6b5cbaaab589ae8335d7fe581129d38bc84e53404c3fdf85",
+    "logo.bgra": "bcca76b564cdf16f8c8ca2382d359d3e5c0a46687c3834b3dd06bdd0cd91fe41",
+    "main-menu-clean.bgra": "edfe70568c488b396cc4ad2adce630b8b3ac4ca515aff9030b080dadf1e3f6b5",
+    "main-menu.bgra": "bbffcc92ad2994a2fa273e8845647806b8cdb36be9b9f7281a92208ef58a11ec",
+    "main-upper-v1.bgra": "b71a54d4fc93177dc7ecca6dad0c223561d072177ca04d3805de167c4aa2264d",
+    "subtitle.bgra": "778bcd9cc2dc8d3f3010e970b30aa2c05d3f8edc63b8a1bef2a7bd50443ce77c",
+    "title-screen-clean.bgra": "2238840001dcae9067734f4e4085165cc70d8c19af0e9a39aa9d5f924af7292a",
+    "title-screen.bgra": "694dbe0b40aeda4738c7704b00c598123bb29e604e1775655403858b1041cf99",
+    "title-upper-v2.bgra": "09027f6c144ee6a0bf6ece250eff9b66b8df3940681e74b124b1abb56917d13c"
+  }
+}

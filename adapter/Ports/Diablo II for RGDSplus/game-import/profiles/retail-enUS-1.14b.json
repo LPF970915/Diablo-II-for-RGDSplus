@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "id": "retail-enUS-1.14b-20261019",
+  "status": "device-smoke-verified-20261019",
+  "frontendEnvironmentSha256": "3a63976d493b7e5a71f1987672854d4ce777adf3d0e156ddcbfcc574433b2c88",
+  "files": [
+    {
+      "name": "d2char.mpq",
+      "size": 266072430,
+      "sha256": "2dfa86d77f371ae435b6cd94e9b8e608ef4355c3b7b70fc7d0d9cdca83ad19ec"
+    },
+    {
+      "name": "d2data.mpq",
+      "size": 269191614,
+      "sha256": "9c2a63e10a60c36c311e4768ca5fe85188b3f8238140af16ae3d0f3fbd4f21b0"
+    },
+    {
+      "name": "d2exp.mpq",
+      "size": 250156780,
+      "sha256": "04e35bffeae8d9959042832055702f8b5b4567ca5505ff1df0cf3fd6d5beb6c2"
+    },
+    {
+      "name": "d2music.mpq",
+      "size": 348433635,
+      "sha256": "5c367f95694cd45a60dc0c02ed9d7c349c05b0f701be787c172087544ddd2e65"
+    },
+    {
+      "name": "d2sfx.mpq",
+      "size": 48927126,
+      "sha256": "737d128b3e81526c630503a435b56c70bbdaee2e76d39df4efb025e721432aba"
+    },
+    {
+      "name": "d2speech.mpq",
+      "size": 163021838,
+      "sha256": "7a238f808be9fbc74da55c98dc629ab7fac9a4f40c537cec3c1b042fa45d211a"
+    },
+    {
+      "name": "d2video.mpq",
+      "size": 441697807,
+      "sha256": "7bf1bbcd6e73a415775444ff78e1bfcce83ca1af75c52b1f33998526e6e186b6"
+    },
+    {
+      "name": "d2xmusic.mpq",
+      "size": 54691647,
+      "sha256": "4aae5a0c456236693226380d062daa3f5cd36a90a9010d036a7da0ba132f71a1"
+    },
+    {
+      "name": "d2xtalk.mpq",
+      "size": 60278192,
+      "sha256": "305a35331629e7054c34682774e18398f5cbcbed293ddf0ce3c16e25c3f0463c"
+    },
+    {
+      "name": "d2xvideo.mpq",
+      "size": 110685575,
+      "sha256": "209c7a250e2117bac2720e40f0c3687549678cf5e993e5f74a6dbb2914c97591"
+    },
+    {
+      "name": "Patch_D2.mpq",
+      "size": 3915305,
+      "sha256": "81470b762c497a8fcaf9a09990c0e869a4175395ef1fae13bd85cfec7b688ddc"
+    },
+    {
+      "name": "D2.LNG",
+      "size": 1536,
+      "sha256": "443b06d96aea1465b43f25c7921c9e4ea5ee391fed79108b461e232321f77433"
+    }
+  ]
+}

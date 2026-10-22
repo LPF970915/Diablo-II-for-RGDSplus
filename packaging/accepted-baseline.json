@@ -1,0 +1,14 @@
+{
+  "build": "20261023-player-rc10",
+  "acceptedDate": "2026-10-23",
+  "status": "user-accepted-latest-baseline",
+  "adapter": {
+    "name": "Diablo II for RGDSplus adapter.zip",
+    "size": 158250551,
+    "sha256": "c72543438ae4a89a2d836c604eb6f373f917aec7e4ce778fbe2a1a133dc18c83"
+  },
+  "completeCoreIncluded": false,
+  "retailAssetsIncluded": false,
+  "chineseSupplementPublished": false,
+  "sourceCompleteness": "Python/Bash/importer and available C sources; exact world_probe/indexed_gpu sources unavailable"
+}

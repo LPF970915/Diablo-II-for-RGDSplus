@@ -1,0 +1,44 @@
+Diablo II for RGDSplus external-core adapter
+
+Diablo II and Lord of Destruction game code and data belong to their respective
+rights holders. The ARM core is supplied separately by the player from notaz:
+https://repo.openpandora.org/?app=package.diablo2&page=detail
+Pinned standalone build: https://notaz.gp2x.de/misc/starec/libd2game_sa_arm.exe.so.xz
+The current Pandora PND r4 has a different binary layout and is not supported.
+The local delta reproduces four inherited community byte changes and the
+classic adapter dependency. Their historical purpose has not been established.
+This package does not contain the complete original or prepared ARM core.
+
+The separate Chinese supplement contains the existing community localization
+split by content identity. Retail-identical entries are read from player MPQs.
+The split is not certification of authorship or third-party permissions.
+
+Wine 4.0, LGPL: https://www.winehq.org/
+Westonpack: https://github.com/binarycounter/Westonpack
+PortMaster runtimes: https://github.com/PortsMaster/PortMaster-New/tree/main/runtimes
+Existing component notices are retained within the unchanged runtime images.
+This project uses PortMaster components; it is not an official PortMaster port.
+gptokeyb: https://github.com/PortsMaster/gptokeyb ; GPL notice under licenses/.
+StormLib: https://github.com/ladislav-zezula/StormLib ; MIT notice under licenses/.
+zlib: https://zlib.net/ ; retained within the ARM Wine runtime.
+Supplementary library source package records are under licenses/*-source.json.
+Python 3.12.10 embedded Windows x64: https://www.python.org/
+Python licensing terms are retained in game-import/python/LICENSE.txt.
+BSDIFF40 delta format: https://www.daemonology.net/bsdiff/
+The bundled delta reader uses Python standard library modules; bsdiff4 is a
+developer-only build dependency and is not required on the player's computer.
+
+The adapter preserves the tested classic world renderer and input bridges.
+Original game artwork and the player's initialized prefix and saves are excluded.
+
+Fresh-player frontend resource generation:
+Pillow 12.1.1, Windows CPython 3.12 x64 wheel from https://pypi.org/project/pillow/12.1.1/
+Project: https://python-pillow.github.io/ ; licenses and bundled-library notices are
+retained in game-import/python/pillow-12.1.1.dist-info/licenses/ within this package.
+The full upstream wheel metadata is retained. No system font file is distributed.
+The small port credit bitmap is rendered text, not an embedded font.
+The two upper-screen extension PNGs are newly generated project artwork, not
+hidden scenery extracted from the original game. Original menu backgrounds,
+subtitles and animated logo frames are generated from player-owned MPQs at import.
+The Chinese inventory background correction likewise reads the player's retail
+panel; no complete patched MPQ or derived original-game frontend cache is shipped.

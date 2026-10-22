@@ -1,0 +1,7 @@
+{
+  "source": "https://ports.ubuntu.com/ubuntu-ports/pool/main/libj/libjpeg-turbo/libjpeg-turbo8_2.0.3-0ubuntu1.20.04.3_arm64.deb",
+  "packageSHA256": "9cd60a19f70399f4a828c7849bc7f18e53c059112100264e568486774eefcc17",
+  "bundleSHA256": "1555d052a6622c2e068c14dd8a755d4072b97a124ed9cfce2a5cfa2d8c5f3460",
+  "westonSource": "https://github.com/PortsMaster/PortMaster-New/blob/main/runtimes/weston_pkg_0.2.aarch64.squashfs",
+  "westonSHA256": "0bccaeebc11296bb1fe4278c9677cb82965c5a04bcd63745fa09d78228bc1a93"
+}

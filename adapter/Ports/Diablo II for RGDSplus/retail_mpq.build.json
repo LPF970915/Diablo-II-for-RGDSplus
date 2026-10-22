@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "sourceSha256": {
+    "prototype/classic-controller/retail_mpq.c": "3eea21b358cf738e39f1321596994a00dfc1c22f53a2c92271d12bde91200e57",
+    "release/adapter/retail_probe.c": "c6f24d2d4280612af8b3606840df19a0874bd1e1bab248ca9c2936cefe6013ff"
+  },
+  "artifactSha256": "a25e8fc08925e09f0b5cc2059c1aabc41d70856e017e072dab388a8fda025a7d",
+  "originalWorldProbeSha256": "6d4e6b7e532c70c0fff2f8e4f70c38287bd59dc0446620766606ea32a0e29efa",
+  "worldProbeSha256": "d2e354af9f17dcc9bbb999918a47dbaa030885c13c5b986d8a1716f312c90e9e",
+  "executableSectionsUnchanged": true
+}

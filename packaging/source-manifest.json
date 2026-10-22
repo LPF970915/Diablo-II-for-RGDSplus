@@ -1,0 +1,210 @@
+{
+  "adapter/Ports/Diablo II for RGDSplus.sh": {
+    "size": 73,
+    "sha256": "1e95c8985c42b96e65283ccbeb42786fa113049ba55a447b50a9231a2d8b0d8b"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/Import Game Assets.cmd": {
+    "size": 571,
+    "sha256": "1676b281c6578a87794b5b93219a557907b64e38b1d40e9da7c51f8b50450941"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/THIRD_PARTY_NOTICES.txt": {
+    "size": 2892,
+    "sha256": "35a45041ec9d588a3f6f03669b235b366732dd17806f1dcaff708d7a0b634101"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/adapter-source/retail_mpq.c": {
+    "size": 1622,
+    "sha256": "3eea21b358cf738e39f1321596994a00dfc1c22f53a2c92271d12bde91200e57"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/adapter-source/retail_probe.c": {
+    "size": 2504,
+    "sha256": "c6f24d2d4280612af8b3606840df19a0874bd1e1bab248ca9c2936cefe6013ff"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/alsa.conf": {
+    "size": 159,
+    "sha256": "cc8f718da64714054dcfbee6fff73ab3cd3b73b39e6ae6609e31852cf11f3fa8"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/audio-session.pa": {
+    "size": 428,
+    "sha256": "270b1b64fce0593db2e20712b8bece9ae1dede2ee7bc4eabb14db87046f9acc8"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/audio_preflight.py": {
+    "size": 4200,
+    "sha256": "1d516e2c43f3d8f9b3c00015c00d01fbf097642d92b518659da22d060d8dd048"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/bin/mount": {
+    "size": 575,
+    "sha256": "26f39348402e739cd0d89fe11d5429f4da97ec8e693f1756b0793d1a5b1e4bcf"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/clear-exec-stack.py": {
+    "size": 1142,
+    "sha256": "5bee348501c490df3f7444157079554a9a9698194ce666d0affd9f62c9e3bb44"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/combat.py": {
+    "size": 1970,
+    "sha256": "1b72c8d2cb66d14593d6c2dc33798b8bed931b59a0782a159a0b8c583a74387f"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/controller-layout.json": {
+    "size": 109836,
+    "sha256": "ee80624ea44069f01eabe59ed06c38d7bb15e5f267ce2cbdb93d2bd828efc7cb"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/create-prefix.py": {
+    "size": 938,
+    "sha256": "be16459b094d513314a3aa73357c2fc39e874eaa7d600cc9527b41dfea15e991"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/diablo2-direct.gptk": {
+    "size": 482,
+    "sha256": "cd9e285b025ba621fe8e72b3fc48d457849c770b231847ff4fe3491255c250db"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/display.py": {
+    "size": 26048,
+    "sha256": "ec3a52a7078c594d5272f63525696692e8c62892de3e829266e93bf14b104344"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/frontend_panels.py": {
+    "size": 10492,
+    "sha256": "11b158f30339e261a6557e7e5f0c3c03cdd80dc4a0ca51ffa1cc6ee08ee1b5d8"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/game-import/Import Game Assets.ps1": {
+    "size": 13066,
+    "sha256": "fd6d83d414f97fed01d0757381df00e51f6e5e0b5b1e7adbc8ce2fc397248f6a"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/game-import/engine/recipe.json": {
+    "size": 928,
+    "sha256": "59cba68c5ceebb9c96f7939f5c39d4de13ee3f145868e714066411c3bad8b3b9"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/game-import/frontend/recipe.json": {
+    "size": 3106,
+    "sha256": "bf945c0b1f59734faf653bac334cc5485cb50a79a26827faaa7145a9614723e6"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/game-import/frontend_decode.py": {
+    "size": 2454,
+    "sha256": "518178074f59e3323e4299e5e57d9414c742650f21123adc6a8c448db9a51202"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/game-import/install_assets.py": {
+    "size": 7839,
+    "sha256": "3cffed9539bdcd88afc7db75e50b543c4fdf16f959c05a15498c52e3483add1e"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/game-import/mpq_split.py": {
+    "size": 25468,
+    "sha256": "822c8f2c830bc4507440584adc1b6e78adf5e51a5ee18c6a3d66c55094de7d85"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/game-import/prepare_external_core.py": {
+    "size": 5664,
+    "sha256": "e2c1a3d00882b1eef41ed47addab7a59997c58eacb9d9ffded2e00a8e67f616b"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/game-import/prepare_frontend.py": {
+    "size": 10192,
+    "sha256": "c175393b7d818d47b2f7dc7c719656626b60f38d2f41972d43c435b8ffd9b7a0"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/game-import/prepare_inventory.py": {
+    "size": 3766,
+    "sha256": "5fc5f9867a38be01c30a25c04e0e5170dac458a823058bab94ac42d62cdfc49d"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/game-import/profiles/retail-enUS-1.14b.json": {
+    "size": 2001,
+    "sha256": "c008b5919a1c7e0171252139561700b866eb905b30cc1ce3c7129b37432e214e"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/game-session.bash": {
+    "size": 1469,
+    "sha256": "86cc05273e13991d4fe0754c1b2daec24d3b55e06e2a3cb04d239f7ef3548c7b"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/indexed_display.py": {
+    "size": 4141,
+    "sha256": "8b598ba9542f49acb24e257affcf3f1fedfe5ffb48a634abdc592392a3bed61f"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/joystick.py": {
+    "size": 13281,
+    "sha256": "634ff59f66abdb422703fdd27b4cbd7c29288c9d178b33080bec339acb6f1678"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/launch-runtime.bash": {
+    "size": 6809,
+    "sha256": "8cb0e59a64d48b76efdaf6019615b6d747740e12c561372da271f2d577cc3815"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/launch.bash": {
+    "size": 3371,
+    "sha256": "ddc5ae077ca21800d59ecffaa2dd38a3d25699441e9ce5caf92eca19e51ab54c"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/licenses/MIT-StormLib.txt": {
+    "size": 1087,
+    "sha256": "03904ca91c8e16cf68e2adc36026cca457ae0a39e5a4359fbf99124529c974d4"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/licenses/armhf-audio-source.json": {
+    "size": 284,
+    "sha256": "862881879788d58727fcb297aeea03072cbcfd910c57326ddc2a06344840c028"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/licenses/armhf-libc-source.json": {
+    "size": 270,
+    "sha256": "3169fda5d5fa138579c309b41a4b7d07ff227ef78a270a4103291be3909f6691"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/licenses/gpl-2.0-gptokeyb.txt": {
+    "size": 18009,
+    "sha256": "204d8eff92f95aac4df6c8122bc1505f468f3a901e5a4cc08940e0ede1938994"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/licenses/native-libs-source.json": {
+    "size": 509,
+    "sha256": "35ef188f2eb6faf15b6afce6095807f3c0e3df0f5ba1ecc8c7e38361db89cc97"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/linux32.py": {
+    "size": 557,
+    "sha256": "a60386fb0570bf1dad96e27de60e7e631ecdb1d51167be5247d1561cc2132dd4"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/platform.bash": {
+    "size": 3294,
+    "sha256": "e7998f2985df78ada3431515ae7841bee06ff6f8de762e8431d7fb675916867f"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/port-env.conf": {
+    "size": 744,
+    "sha256": "382a4ca1e6ca47d29b1261fcd5337695c4dff80c6f575ecef671ad3962a3b686"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/present-session.bash": {
+    "size": 2252,
+    "sha256": "3fc433ceaf876aea80e409f9d176ce2b6d49445129cd0e9ade70516df70e0e6f"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/retail_mpq.build.json": {
+    "size": 580,
+    "sha256": "8b485d72247d723b85e132e796ffa78270c26b4583613d6f88eb0d39d02c2743"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/touch.py": {
+    "size": 20852,
+    "sha256": "79457a115cb57139707b8ee5aa492cc1b53b976657613eb3b6486a3382025d9d"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/touch_keyboard.py": {
+    "size": 3427,
+    "sha256": "4a70293f97702bc1d61bcbcdb4b493725fa4a0b83950755a6cc4d0e05ad2f6ba"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/ui_controller.py": {
+    "size": 12373,
+    "sha256": "110a0270df92e38ca745486955374d6c5bbf3880852fbb8ce0f72026369ea8d6"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/ui_navigation.py": {
+    "size": 24975,
+    "sha256": "2d5184b19206b119d39674f9d4c4234701d55cff7b5ad8040a5045424c679f88"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/verify-installation.py": {
+    "size": 1564,
+    "sha256": "1420adf1a3ed24184ab9592ce3f1966942cdad279f3c50c248ebc6020cef3fbd"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/verify-resources.py": {
+    "size": 2009,
+    "sha256": "73322d31fff23e7c3edf12f502426ff50ab40ed037ff75fffcc3ebf35cbaf195"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/weston-session.bash": {
+    "size": 4108,
+    "sha256": "281ba0783fb702dca87137d77cc9611302c5890e363a4600d48308ad85b1a91c"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/weston.ini": {
+    "size": 77,
+    "sha256": "e3ba686767b9f76aed1d129c05ef93fe40c842d7dddd3037d2ad9e5e66822df3"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/wine-loader.bash": {
+    "size": 134,
+    "sha256": "12b46f6a61770ebcd1e7136d9699cb7ee802c3106bf72b596952914974ebfd00"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/wine-run.bash": {
+    "size": 4352,
+    "sha256": "3ed4b6e7dbea9d86db0ae5c4652d186fe8db1d76c1d10e5f2abdce6562cc8991"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/wineserver.bash": {
+    "size": 142,
+    "sha256": "f0aa6aa0b44d0f08ce95dc6cfbb52f469343abb79b6ef67e3fa8e5d096844a75"
+  }
+}

@@ -1,0 +1,6 @@
+.fail
+load-module module-native-protocol-unix auth-anonymous=1 socket=/tmp/pulse-socket
+load-module module-alsa-sink device=hw:1,0 sink_name=alsa_output.1.stereo-fallback format=s16le channels=2 rate=44100 tsched=0
+load-module module-alsa-sink device=hw:0,0 sink_name=alsa_output.0.HiFi__Speaker__sink format=s16le channels=2 rate=44100 tsched=0
+load-module module-suspend-on-idle
+set-default-sink alsa_output.1.stereo-fallback

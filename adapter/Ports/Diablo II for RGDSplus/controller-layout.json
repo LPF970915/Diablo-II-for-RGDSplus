@@ -1,0 +1,6612 @@
+{
+  "version": 1,
+  "viewport": [
+    640,
+    480
+  ],
+  "frontend": [
+    800,
+    600
+  ],
+  "hardware": {
+    "faces": {
+      "A": 305,
+      "B": 304,
+      "X": 306,
+      "Y": 307
+    },
+    "L1": 308,
+    "R1": 309,
+    "Select": 312,
+    "Start": 311,
+    "L2": 314,
+    "R2": 315,
+    "L3": 313,
+    "R3": 316,
+    "sticks": {
+      "left": [
+        2,
+        3
+      ],
+      "right": [
+        4,
+        5
+      ]
+    },
+    "dpad": [
+      16,
+      17
+    ]
+  },
+  "grids": {
+    "inventory": {
+      "origin": [
+        339,
+        255
+      ],
+      "cols": 10,
+      "rows": 4,
+      "cell": [
+        29,
+        29
+      ],
+      "page": 0
+    },
+    "stash": {
+      "origin": [
+        74,
+        82
+      ],
+      "cols": 6,
+      "rows": 8,
+      "cell": [
+        29,
+        29
+      ],
+      "page": 4
+    },
+    "cube": {
+      "origin": [
+        118,
+        139
+      ],
+      "cols": 3,
+      "rows": 4,
+      "cell": [
+        29,
+        29
+      ],
+      "page": 3
+    },
+    "shop": {
+      "origin": [
+        16,
+        63
+      ],
+      "cols": 10,
+      "rows": 10,
+      "cell": [
+        29,
+        29
+      ],
+      "page": 0,
+      "foreign": true
+    }
+  },
+  "equipment": [
+    {
+      "id": "slot_head",
+      "rect": [
+        455,
+        8,
+        54,
+        51
+      ],
+      "body": 1,
+      "group": "equipment"
+    },
+    {
+      "id": "slot_neck",
+      "rect": [
+        529,
+        35,
+        23,
+        24
+      ],
+      "body": 2,
+      "group": "equipment"
+    },
+    {
+      "id": "slot_torso",
+      "rect": [
+        453,
+        77,
+        56,
+        82
+      ],
+      "body": 3,
+      "group": "equipment"
+    },
+    {
+      "id": "slot_right_arm",
+      "rect": [
+        340,
+        47,
+        55,
+        112
+      ],
+      "body": 4,
+      "group": "equipment"
+    },
+    {
+      "id": "slot_left_arm",
+      "rect": [
+        571,
+        47,
+        55,
+        112
+      ],
+      "body": 5,
+      "group": "equipment"
+    },
+    {
+      "id": "slot_right_hand",
+      "rect": [
+        415,
+        180,
+        23,
+        24
+      ],
+      "body": 6,
+      "group": "equipment"
+    },
+    {
+      "id": "slot_left_hand",
+      "rect": [
+        529,
+        180,
+        23,
+        24
+      ],
+      "body": 7,
+      "group": "equipment"
+    },
+    {
+      "id": "slot_belt",
+      "rect": [
+        456,
+        179,
+        52,
+        25
+      ],
+      "body": 8,
+      "group": "equipment"
+    },
+    {
+      "id": "slot_feet",
+      "rect": [
+        572,
+        182,
+        54,
+        52
+      ],
+      "body": 9,
+      "group": "equipment"
+    },
+    {
+      "id": "slot_gloves",
+      "rect": [
+        341,
+        181,
+        54,
+        53
+      ],
+      "body": 10,
+      "group": "equipment"
+    }
+  ],
+  "items": [
+    {
+      "code": "hax",
+      "width": 1,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "axe",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "2ax",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "mpi",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "wax",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "lax",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "bax",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "btx",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "gax",
+      "width": 2,
+      "height": 4,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "gix",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "wnd",
+      "width": 1,
+      "height": 2,
+      "type": "wand",
+      "kind": "weapons"
+    },
+    {
+      "code": "ywn",
+      "width": 1,
+      "height": 2,
+      "type": "wand",
+      "kind": "weapons"
+    },
+    {
+      "code": "bwn",
+      "width": 1,
+      "height": 2,
+      "type": "wand",
+      "kind": "weapons"
+    },
+    {
+      "code": "gwn",
+      "width": 1,
+      "height": 2,
+      "type": "wand",
+      "kind": "weapons"
+    },
+    {
+      "code": "clb",
+      "width": 1,
+      "height": 3,
+      "type": "club",
+      "kind": "weapons"
+    },
+    {
+      "code": "scp",
+      "width": 1,
+      "height": 3,
+      "type": "scep",
+      "kind": "weapons"
+    },
+    {
+      "code": "gsc",
+      "width": 1,
+      "height": 3,
+      "type": "scep",
+      "kind": "weapons"
+    },
+    {
+      "code": "wsp",
+      "width": 2,
+      "height": 3,
+      "type": "scep",
+      "kind": "weapons"
+    },
+    {
+      "code": "spc",
+      "width": 1,
+      "height": 3,
+      "type": "club",
+      "kind": "weapons"
+    },
+    {
+      "code": "mac",
+      "width": 1,
+      "height": 3,
+      "type": "mace",
+      "kind": "weapons"
+    },
+    {
+      "code": "mst",
+      "width": 1,
+      "height": 3,
+      "type": "mace",
+      "kind": "weapons"
+    },
+    {
+      "code": "fla",
+      "width": 2,
+      "height": 3,
+      "type": "mace",
+      "kind": "weapons"
+    },
+    {
+      "code": "whm",
+      "width": 2,
+      "height": 3,
+      "type": "hamm",
+      "kind": "weapons"
+    },
+    {
+      "code": "mau",
+      "width": 2,
+      "height": 4,
+      "type": "hamm",
+      "kind": "weapons"
+    },
+    {
+      "code": "gma",
+      "width": 2,
+      "height": 3,
+      "type": "hamm",
+      "kind": "weapons"
+    },
+    {
+      "code": "ssd",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "scm",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "sbr",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "flc",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "crs",
+      "width": 2,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "bsd",
+      "width": 2,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "lsd",
+      "width": 2,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "wsd",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "2hs",
+      "width": 1,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "clm",
+      "width": 1,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "gis",
+      "width": 1,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "bsw",
+      "width": 1,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "flb",
+      "width": 2,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "gsd",
+      "width": 2,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "dgr",
+      "width": 1,
+      "height": 2,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "dir",
+      "width": 1,
+      "height": 2,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "kri",
+      "width": 1,
+      "height": 3,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "bld",
+      "width": 1,
+      "height": 3,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "tkf",
+      "width": 1,
+      "height": 2,
+      "type": "tkni",
+      "kind": "weapons"
+    },
+    {
+      "code": "tax",
+      "width": 1,
+      "height": 2,
+      "type": "taxe",
+      "kind": "weapons"
+    },
+    {
+      "code": "bkf",
+      "width": 1,
+      "height": 2,
+      "type": "tkni",
+      "kind": "weapons"
+    },
+    {
+      "code": "bal",
+      "width": 2,
+      "height": 3,
+      "type": "taxe",
+      "kind": "weapons"
+    },
+    {
+      "code": "jav",
+      "width": 1,
+      "height": 3,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "pil",
+      "width": 1,
+      "height": 3,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "ssp",
+      "width": 1,
+      "height": 3,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "glv",
+      "width": 1,
+      "height": 4,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "tsp",
+      "width": 1,
+      "height": 4,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "spr",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "tri",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "brn",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "spt",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "pik",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "bar",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "vou",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "scy",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "pax",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "hal",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "wsc",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "sst",
+      "width": 1,
+      "height": 3,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "lst",
+      "width": 1,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "cst",
+      "width": 1,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "bst",
+      "width": 1,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "wst",
+      "width": 2,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "sbw",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "hbw",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "lbw",
+      "width": 2,
+      "height": 4,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "cbw",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "sbb",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "lbb",
+      "width": 2,
+      "height": 4,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "swb",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "lwb",
+      "width": 2,
+      "height": 4,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "lxb",
+      "width": 2,
+      "height": 3,
+      "type": "xbow",
+      "kind": "weapons"
+    },
+    {
+      "code": "mxb",
+      "width": 2,
+      "height": 3,
+      "type": "xbow",
+      "kind": "weapons"
+    },
+    {
+      "code": "hxb",
+      "width": 2,
+      "height": 4,
+      "type": "xbow",
+      "kind": "weapons"
+    },
+    {
+      "code": "rxb",
+      "width": 2,
+      "height": 3,
+      "type": "xbow",
+      "kind": "weapons"
+    },
+    {
+      "code": "gps",
+      "width": 1,
+      "height": 1,
+      "type": "tpot",
+      "kind": "weapons"
+    },
+    {
+      "code": "ops",
+      "width": 1,
+      "height": 1,
+      "type": "tpot",
+      "kind": "weapons"
+    },
+    {
+      "code": "gpm",
+      "width": 1,
+      "height": 1,
+      "type": "tpot",
+      "kind": "weapons"
+    },
+    {
+      "code": "opm",
+      "width": 1,
+      "height": 1,
+      "type": "tpot",
+      "kind": "weapons"
+    },
+    {
+      "code": "gpl",
+      "width": 1,
+      "height": 1,
+      "type": "tpot",
+      "kind": "weapons"
+    },
+    {
+      "code": "opl",
+      "width": 1,
+      "height": 1,
+      "type": "tpot",
+      "kind": "weapons"
+    },
+    {
+      "code": "d33",
+      "width": 1,
+      "height": 2,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "g33",
+      "width": 1,
+      "height": 2,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "leg",
+      "width": 1,
+      "height": 3,
+      "type": "club",
+      "kind": "weapons"
+    },
+    {
+      "code": "hdm",
+      "width": 1,
+      "height": 2,
+      "type": "hamm",
+      "kind": "weapons"
+    },
+    {
+      "code": "hfh",
+      "width": 2,
+      "height": 3,
+      "type": "hamm",
+      "kind": "weapons"
+    },
+    {
+      "code": "hst",
+      "width": 1,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "msf",
+      "width": 1,
+      "height": 3,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "9ha",
+      "width": 1,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "9ax",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "92a",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "9mp",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "9wa",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "9la",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "9ba",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "9bt",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "9ga",
+      "width": 2,
+      "height": 4,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "9gi",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "9wn",
+      "width": 1,
+      "height": 2,
+      "type": "wand",
+      "kind": "weapons"
+    },
+    {
+      "code": "9yw",
+      "width": 1,
+      "height": 2,
+      "type": "wand",
+      "kind": "weapons"
+    },
+    {
+      "code": "9bw",
+      "width": 1,
+      "height": 2,
+      "type": "wand",
+      "kind": "weapons"
+    },
+    {
+      "code": "9gw",
+      "width": 1,
+      "height": 2,
+      "type": "wand",
+      "kind": "weapons"
+    },
+    {
+      "code": "9cl",
+      "width": 1,
+      "height": 3,
+      "type": "club",
+      "kind": "weapons"
+    },
+    {
+      "code": "9sc",
+      "width": 1,
+      "height": 3,
+      "type": "scep",
+      "kind": "weapons"
+    },
+    {
+      "code": "9qs",
+      "width": 1,
+      "height": 3,
+      "type": "scep",
+      "kind": "weapons"
+    },
+    {
+      "code": "9ws",
+      "width": 2,
+      "height": 3,
+      "type": "scep",
+      "kind": "weapons"
+    },
+    {
+      "code": "9sp",
+      "width": 1,
+      "height": 3,
+      "type": "club",
+      "kind": "weapons"
+    },
+    {
+      "code": "9ma",
+      "width": 1,
+      "height": 3,
+      "type": "mace",
+      "kind": "weapons"
+    },
+    {
+      "code": "9mt",
+      "width": 1,
+      "height": 3,
+      "type": "mace",
+      "kind": "weapons"
+    },
+    {
+      "code": "9fl",
+      "width": 2,
+      "height": 3,
+      "type": "mace",
+      "kind": "weapons"
+    },
+    {
+      "code": "9wh",
+      "width": 2,
+      "height": 3,
+      "type": "hamm",
+      "kind": "weapons"
+    },
+    {
+      "code": "9m9",
+      "width": 2,
+      "height": 4,
+      "type": "hamm",
+      "kind": "weapons"
+    },
+    {
+      "code": "9gm",
+      "width": 2,
+      "height": 3,
+      "type": "hamm",
+      "kind": "weapons"
+    },
+    {
+      "code": "9ss",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9sm",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9sb",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9fc",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9cr",
+      "width": 2,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9bs",
+      "width": 2,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9ls",
+      "width": 2,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9wd",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "92h",
+      "width": 1,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9cm",
+      "width": 1,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9gs",
+      "width": 1,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9b9",
+      "width": 1,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9fb",
+      "width": 2,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9gd",
+      "width": 2,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "9dg",
+      "width": 1,
+      "height": 2,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "9di",
+      "width": 1,
+      "height": 2,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "9kr",
+      "width": 1,
+      "height": 3,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "9bl",
+      "width": 1,
+      "height": 3,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "9tk",
+      "width": 1,
+      "height": 2,
+      "type": "tkni",
+      "kind": "weapons"
+    },
+    {
+      "code": "9ta",
+      "width": 1,
+      "height": 2,
+      "type": "taxe",
+      "kind": "weapons"
+    },
+    {
+      "code": "9bk",
+      "width": 1,
+      "height": 2,
+      "type": "tkni",
+      "kind": "weapons"
+    },
+    {
+      "code": "9b8",
+      "width": 2,
+      "height": 3,
+      "type": "taxe",
+      "kind": "weapons"
+    },
+    {
+      "code": "9ja",
+      "width": 1,
+      "height": 3,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "9pi",
+      "width": 1,
+      "height": 3,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "9s9",
+      "width": 1,
+      "height": 3,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "9gl",
+      "width": 1,
+      "height": 4,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "9ts",
+      "width": 1,
+      "height": 4,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "9sr",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "9tr",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "9br",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "9st",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "9p9",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "9b7",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "9vo",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "9s8",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "9pa",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "9h9",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "9wc",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "8ss",
+      "width": 1,
+      "height": 3,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "8ls",
+      "width": 1,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "8cs",
+      "width": 1,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "8bs",
+      "width": 1,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "8ws",
+      "width": 2,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "8sb",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "8hb",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "8lb",
+      "width": 2,
+      "height": 4,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "8cb",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "8s8",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "8l8",
+      "width": 2,
+      "height": 4,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "8sw",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "8lw",
+      "width": 2,
+      "height": 4,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "8lx",
+      "width": 2,
+      "height": 3,
+      "type": "xbow",
+      "kind": "weapons"
+    },
+    {
+      "code": "8mx",
+      "width": 2,
+      "height": 3,
+      "type": "xbow",
+      "kind": "weapons"
+    },
+    {
+      "code": "8hx",
+      "width": 2,
+      "height": 4,
+      "type": "xbow",
+      "kind": "weapons"
+    },
+    {
+      "code": "8rx",
+      "width": 2,
+      "height": 3,
+      "type": "xbow",
+      "kind": "weapons"
+    },
+    {
+      "code": "qf1",
+      "width": 2,
+      "height": 3,
+      "type": "mace",
+      "kind": "weapons"
+    },
+    {
+      "code": "qf2",
+      "width": 2,
+      "height": 3,
+      "type": "mace",
+      "kind": "weapons"
+    },
+    {
+      "code": "ktr",
+      "width": 1,
+      "height": 3,
+      "type": "h2h",
+      "kind": "weapons"
+    },
+    {
+      "code": "wrb",
+      "width": 1,
+      "height": 3,
+      "type": "h2h",
+      "kind": "weapons"
+    },
+    {
+      "code": "axf",
+      "width": 1,
+      "height": 3,
+      "type": "h2h",
+      "kind": "weapons"
+    },
+    {
+      "code": "ces",
+      "width": 1,
+      "height": 3,
+      "type": "h2h",
+      "kind": "weapons"
+    },
+    {
+      "code": "clw",
+      "width": 1,
+      "height": 3,
+      "type": "h2h",
+      "kind": "weapons"
+    },
+    {
+      "code": "btl",
+      "width": 1,
+      "height": 3,
+      "type": "h2h",
+      "kind": "weapons"
+    },
+    {
+      "code": "skr",
+      "width": 1,
+      "height": 3,
+      "type": "h2h",
+      "kind": "weapons"
+    },
+    {
+      "code": "9ar",
+      "width": 1,
+      "height": 3,
+      "type": "h2h",
+      "kind": "weapons"
+    },
+    {
+      "code": "9wb",
+      "width": 1,
+      "height": 3,
+      "type": "h2h",
+      "kind": "weapons"
+    },
+    {
+      "code": "9xf",
+      "width": 1,
+      "height": 3,
+      "type": "h2h",
+      "kind": "weapons"
+    },
+    {
+      "code": "9cs",
+      "width": 1,
+      "height": 3,
+      "type": "h2h2",
+      "kind": "weapons"
+    },
+    {
+      "code": "9lw",
+      "width": 1,
+      "height": 3,
+      "type": "h2h2",
+      "kind": "weapons"
+    },
+    {
+      "code": "9tw",
+      "width": 1,
+      "height": 3,
+      "type": "h2h2",
+      "kind": "weapons"
+    },
+    {
+      "code": "9qr",
+      "width": 1,
+      "height": 3,
+      "type": "h2h2",
+      "kind": "weapons"
+    },
+    {
+      "code": "7ar",
+      "width": 1,
+      "height": 3,
+      "type": "h2h2",
+      "kind": "weapons"
+    },
+    {
+      "code": "7wb",
+      "width": 1,
+      "height": 3,
+      "type": "h2h2",
+      "kind": "weapons"
+    },
+    {
+      "code": "7xf",
+      "width": 1,
+      "height": 3,
+      "type": "h2h2",
+      "kind": "weapons"
+    },
+    {
+      "code": "7cs",
+      "width": 1,
+      "height": 3,
+      "type": "h2h2",
+      "kind": "weapons"
+    },
+    {
+      "code": "7lw",
+      "width": 1,
+      "height": 3,
+      "type": "h2h2",
+      "kind": "weapons"
+    },
+    {
+      "code": "7tw",
+      "width": 1,
+      "height": 3,
+      "type": "h2h2",
+      "kind": "weapons"
+    },
+    {
+      "code": "7qr",
+      "width": 1,
+      "height": 3,
+      "type": "h2h2",
+      "kind": "weapons"
+    },
+    {
+      "code": "7ha",
+      "width": 1,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "7ax",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "72a",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "7mp",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "7wa",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "7la",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "7ba",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "7bt",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "7ga",
+      "width": 2,
+      "height": 4,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "7gi",
+      "width": 2,
+      "height": 3,
+      "type": "axe",
+      "kind": "weapons"
+    },
+    {
+      "code": "7wn",
+      "width": 1,
+      "height": 2,
+      "type": "wand",
+      "kind": "weapons"
+    },
+    {
+      "code": "7yw",
+      "width": 1,
+      "height": 2,
+      "type": "wand",
+      "kind": "weapons"
+    },
+    {
+      "code": "7bw",
+      "width": 1,
+      "height": 2,
+      "type": "wand",
+      "kind": "weapons"
+    },
+    {
+      "code": "7gw",
+      "width": 1,
+      "height": 2,
+      "type": "wand",
+      "kind": "weapons"
+    },
+    {
+      "code": "7cl",
+      "width": 1,
+      "height": 3,
+      "type": "club",
+      "kind": "weapons"
+    },
+    {
+      "code": "7sc",
+      "width": 1,
+      "height": 3,
+      "type": "scep",
+      "kind": "weapons"
+    },
+    {
+      "code": "7qs",
+      "width": 1,
+      "height": 3,
+      "type": "scep",
+      "kind": "weapons"
+    },
+    {
+      "code": "7ws",
+      "width": 2,
+      "height": 3,
+      "type": "scep",
+      "kind": "weapons"
+    },
+    {
+      "code": "7sp",
+      "width": 1,
+      "height": 3,
+      "type": "club",
+      "kind": "weapons"
+    },
+    {
+      "code": "7ma",
+      "width": 1,
+      "height": 3,
+      "type": "mace",
+      "kind": "weapons"
+    },
+    {
+      "code": "7mt",
+      "width": 1,
+      "height": 3,
+      "type": "mace",
+      "kind": "weapons"
+    },
+    {
+      "code": "7fl",
+      "width": 2,
+      "height": 3,
+      "type": "mace",
+      "kind": "weapons"
+    },
+    {
+      "code": "7wh",
+      "width": 2,
+      "height": 3,
+      "type": "hamm",
+      "kind": "weapons"
+    },
+    {
+      "code": "7m7",
+      "width": 2,
+      "height": 4,
+      "type": "hamm",
+      "kind": "weapons"
+    },
+    {
+      "code": "7gm",
+      "width": 2,
+      "height": 3,
+      "type": "hamm",
+      "kind": "weapons"
+    },
+    {
+      "code": "7ss",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7sm",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7sb",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7fc",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7cr",
+      "width": 2,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7bs",
+      "width": 2,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7ls",
+      "width": 2,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7wd",
+      "width": 1,
+      "height": 3,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "72h",
+      "width": 1,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7cm",
+      "width": 1,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7gs",
+      "width": 1,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7b7",
+      "width": 1,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7fb",
+      "width": 2,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7gd",
+      "width": 2,
+      "height": 4,
+      "type": "swor",
+      "kind": "weapons"
+    },
+    {
+      "code": "7dg",
+      "width": 1,
+      "height": 2,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "7di",
+      "width": 1,
+      "height": 2,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "7kr",
+      "width": 1,
+      "height": 3,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "7bl",
+      "width": 1,
+      "height": 3,
+      "type": "knif",
+      "kind": "weapons"
+    },
+    {
+      "code": "7tk",
+      "width": 1,
+      "height": 2,
+      "type": "tkni",
+      "kind": "weapons"
+    },
+    {
+      "code": "7ta",
+      "width": 1,
+      "height": 2,
+      "type": "taxe",
+      "kind": "weapons"
+    },
+    {
+      "code": "7bk",
+      "width": 1,
+      "height": 2,
+      "type": "tkni",
+      "kind": "weapons"
+    },
+    {
+      "code": "7b8",
+      "width": 2,
+      "height": 3,
+      "type": "taxe",
+      "kind": "weapons"
+    },
+    {
+      "code": "7ja",
+      "width": 1,
+      "height": 3,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "7pi",
+      "width": 1,
+      "height": 3,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "7s7",
+      "width": 1,
+      "height": 3,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "7gl",
+      "width": 1,
+      "height": 4,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "7ts",
+      "width": 1,
+      "height": 4,
+      "type": "jave",
+      "kind": "weapons"
+    },
+    {
+      "code": "7sr",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "7tr",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "7br",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "7st",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "7p7",
+      "width": 2,
+      "height": 4,
+      "type": "spea",
+      "kind": "weapons"
+    },
+    {
+      "code": "7o7",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "7vo",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "7s8",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "7pa",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "7h7",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "7wc",
+      "width": 2,
+      "height": 4,
+      "type": "pole",
+      "kind": "weapons"
+    },
+    {
+      "code": "6ss",
+      "width": 1,
+      "height": 3,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "6ls",
+      "width": 1,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "6cs",
+      "width": 1,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "6bs",
+      "width": 1,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "6ws",
+      "width": 2,
+      "height": 4,
+      "type": "staf",
+      "kind": "weapons"
+    },
+    {
+      "code": "6sb",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "6hb",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "6lb",
+      "width": 2,
+      "height": 4,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "6cb",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "6s7",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "6l7",
+      "width": 2,
+      "height": 4,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "6sw",
+      "width": 2,
+      "height": 3,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "6lw",
+      "width": 2,
+      "height": 4,
+      "type": "bow",
+      "kind": "weapons"
+    },
+    {
+      "code": "6lx",
+      "width": 2,
+      "height": 3,
+      "type": "xbow",
+      "kind": "weapons"
+    },
+    {
+      "code": "6mx",
+      "width": 2,
+      "height": 3,
+      "type": "xbow",
+      "kind": "weapons"
+    },
+    {
+      "code": "6hx",
+      "width": 2,
+      "height": 4,
+      "type": "xbow",
+      "kind": "weapons"
+    },
+    {
+      "code": "6rx",
+      "width": 2,
+      "height": 3,
+      "type": "xbow",
+      "kind": "weapons"
+    },
+    {
+      "code": "ob1",
+      "width": 1,
+      "height": 2,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "ob2",
+      "width": 1,
+      "height": 2,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "ob3",
+      "width": 1,
+      "height": 2,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "ob4",
+      "width": 1,
+      "height": 2,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "ob5",
+      "width": 1,
+      "height": 3,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "am1",
+      "width": 2,
+      "height": 4,
+      "type": "abow",
+      "kind": "weapons"
+    },
+    {
+      "code": "am2",
+      "width": 2,
+      "height": 4,
+      "type": "abow",
+      "kind": "weapons"
+    },
+    {
+      "code": "am3",
+      "width": 2,
+      "height": 4,
+      "type": "aspe",
+      "kind": "weapons"
+    },
+    {
+      "code": "am4",
+      "width": 2,
+      "height": 4,
+      "type": "aspe",
+      "kind": "weapons"
+    },
+    {
+      "code": "am5",
+      "width": 1,
+      "height": 3,
+      "type": "ajav",
+      "kind": "weapons"
+    },
+    {
+      "code": "ob6",
+      "width": 1,
+      "height": 2,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "ob7",
+      "width": 1,
+      "height": 2,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "ob8",
+      "width": 1,
+      "height": 2,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "ob9",
+      "width": 1,
+      "height": 2,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "oba",
+      "width": 1,
+      "height": 3,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "am6",
+      "width": 2,
+      "height": 4,
+      "type": "abow",
+      "kind": "weapons"
+    },
+    {
+      "code": "am7",
+      "width": 2,
+      "height": 4,
+      "type": "abow",
+      "kind": "weapons"
+    },
+    {
+      "code": "am8",
+      "width": 2,
+      "height": 4,
+      "type": "aspe",
+      "kind": "weapons"
+    },
+    {
+      "code": "am9",
+      "width": 2,
+      "height": 4,
+      "type": "aspe",
+      "kind": "weapons"
+    },
+    {
+      "code": "ama",
+      "width": 1,
+      "height": 3,
+      "type": "ajav",
+      "kind": "weapons"
+    },
+    {
+      "code": "obb",
+      "width": 1,
+      "height": 2,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "obc",
+      "width": 1,
+      "height": 2,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "obd",
+      "width": 1,
+      "height": 2,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "obe",
+      "width": 1,
+      "height": 2,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "obf",
+      "width": 1,
+      "height": 3,
+      "type": "orb",
+      "kind": "weapons"
+    },
+    {
+      "code": "amb",
+      "width": 2,
+      "height": 4,
+      "type": "abow",
+      "kind": "weapons"
+    },
+    {
+      "code": "amc",
+      "width": 2,
+      "height": 4,
+      "type": "abow",
+      "kind": "weapons"
+    },
+    {
+      "code": "amd",
+      "width": 2,
+      "height": 4,
+      "type": "aspe",
+      "kind": "weapons"
+    },
+    {
+      "code": "ame",
+      "width": 2,
+      "height": 4,
+      "type": "aspe",
+      "kind": "weapons"
+    },
+    {
+      "code": "amf",
+      "width": 1,
+      "height": 3,
+      "type": "ajav",
+      "kind": "weapons"
+    },
+    {
+      "code": "cap",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "skp",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "hlm",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "fhl",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "ghm",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "crn",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "msk",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "qui",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "lea",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "hla",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "stu",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "rng",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "scl",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "chn",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "brs",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "spl",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "plt",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "fld",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "gth",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "ful",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "aar",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "ltp",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "buc",
+      "width": 2,
+      "height": 2,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "sml",
+      "width": 2,
+      "height": 2,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "lrg",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "kit",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "tow",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "gts",
+      "width": 2,
+      "height": 4,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "lgl",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "vgl",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "mgl",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "tgl",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "hgl",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "lbt",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "vbt",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "mbt",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "tbt",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "hbt",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "lbl",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "vbl",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "mbl",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "tbl",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "hbl",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "bhm",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "bsh",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "spk",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "xap",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "xkp",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "xlm",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "xhl",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "xhm",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "xrn",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "xsk",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "xui",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xea",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xla",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xtu",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xng",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xcl",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xhn",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xrs",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xpl",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xlt",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xld",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xth",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xul",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xar",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xtp",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "xuc",
+      "width": 2,
+      "height": 2,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "xml",
+      "width": 2,
+      "height": 2,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "xrg",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "xit",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "xow",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "xts",
+      "width": 2,
+      "height": 4,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "xlg",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "xvg",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "xmg",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "xtg",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "xhg",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "xlb",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "xvb",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "xmb",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "xtb",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "xhb",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "zlb",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "zvb",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "zmb",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "ztb",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "zhb",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "xh9",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "xsh",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "xpk",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "dr1",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "dr2",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "dr3",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "dr4",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "dr5",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "ba1",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "ba2",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "ba3",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "ba4",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "ba5",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "pa1",
+      "width": 2,
+      "height": 2,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "pa2",
+      "width": 2,
+      "height": 2,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "pa3",
+      "width": 2,
+      "height": 4,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "pa4",
+      "width": 2,
+      "height": 4,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "pa5",
+      "width": 2,
+      "height": 2,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "ne1",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "ne2",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "ne3",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "ne4",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "ne5",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "ci0",
+      "width": 2,
+      "height": 2,
+      "type": "circ",
+      "kind": "armor"
+    },
+    {
+      "code": "ci1",
+      "width": 2,
+      "height": 2,
+      "type": "circ",
+      "kind": "armor"
+    },
+    {
+      "code": "ci2",
+      "width": 2,
+      "height": 2,
+      "type": "circ",
+      "kind": "armor"
+    },
+    {
+      "code": "ci3",
+      "width": 2,
+      "height": 2,
+      "type": "circ",
+      "kind": "armor"
+    },
+    {
+      "code": "uap",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "ukp",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "ulm",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "uhl",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "uhm",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "urn",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "usk",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "uui",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "uea",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "ula",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "utu",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "ung",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "ucl",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "uhn",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "urs",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "upl",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "ult",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "uld",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "uth",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "uul",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "uar",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "utp",
+      "width": 2,
+      "height": 3,
+      "type": "tors",
+      "kind": "armor"
+    },
+    {
+      "code": "uuc",
+      "width": 2,
+      "height": 2,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "uml",
+      "width": 2,
+      "height": 2,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "urg",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "uit",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "uow",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "uts",
+      "width": 2,
+      "height": 4,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "ulg",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "uvg",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "umg",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "utg",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "uhg",
+      "width": 2,
+      "height": 2,
+      "type": "glov",
+      "kind": "armor"
+    },
+    {
+      "code": "ulb",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "uvb",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "umb",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "utb",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "uhb",
+      "width": 2,
+      "height": 2,
+      "type": "boot",
+      "kind": "armor"
+    },
+    {
+      "code": "ulc",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "uvc",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "umc",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "utc",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "uhc",
+      "width": 2,
+      "height": 1,
+      "type": "belt",
+      "kind": "armor"
+    },
+    {
+      "code": "uh9",
+      "width": 2,
+      "height": 2,
+      "type": "helm",
+      "kind": "armor"
+    },
+    {
+      "code": "ush",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "upk",
+      "width": 2,
+      "height": 3,
+      "type": "shie",
+      "kind": "armor"
+    },
+    {
+      "code": "dr6",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "dr7",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "dr8",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "dr9",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "dra",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "ba6",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "ba7",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "ba8",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "ba9",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "baa",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "pa6",
+      "width": 2,
+      "height": 2,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "pa7",
+      "width": 2,
+      "height": 2,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "pa8",
+      "width": 2,
+      "height": 4,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "pa9",
+      "width": 2,
+      "height": 4,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "paa",
+      "width": 2,
+      "height": 2,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "ne6",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "ne7",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "ne8",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "ne9",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "nea",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "drb",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "drc",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "drd",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "dre",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "drf",
+      "width": 2,
+      "height": 2,
+      "type": "pelt",
+      "kind": "armor"
+    },
+    {
+      "code": "bab",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "bac",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "bad",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "bae",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "baf",
+      "width": 2,
+      "height": 2,
+      "type": "phlm",
+      "kind": "armor"
+    },
+    {
+      "code": "pab",
+      "width": 2,
+      "height": 2,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "pac",
+      "width": 2,
+      "height": 2,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "pad",
+      "width": 2,
+      "height": 4,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "pae",
+      "width": 2,
+      "height": 4,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "paf",
+      "width": 2,
+      "height": 2,
+      "type": "ashd",
+      "kind": "armor"
+    },
+    {
+      "code": "neb",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "neg",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "ned",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "nee",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "nef",
+      "width": 2,
+      "height": 2,
+      "type": "head",
+      "kind": "armor"
+    },
+    {
+      "code": "elx",
+      "width": 1,
+      "height": 1,
+      "type": "elix",
+      "kind": "misc"
+    },
+    {
+      "code": "hpo",
+      "width": 1,
+      "height": 1,
+      "type": "hpot",
+      "kind": "misc"
+    },
+    {
+      "code": "mpo",
+      "width": 1,
+      "height": 1,
+      "type": "mpot",
+      "kind": "misc"
+    },
+    {
+      "code": "hpf",
+      "width": 1,
+      "height": 1,
+      "type": "hpot",
+      "kind": "misc"
+    },
+    {
+      "code": "mpf",
+      "width": 1,
+      "height": 1,
+      "type": "mpot",
+      "kind": "misc"
+    },
+    {
+      "code": "vps",
+      "width": 1,
+      "height": 1,
+      "type": "spot",
+      "kind": "misc"
+    },
+    {
+      "code": "yps",
+      "width": 1,
+      "height": 1,
+      "type": "apot",
+      "kind": "misc"
+    },
+    {
+      "code": "rvs",
+      "width": 1,
+      "height": 1,
+      "type": "rpot",
+      "kind": "misc"
+    },
+    {
+      "code": "rvl",
+      "width": 1,
+      "height": 1,
+      "type": "rpot",
+      "kind": "misc"
+    },
+    {
+      "code": "wms",
+      "width": 1,
+      "height": 1,
+      "type": "wpot",
+      "kind": "misc"
+    },
+    {
+      "code": "tbk",
+      "width": 1,
+      "height": 2,
+      "type": "book",
+      "kind": "misc"
+    },
+    {
+      "code": "ibk",
+      "width": 1,
+      "height": 2,
+      "type": "book",
+      "kind": "misc"
+    },
+    {
+      "code": "amu",
+      "width": 1,
+      "height": 1,
+      "type": "amul",
+      "kind": "misc"
+    },
+    {
+      "code": "vip",
+      "width": 1,
+      "height": 1,
+      "type": "amul",
+      "kind": "misc"
+    },
+    {
+      "code": "rin",
+      "width": 1,
+      "height": 1,
+      "type": "ring",
+      "kind": "misc"
+    },
+    {
+      "code": "gld",
+      "width": 1,
+      "height": 1,
+      "type": "gold",
+      "kind": "misc"
+    },
+    {
+      "code": "bks",
+      "width": 2,
+      "height": 2,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "bkd",
+      "width": 2,
+      "height": 2,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "aqv",
+      "width": 1,
+      "height": 3,
+      "type": "bowq",
+      "kind": "misc"
+    },
+    {
+      "code": "tch",
+      "width": 1,
+      "height": 2,
+      "type": "torc",
+      "kind": "misc"
+    },
+    {
+      "code": "cqv",
+      "width": 1,
+      "height": 3,
+      "type": "xboq",
+      "kind": "misc"
+    },
+    {
+      "code": "tsc",
+      "width": 1,
+      "height": 1,
+      "type": "scro",
+      "kind": "misc"
+    },
+    {
+      "code": "isc",
+      "width": 1,
+      "height": 1,
+      "type": "scro",
+      "kind": "misc"
+    },
+    {
+      "code": "hrt",
+      "width": 1,
+      "height": 1,
+      "type": "body",
+      "kind": "misc"
+    },
+    {
+      "code": "brz",
+      "width": 1,
+      "height": 1,
+      "type": "body",
+      "kind": "misc"
+    },
+    {
+      "code": "jaw",
+      "width": 1,
+      "height": 1,
+      "type": "body",
+      "kind": "misc"
+    },
+    {
+      "code": "eyz",
+      "width": 1,
+      "height": 1,
+      "type": "body",
+      "kind": "misc"
+    },
+    {
+      "code": "hrn",
+      "width": 1,
+      "height": 1,
+      "type": "body",
+      "kind": "misc"
+    },
+    {
+      "code": "tal",
+      "width": 1,
+      "height": 1,
+      "type": "body",
+      "kind": "misc"
+    },
+    {
+      "code": "flg",
+      "width": 1,
+      "height": 1,
+      "type": "body",
+      "kind": "misc"
+    },
+    {
+      "code": "fng",
+      "width": 1,
+      "height": 1,
+      "type": "body",
+      "kind": "misc"
+    },
+    {
+      "code": "qll",
+      "width": 1,
+      "height": 1,
+      "type": "body",
+      "kind": "misc"
+    },
+    {
+      "code": "sol",
+      "width": 1,
+      "height": 1,
+      "type": "body",
+      "kind": "misc"
+    },
+    {
+      "code": "scz",
+      "width": 1,
+      "height": 1,
+      "type": "body",
+      "kind": "misc"
+    },
+    {
+      "code": "spe",
+      "width": 1,
+      "height": 1,
+      "type": "body",
+      "kind": "misc"
+    },
+    {
+      "code": "key",
+      "width": 1,
+      "height": 1,
+      "type": "key",
+      "kind": "misc"
+    },
+    {
+      "code": "luv",
+      "width": 1,
+      "height": 2,
+      "type": "key",
+      "kind": "misc"
+    },
+    {
+      "code": "xyz",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "j34",
+      "width": 1,
+      "height": 2,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "g34",
+      "width": 1,
+      "height": 2,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "bbb",
+      "width": 2,
+      "height": 2,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "box",
+      "width": 2,
+      "height": 2,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "tr1",
+      "width": 2,
+      "height": 2,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "mss",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "ass",
+      "width": 2,
+      "height": 2,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "qey",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "qhr",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "qbr",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "ear",
+      "width": 1,
+      "height": 1,
+      "type": "play",
+      "kind": "misc"
+    },
+    {
+      "code": "gcv",
+      "width": 1,
+      "height": 1,
+      "type": "gema",
+      "kind": "misc"
+    },
+    {
+      "code": "gfv",
+      "width": 1,
+      "height": 1,
+      "type": "gema",
+      "kind": "misc"
+    },
+    {
+      "code": "gsv",
+      "width": 1,
+      "height": 1,
+      "type": "gema",
+      "kind": "misc"
+    },
+    {
+      "code": "gzv",
+      "width": 1,
+      "height": 1,
+      "type": "gema",
+      "kind": "misc"
+    },
+    {
+      "code": "gpv",
+      "width": 1,
+      "height": 1,
+      "type": "gema",
+      "kind": "misc"
+    },
+    {
+      "code": "gcy",
+      "width": 1,
+      "height": 1,
+      "type": "gemt",
+      "kind": "misc"
+    },
+    {
+      "code": "gfy",
+      "width": 1,
+      "height": 1,
+      "type": "gemt",
+      "kind": "misc"
+    },
+    {
+      "code": "gsy",
+      "width": 1,
+      "height": 1,
+      "type": "gemt",
+      "kind": "misc"
+    },
+    {
+      "code": "gly",
+      "width": 1,
+      "height": 1,
+      "type": "gemt",
+      "kind": "misc"
+    },
+    {
+      "code": "gpy",
+      "width": 1,
+      "height": 1,
+      "type": "gemt",
+      "kind": "misc"
+    },
+    {
+      "code": "gcb",
+      "width": 1,
+      "height": 1,
+      "type": "gems",
+      "kind": "misc"
+    },
+    {
+      "code": "gfb",
+      "width": 1,
+      "height": 1,
+      "type": "gems",
+      "kind": "misc"
+    },
+    {
+      "code": "gsb",
+      "width": 1,
+      "height": 1,
+      "type": "gems",
+      "kind": "misc"
+    },
+    {
+      "code": "glb",
+      "width": 1,
+      "height": 1,
+      "type": "gems",
+      "kind": "misc"
+    },
+    {
+      "code": "gpb",
+      "width": 1,
+      "height": 1,
+      "type": "gems",
+      "kind": "misc"
+    },
+    {
+      "code": "gcg",
+      "width": 1,
+      "height": 1,
+      "type": "geme",
+      "kind": "misc"
+    },
+    {
+      "code": "gfg",
+      "width": 1,
+      "height": 1,
+      "type": "geme",
+      "kind": "misc"
+    },
+    {
+      "code": "gsg",
+      "width": 1,
+      "height": 1,
+      "type": "geme",
+      "kind": "misc"
+    },
+    {
+      "code": "glg",
+      "width": 1,
+      "height": 1,
+      "type": "geme",
+      "kind": "misc"
+    },
+    {
+      "code": "gpg",
+      "width": 1,
+      "height": 1,
+      "type": "geme",
+      "kind": "misc"
+    },
+    {
+      "code": "gcr",
+      "width": 1,
+      "height": 1,
+      "type": "gemr",
+      "kind": "misc"
+    },
+    {
+      "code": "gfr",
+      "width": 1,
+      "height": 1,
+      "type": "gemr",
+      "kind": "misc"
+    },
+    {
+      "code": "gsr",
+      "width": 1,
+      "height": 1,
+      "type": "gemr",
+      "kind": "misc"
+    },
+    {
+      "code": "glr",
+      "width": 1,
+      "height": 1,
+      "type": "gemr",
+      "kind": "misc"
+    },
+    {
+      "code": "gpr",
+      "width": 1,
+      "height": 1,
+      "type": "gemr",
+      "kind": "misc"
+    },
+    {
+      "code": "gcw",
+      "width": 1,
+      "height": 1,
+      "type": "gemd",
+      "kind": "misc"
+    },
+    {
+      "code": "gfw",
+      "width": 1,
+      "height": 1,
+      "type": "gemd",
+      "kind": "misc"
+    },
+    {
+      "code": "gsw",
+      "width": 1,
+      "height": 1,
+      "type": "gemd",
+      "kind": "misc"
+    },
+    {
+      "code": "glw",
+      "width": 1,
+      "height": 1,
+      "type": "gemd",
+      "kind": "misc"
+    },
+    {
+      "code": "gpw",
+      "width": 1,
+      "height": 1,
+      "type": "gemd",
+      "kind": "misc"
+    },
+    {
+      "code": "hp1",
+      "width": 1,
+      "height": 1,
+      "type": "hpot",
+      "kind": "misc"
+    },
+    {
+      "code": "hp2",
+      "width": 1,
+      "height": 1,
+      "type": "hpot",
+      "kind": "misc"
+    },
+    {
+      "code": "hp3",
+      "width": 1,
+      "height": 1,
+      "type": "hpot",
+      "kind": "misc"
+    },
+    {
+      "code": "hp4",
+      "width": 1,
+      "height": 1,
+      "type": "hpot",
+      "kind": "misc"
+    },
+    {
+      "code": "hp5",
+      "width": 1,
+      "height": 1,
+      "type": "hpot",
+      "kind": "misc"
+    },
+    {
+      "code": "mp1",
+      "width": 1,
+      "height": 1,
+      "type": "mpot",
+      "kind": "misc"
+    },
+    {
+      "code": "mp2",
+      "width": 1,
+      "height": 1,
+      "type": "mpot",
+      "kind": "misc"
+    },
+    {
+      "code": "mp3",
+      "width": 1,
+      "height": 1,
+      "type": "mpot",
+      "kind": "misc"
+    },
+    {
+      "code": "mp4",
+      "width": 1,
+      "height": 1,
+      "type": "mpot",
+      "kind": "misc"
+    },
+    {
+      "code": "mp5",
+      "width": 1,
+      "height": 1,
+      "type": "mpot",
+      "kind": "misc"
+    },
+    {
+      "code": "skc",
+      "width": 1,
+      "height": 1,
+      "type": "gemz",
+      "kind": "misc"
+    },
+    {
+      "code": "skf",
+      "width": 1,
+      "height": 1,
+      "type": "gemz",
+      "kind": "misc"
+    },
+    {
+      "code": "sku",
+      "width": 1,
+      "height": 1,
+      "type": "gemz",
+      "kind": "misc"
+    },
+    {
+      "code": "skl",
+      "width": 1,
+      "height": 1,
+      "type": "gemz",
+      "kind": "misc"
+    },
+    {
+      "code": "skz",
+      "width": 1,
+      "height": 1,
+      "type": "gemz",
+      "kind": "misc"
+    },
+    {
+      "code": "hrb",
+      "width": 1,
+      "height": 1,
+      "type": "herb",
+      "kind": "misc"
+    },
+    {
+      "code": "cm1",
+      "width": 1,
+      "height": 1,
+      "type": "scha",
+      "kind": "misc"
+    },
+    {
+      "code": "cm2",
+      "width": 1,
+      "height": 2,
+      "type": "mcha",
+      "kind": "misc"
+    },
+    {
+      "code": "cm3",
+      "width": 1,
+      "height": 3,
+      "type": "lcha",
+      "kind": "misc"
+    },
+    {
+      "code": "rps",
+      "width": 1,
+      "height": 1,
+      "type": "hpot",
+      "kind": "misc"
+    },
+    {
+      "code": "rpl",
+      "width": 1,
+      "height": 1,
+      "type": "hpot",
+      "kind": "misc"
+    },
+    {
+      "code": "bps",
+      "width": 1,
+      "height": 1,
+      "type": "mpot",
+      "kind": "misc"
+    },
+    {
+      "code": "bpl",
+      "width": 1,
+      "height": 1,
+      "type": "mpot",
+      "kind": "misc"
+    },
+    {
+      "code": "r01",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r02",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r03",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r04",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r05",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r06",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r07",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r08",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r09",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r10",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r11",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r12",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r13",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r14",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r15",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r16",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r17",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r18",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r19",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r20",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r21",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r22",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r23",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r24",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r25",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r26",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r27",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r28",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r29",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r30",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r31",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r32",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "r33",
+      "width": 1,
+      "height": 1,
+      "type": "rune",
+      "kind": "misc"
+    },
+    {
+      "code": "jew",
+      "width": 1,
+      "height": 1,
+      "type": "jewl",
+      "kind": "misc"
+    },
+    {
+      "code": "ice",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "0sc",
+      "width": 1,
+      "height": 1,
+      "type": "scro",
+      "kind": "misc"
+    },
+    {
+      "code": "tr2",
+      "width": 2,
+      "height": 2,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "pk1",
+      "width": 1,
+      "height": 2,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "pk2",
+      "width": 1,
+      "height": 2,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "pk3",
+      "width": 1,
+      "height": 2,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "dhn",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "bey",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "mbr",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "toa",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "tes",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "ceh",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "bet",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "fed",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    },
+    {
+      "code": "std",
+      "width": 1,
+      "height": 1,
+      "type": "ques",
+      "kind": "misc"
+    }
+  ],
+  "skills": [
+    {
+      "id": 6,
+      "cls": "ama",
+      "page": 0,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 7,
+      "cls": "ama",
+      "page": 0,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 8,
+      "cls": "ama",
+      "page": 1,
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": 9,
+      "cls": "ama",
+      "page": 1,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 10,
+      "cls": "ama",
+      "page": 2,
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": 11,
+      "cls": "ama",
+      "page": 0,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 12,
+      "cls": "ama",
+      "page": 0,
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": 13,
+      "cls": "ama",
+      "page": 1,
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": 14,
+      "cls": "ama",
+      "page": 2,
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": 15,
+      "cls": "ama",
+      "page": 2,
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": 16,
+      "cls": "ama",
+      "page": 0,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 17,
+      "cls": "ama",
+      "page": 1,
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": 18,
+      "cls": "ama",
+      "page": 1,
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": 19,
+      "cls": "ama",
+      "page": 2,
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": 20,
+      "cls": "ama",
+      "page": 2,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 21,
+      "cls": "ama",
+      "page": 0,
+      "row": 3,
+      "col": 0
+    },
+    {
+      "id": 22,
+      "cls": "ama",
+      "page": 0,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 23,
+      "cls": "ama",
+      "page": 1,
+      "row": 3,
+      "col": 2
+    },
+    {
+      "id": 24,
+      "cls": "ama",
+      "page": 2,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 25,
+      "cls": "ama",
+      "page": 2,
+      "row": 3,
+      "col": 2
+    },
+    {
+      "id": 26,
+      "cls": "ama",
+      "page": 0,
+      "row": 4,
+      "col": 1
+    },
+    {
+      "id": 27,
+      "cls": "ama",
+      "page": 0,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 28,
+      "cls": "ama",
+      "page": 1,
+      "row": 4,
+      "col": 0
+    },
+    {
+      "id": 29,
+      "cls": "ama",
+      "page": 1,
+      "row": 4,
+      "col": 1
+    },
+    {
+      "id": 30,
+      "cls": "ama",
+      "page": 2,
+      "row": 4,
+      "col": 0
+    },
+    {
+      "id": 31,
+      "cls": "ama",
+      "page": 0,
+      "row": 5,
+      "col": 0
+    },
+    {
+      "id": 32,
+      "cls": "ama",
+      "page": 1,
+      "row": 5,
+      "col": 0
+    },
+    {
+      "id": 33,
+      "cls": "ama",
+      "page": 1,
+      "row": 5,
+      "col": 2
+    },
+    {
+      "id": 34,
+      "cls": "ama",
+      "page": 2,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 35,
+      "cls": "ama",
+      "page": 2,
+      "row": 5,
+      "col": 2
+    },
+    {
+      "id": 36,
+      "cls": "sor",
+      "page": 0,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 37,
+      "cls": "sor",
+      "page": 0,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 38,
+      "cls": "sor",
+      "page": 1,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 39,
+      "cls": "sor",
+      "page": 2,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 40,
+      "cls": "sor",
+      "page": 2,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 41,
+      "cls": "sor",
+      "page": 0,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 42,
+      "cls": "sor",
+      "page": 1,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 43,
+      "cls": "sor",
+      "page": 1,
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": 44,
+      "cls": "sor",
+      "page": 2,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 45,
+      "cls": "sor",
+      "page": 2,
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": 46,
+      "cls": "sor",
+      "page": 0,
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": 47,
+      "cls": "sor",
+      "page": 0,
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": 48,
+      "cls": "sor",
+      "page": 1,
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": 49,
+      "cls": "sor",
+      "page": 1,
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": 50,
+      "cls": "sor",
+      "page": 2,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 51,
+      "cls": "sor",
+      "page": 0,
+      "row": 3,
+      "col": 0
+    },
+    {
+      "id": 52,
+      "cls": "sor",
+      "page": 0,
+      "row": 3,
+      "col": 2
+    },
+    {
+      "id": 53,
+      "cls": "sor",
+      "page": 1,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 54,
+      "cls": "sor",
+      "page": 1,
+      "row": 3,
+      "col": 2
+    },
+    {
+      "id": 55,
+      "cls": "sor",
+      "page": 2,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 56,
+      "cls": "sor",
+      "page": 0,
+      "row": 4,
+      "col": 1
+    },
+    {
+      "id": 57,
+      "cls": "sor",
+      "page": 1,
+      "row": 4,
+      "col": 0
+    },
+    {
+      "id": 58,
+      "cls": "sor",
+      "page": 1,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 59,
+      "cls": "sor",
+      "page": 2,
+      "row": 4,
+      "col": 0
+    },
+    {
+      "id": 60,
+      "cls": "sor",
+      "page": 2,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 61,
+      "cls": "sor",
+      "page": 0,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 62,
+      "cls": "sor",
+      "page": 0,
+      "row": 5,
+      "col": 2
+    },
+    {
+      "id": 63,
+      "cls": "sor",
+      "page": 1,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 64,
+      "cls": "sor",
+      "page": 2,
+      "row": 5,
+      "col": 0
+    },
+    {
+      "id": 65,
+      "cls": "sor",
+      "page": 2,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 66,
+      "cls": "nec",
+      "page": 0,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 67,
+      "cls": "nec",
+      "page": 1,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 68,
+      "cls": "nec",
+      "page": 1,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 69,
+      "cls": "nec",
+      "page": 2,
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": 70,
+      "cls": "nec",
+      "page": 2,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 71,
+      "cls": "nec",
+      "page": 0,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 72,
+      "cls": "nec",
+      "page": 0,
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": 73,
+      "cls": "nec",
+      "page": 1,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 74,
+      "cls": "nec",
+      "page": 1,
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": 75,
+      "cls": "nec",
+      "page": 2,
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": 76,
+      "cls": "nec",
+      "page": 0,
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": 77,
+      "cls": "nec",
+      "page": 0,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 78,
+      "cls": "nec",
+      "page": 1,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 79,
+      "cls": "nec",
+      "page": 2,
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": 80,
+      "cls": "nec",
+      "page": 2,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 81,
+      "cls": "nec",
+      "page": 0,
+      "row": 3,
+      "col": 0
+    },
+    {
+      "id": 82,
+      "cls": "nec",
+      "page": 0,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 83,
+      "cls": "nec",
+      "page": 1,
+      "row": 3,
+      "col": 0
+    },
+    {
+      "id": 84,
+      "cls": "nec",
+      "page": 1,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 85,
+      "cls": "nec",
+      "page": 2,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 86,
+      "cls": "nec",
+      "page": 0,
+      "row": 4,
+      "col": 0
+    },
+    {
+      "id": 87,
+      "cls": "nec",
+      "page": 0,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 88,
+      "cls": "nec",
+      "page": 1,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 89,
+      "cls": "nec",
+      "page": 2,
+      "row": 4,
+      "col": 0
+    },
+    {
+      "id": 90,
+      "cls": "nec",
+      "page": 2,
+      "row": 4,
+      "col": 1
+    },
+    {
+      "id": 91,
+      "cls": "nec",
+      "page": 0,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 92,
+      "cls": "nec",
+      "page": 1,
+      "row": 5,
+      "col": 0
+    },
+    {
+      "id": 93,
+      "cls": "nec",
+      "page": 1,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 94,
+      "cls": "nec",
+      "page": 2,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 95,
+      "cls": "nec",
+      "page": 2,
+      "row": 5,
+      "col": 2
+    },
+    {
+      "id": 96,
+      "cls": "pal",
+      "page": 0,
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": 97,
+      "cls": "pal",
+      "page": 0,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 98,
+      "cls": "pal",
+      "page": 1,
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": 99,
+      "cls": "pal",
+      "page": 2,
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": 100,
+      "cls": "pal",
+      "page": 2,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 101,
+      "cls": "pal",
+      "page": 0,
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": 102,
+      "cls": "pal",
+      "page": 1,
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": 103,
+      "cls": "pal",
+      "page": 1,
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": 104,
+      "cls": "pal",
+      "page": 2,
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": 105,
+      "cls": "pal",
+      "page": 2,
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": 106,
+      "cls": "pal",
+      "page": 0,
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": 107,
+      "cls": "pal",
+      "page": 0,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 108,
+      "cls": "pal",
+      "page": 1,
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": 109,
+      "cls": "pal",
+      "page": 2,
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": 110,
+      "cls": "pal",
+      "page": 2,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 111,
+      "cls": "pal",
+      "page": 0,
+      "row": 3,
+      "col": 0
+    },
+    {
+      "id": 112,
+      "cls": "pal",
+      "page": 0,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 113,
+      "cls": "pal",
+      "page": 1,
+      "row": 3,
+      "col": 0
+    },
+    {
+      "id": 114,
+      "cls": "pal",
+      "page": 1,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 115,
+      "cls": "pal",
+      "page": 2,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 116,
+      "cls": "pal",
+      "page": 0,
+      "row": 4,
+      "col": 0
+    },
+    {
+      "id": 117,
+      "cls": "pal",
+      "page": 0,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 118,
+      "cls": "pal",
+      "page": 1,
+      "row": 4,
+      "col": 1
+    },
+    {
+      "id": 119,
+      "cls": "pal",
+      "page": 1,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 120,
+      "cls": "pal",
+      "page": 2,
+      "row": 4,
+      "col": 0
+    },
+    {
+      "id": 121,
+      "cls": "pal",
+      "page": 0,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 122,
+      "cls": "pal",
+      "page": 1,
+      "row": 5,
+      "col": 0
+    },
+    {
+      "id": 123,
+      "cls": "pal",
+      "page": 1,
+      "row": 5,
+      "col": 2
+    },
+    {
+      "id": 124,
+      "cls": "pal",
+      "page": 2,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 125,
+      "cls": "pal",
+      "page": 2,
+      "row": 5,
+      "col": 2
+    },
+    {
+      "id": 126,
+      "cls": "bar",
+      "page": 0,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 127,
+      "cls": "bar",
+      "page": 1,
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": 128,
+      "cls": "bar",
+      "page": 1,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 129,
+      "cls": "bar",
+      "page": 1,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 130,
+      "cls": "bar",
+      "page": 2,
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": 131,
+      "cls": "bar",
+      "page": 2,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 132,
+      "cls": "bar",
+      "page": 0,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 133,
+      "cls": "bar",
+      "page": 0,
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": 134,
+      "cls": "bar",
+      "page": 1,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 135,
+      "cls": "bar",
+      "page": 1,
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": 136,
+      "cls": "bar",
+      "page": 1,
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": 137,
+      "cls": "bar",
+      "page": 2,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 138,
+      "cls": "bar",
+      "page": 2,
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": 139,
+      "cls": "bar",
+      "page": 0,
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": 140,
+      "cls": "bar",
+      "page": 0,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 141,
+      "cls": "bar",
+      "page": 1,
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": 142,
+      "cls": "bar",
+      "page": 2,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 143,
+      "cls": "bar",
+      "page": 0,
+      "row": 3,
+      "col": 0
+    },
+    {
+      "id": 144,
+      "cls": "bar",
+      "page": 0,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 145,
+      "cls": "bar",
+      "page": 1,
+      "row": 3,
+      "col": 2
+    },
+    {
+      "id": 146,
+      "cls": "bar",
+      "page": 2,
+      "row": 3,
+      "col": 0
+    },
+    {
+      "id": 147,
+      "cls": "bar",
+      "page": 0,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 148,
+      "cls": "bar",
+      "page": 1,
+      "row": 4,
+      "col": 0
+    },
+    {
+      "id": 149,
+      "cls": "bar",
+      "page": 2,
+      "row": 4,
+      "col": 1
+    },
+    {
+      "id": 150,
+      "cls": "bar",
+      "page": 2,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 151,
+      "cls": "bar",
+      "page": 0,
+      "row": 5,
+      "col": 0
+    },
+    {
+      "id": 152,
+      "cls": "bar",
+      "page": 0,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 153,
+      "cls": "bar",
+      "page": 1,
+      "row": 5,
+      "col": 2
+    },
+    {
+      "id": 154,
+      "cls": "bar",
+      "page": 2,
+      "row": 5,
+      "col": 0
+    },
+    {
+      "id": 155,
+      "cls": "bar",
+      "page": 2,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 221,
+      "cls": "dru",
+      "page": 0,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 222,
+      "cls": "dru",
+      "page": 0,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 223,
+      "cls": "dru",
+      "page": 1,
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": 224,
+      "cls": "dru",
+      "page": 1,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 225,
+      "cls": "dru",
+      "page": 2,
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": 226,
+      "cls": "dru",
+      "page": 0,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 227,
+      "cls": "dru",
+      "page": 0,
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": 228,
+      "cls": "dru",
+      "page": 1,
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": 229,
+      "cls": "dru",
+      "page": 2,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 230,
+      "cls": "dru",
+      "page": 2,
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": 231,
+      "cls": "dru",
+      "page": 0,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 232,
+      "cls": "dru",
+      "page": 1,
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": 233,
+      "cls": "dru",
+      "page": 1,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 234,
+      "cls": "dru",
+      "page": 2,
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": 235,
+      "cls": "dru",
+      "page": 2,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 236,
+      "cls": "dru",
+      "page": 0,
+      "row": 3,
+      "col": 0
+    },
+    {
+      "id": 237,
+      "cls": "dru",
+      "page": 0,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 238,
+      "cls": "dru",
+      "page": 1,
+      "row": 3,
+      "col": 0
+    },
+    {
+      "id": 239,
+      "cls": "dru",
+      "page": 1,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 240,
+      "cls": "dru",
+      "page": 2,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 241,
+      "cls": "dru",
+      "page": 0,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 242,
+      "cls": "dru",
+      "page": 1,
+      "row": 4,
+      "col": 1
+    },
+    {
+      "id": 243,
+      "cls": "dru",
+      "page": 1,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 244,
+      "cls": "dru",
+      "page": 2,
+      "row": 4,
+      "col": 0
+    },
+    {
+      "id": 245,
+      "cls": "dru",
+      "page": 2,
+      "row": 4,
+      "col": 1
+    },
+    {
+      "id": 246,
+      "cls": "dru",
+      "page": 0,
+      "row": 5,
+      "col": 0
+    },
+    {
+      "id": 247,
+      "cls": "dru",
+      "page": 0,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 248,
+      "cls": "dru",
+      "page": 1,
+      "row": 5,
+      "col": 0
+    },
+    {
+      "id": 249,
+      "cls": "dru",
+      "page": 2,
+      "row": 5,
+      "col": 0
+    },
+    {
+      "id": 250,
+      "cls": "dru",
+      "page": 2,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 251,
+      "cls": "ass",
+      "page": 0,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 252,
+      "cls": "ass",
+      "page": 1,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 253,
+      "cls": "ass",
+      "page": 1,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 254,
+      "cls": "ass",
+      "page": 2,
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": 255,
+      "cls": "ass",
+      "page": 2,
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": 256,
+      "cls": "ass",
+      "page": 0,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 257,
+      "cls": "ass",
+      "page": 0,
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": 258,
+      "cls": "ass",
+      "page": 1,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 259,
+      "cls": "ass",
+      "page": 2,
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": 260,
+      "cls": "ass",
+      "page": 2,
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": 261,
+      "cls": "ass",
+      "page": 0,
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": 262,
+      "cls": "ass",
+      "page": 0,
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": 263,
+      "cls": "ass",
+      "page": 1,
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": 264,
+      "cls": "ass",
+      "page": 1,
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": 265,
+      "cls": "ass",
+      "page": 2,
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": 266,
+      "cls": "ass",
+      "page": 0,
+      "row": 3,
+      "col": 2
+    },
+    {
+      "id": 267,
+      "cls": "ass",
+      "page": 1,
+      "row": 3,
+      "col": 0
+    },
+    {
+      "id": 268,
+      "cls": "ass",
+      "page": 1,
+      "row": 3,
+      "col": 1
+    },
+    {
+      "id": 269,
+      "cls": "ass",
+      "page": 2,
+      "row": 3,
+      "col": 0
+    },
+    {
+      "id": 270,
+      "cls": "ass",
+      "page": 2,
+      "row": 3,
+      "col": 2
+    },
+    {
+      "id": 271,
+      "cls": "ass",
+      "page": 0,
+      "row": 4,
+      "col": 0
+    },
+    {
+      "id": 272,
+      "cls": "ass",
+      "page": 0,
+      "row": 4,
+      "col": 1
+    },
+    {
+      "id": 273,
+      "cls": "ass",
+      "page": 1,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 274,
+      "cls": "ass",
+      "page": 2,
+      "row": 4,
+      "col": 0
+    },
+    {
+      "id": 275,
+      "cls": "ass",
+      "page": 2,
+      "row": 4,
+      "col": 2
+    },
+    {
+      "id": 276,
+      "cls": "ass",
+      "page": 0,
+      "row": 5,
+      "col": 0
+    },
+    {
+      "id": 277,
+      "cls": "ass",
+      "page": 0,
+      "row": 5,
+      "col": 2
+    },
+    {
+      "id": 278,
+      "cls": "ass",
+      "page": 1,
+      "row": 5,
+      "col": 0
+    },
+    {
+      "id": 279,
+      "cls": "ass",
+      "page": 1,
+      "row": 5,
+      "col": 1
+    },
+    {
+      "id": 280,
+      "cls": "ass",
+      "page": 2,
+      "row": 5,
+      "col": 1
+    }
+  ],
+  "character_points": [
+    [
+      125,
+      76,
+      20,
+      20
+    ],
+    [
+      125,
+      138,
+      20,
+      20
+    ],
+    [
+      125,
+      224,
+      20,
+      20
+    ],
+    [
+      125,
+      286,
+      20,
+      20
+    ]
+  ],
+  "skill_grid": {
+    "origin": [
+      335,
+      14
+    ],
+    "cell": [
+      69,
+      68
+    ],
+    "size": [
+      48,
+      48
+    ]
+  },
+  "skill_tabs": [
+    [
+      551,
+      108,
+      88,
+      108
+    ],
+    [
+      551,
+      216,
+      88,
+      108
+    ],
+    [
+      551,
+      324,
+      88,
+      108
+    ]
+  ],
+  "waypoint": {
+    "origin": [
+      50,
+      61
+    ],
+    "row_height": 36,
+    "rows": 9,
+    "width": 222,
+    "tabs": [
+      [
+        5,
+        3,
+        62,
+        24
+      ],
+      [
+        67,
+        3,
+        62,
+        24
+      ],
+      [
+        129,
+        3,
+        62,
+        24
+      ],
+      [
+        191,
+        3,
+        62,
+        24
+      ],
+      [
+        253,
+        3,
+        62,
+        24
+      ]
+    ]
+  },
+  "quest": {
+    "origin": [
+      26,
+      35
+    ],
+    "cell": [
+      97,
+      97
+    ],
+    "size": [
+      80,
+      80
+    ],
+    "cols": 3,
+    "rows": 2,
+    "tabs": [
+      [
+        5,
+        2,
+        62,
+        26
+      ],
+      [
+        67,
+        2,
+        62,
+        26
+      ],
+      [
+        129,
+        2,
+        62,
+        26
+      ],
+      [
+        191,
+        2,
+        62,
+        26
+      ],
+      [
+        253,
+        2,
+        62,
+        26
+      ]
+    ]
+  },
+  "buttons": {
+    "gold": [
+      405,
+      390,
+      22,
+      22
+    ],
+    "stash_withdraw": [
+      70,
+      24,
+      26,
+      22
+    ],
+    "cube_transmute": [
+      144,
+      260,
+      32,
+      32
+    ],
+    "shop_buy": [
+      116,
+      385,
+      32,
+      32
+    ],
+    "shop_sell": [
+      168,
+      385,
+      32,
+      32
+    ],
+    "shop_repair": [
+      220,
+      385,
+      32,
+      32
+    ],
+    "shop_repair_all": [
+      272,
+      385,
+      32,
+      32
+    ]
+  },
+  "shop_tabs": [
+    [
+      0,
+      0,
+      79,
+      24
+    ],
+    [
+      80,
+      0,
+      79,
+      24
+    ],
+    [
+      160,
+      0,
+      79,
+      24
+    ],
+    [
+      240,
+      0,
+      79,
+      24
+    ]
+  ],
+  "mercenary": [
+    {
+      "id": "merc_head",
+      "rect": [
+        135,
+        5,
+        54,
+        51
+      ],
+      "body": 1,
+      "group": "merc"
+    },
+    {
+      "id": "merc_torso",
+      "rect": [
+        133,
+        77,
+        56,
+        82
+      ],
+      "body": 3,
+      "group": "merc"
+    },
+    {
+      "id": "merc_right_arm",
+      "rect": [
+        20,
+        45,
+        55,
+        112
+      ],
+      "body": 4,
+      "group": "merc"
+    },
+    {
+      "id": "merc_left_arm",
+      "rect": [
+        250,
+        45,
+        55,
+        112
+      ],
+      "body": 5,
+      "group": "merc"
+    }
+  ],
+  "pause": [
+    {
+      "id": "options",
+      "rect": [
+        240,
+        128,
+        160,
+        36
+      ],
+      "action": "options"
+    },
+    {
+      "id": "save_exit",
+      "rect": [
+        180,
+        178,
+        280,
+        36
+      ],
+      "action": "click"
+    },
+    {
+      "id": "return",
+      "rect": [
+        230,
+        228,
+        180,
+        36
+      ],
+      "action": "click"
+    }
+  ],
+  "menu_fallback": "native keyboard focus, right-stick cursor; context-sensitive native menus are not inferred from stale pixels",
+  "hire_list": {
+    "origin": [
+      80,
+      65
+    ],
+    "row_height": 34,
+    "rows": 7,
+    "width": 460,
+    "cancel": [
+      80,
+      341,
+      480,
+      32
+    ]
+  },
+  "hold_seconds": 0.6,
+  "repeat_delay": 0.32,
+  "repeat_interval": 0.11,
+  "presentation": "original"
+}

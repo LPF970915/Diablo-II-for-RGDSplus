@@ -1,0 +1,18 @@
+#!/bin/sh
+# Private helper for this game's loop mounts; firmware binaries stay intact.
+target=
+for arg in "$@"; do target=$arg; done
+if [ "$(id -u)" = 0 ]; then
+    /usr/bin/mount "$@" || exit $?
+else
+    /usr/bin/sudo -n /usr/bin/mount "$@" || exit $?
+fi
+# Wine requires the prefix filesystem to belong to the launching user.
+if [ "$target" = "${D2_WINE_PREFIX:-/tmp/diablo2-prefix}" ]; then
+    owner="$(id -u):$(id -g)"
+    if [ "$(id -u)" = 0 ]; then
+        /usr/bin/chown "$owner" "$target"
+    else
+        /usr/bin/sudo -n /usr/bin/chown "$owner" "$target"
+    fi
+fi

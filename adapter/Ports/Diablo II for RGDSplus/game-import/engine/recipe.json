@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "url": "https://notaz.gp2x.de/misc/starec/libd2game_sa_arm.exe.so.xz",
+  "archiveSize": 7031156,
+  "archiveSha256": "b9a9b880f674571a8d9ca09d8604b173126e2651778eb23714064ba71332f103",
+  "inputSize": 24827720,
+  "inputSha256": "46c0a01d6d4d8b8014d3fd33efae2f962a72ee1e479769ae520b26e300077307",
+  "outputSize": 25331557,
+  "outputSha256": "7f18eae0a61f95839d5f015d3f9213292e275c1198d555f2131ed9a89fadb59f",
+  "deltaFile": "classic.bsdiff",
+  "deltaSha256": "49d170eaf3a909a4ecb5e1b14373002cf47cd4b76d00fe1232b2e84a2762ff47",
+  "checkedBaselineSha256": "314f5650b5569de776efed379a5d9caa56948b25dfab0d7a4b340b75f5d24230",
+  "note": "Pinned author standalone core, four inherited community byte changes and classic hook dependency. Current PND r4 has a different address layout and is rejected.",
+  "sourcePage": "https://repo.openpandora.org/?app=package.diablo2&page=detail",
+  "manualDownloadRequired": true
+}
