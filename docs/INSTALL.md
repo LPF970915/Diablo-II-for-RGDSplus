@@ -21,7 +21,7 @@ The supplement is withheld because complete redistribution permission has not be
 Download the adapter ZIP and checksum from Releases, verify it, then extract into a new empty PC folder:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 '.\Diablo II for RGDSplus adapter.zip'
+Get-FileHash -Algorithm SHA256 '.\Diablo.II.for.RGDSplus.adapter.zip'
 ```
 
 应为 / Expected: `c72543438ae4a89a2d836c604eb6f373f917aec7e4ce778fbe2a1a133dc18c83`。
