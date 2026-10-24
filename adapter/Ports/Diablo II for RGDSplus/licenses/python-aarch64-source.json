@@ -1,0 +1,8 @@
+{
+  "project": "https://github.com/astral-sh/python-build-standalone",
+  "release": "20261021",
+  "version": "3.11.17",
+  "asset": "cpython-3.11.17+20261021-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz",
+  "sha256": "a2364356a17f63de74120a55d5af1f8ae56b8e700c9d43f478ba90e2f543f3a6",
+  "licenses": "Original runtime license files preserved inside the unmodified upstream archive"
+}

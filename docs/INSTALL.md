@@ -1,4 +1,4 @@
-# 安装说明 / Installation guide — RC10
+# 安装说明 / Installation guide — RC11
 
 正式包名 / Official package name: **Diablo II for RGDSplus.zip**。GitHub 自动规范的下载名 / GitHub-normalized download filename: `Diablo.II.for.RGDSplus.zip`。包内名称保持空格 / Internal names retain spaces.
 
@@ -26,7 +26,7 @@ Download the adapter ZIP and checksum from Releases, verify it, then extract int
 Get-FileHash -Algorithm SHA256 '.\Diablo.II.for.RGDSplus.zip'
 ```
 
-应为 / Expected: `c72543438ae4a89a2d836c604eb6f373f917aec7e4ce778fbe2a1a133dc18c83`。
+应为 / Expected: `409df4aba861e96a0e2a5c5bc9e288d3d66ca825d39c1ea532bb5c7e8e922fc6`。
 
 将自己合法取得的匹配中文分片放在同一个新目录的 `Ports\Diablo II for RGDSplus\game-import\chinese-patch\`。不要直接将分片改名为 `Patch_D2.mpq`，也不要放入 `gamedata`。公开 Releases 不提供中文包；ZIP 内提及“两个 ZIP”的旧说明是私有验收流程背景，以本说明的公开依赖限制为准。
 
@@ -93,3 +93,9 @@ The adapter handles lower-screen touch and controller input. R3 toggles cursor/d
 If touch behaves unexpectedly, compare with charging/USB disconnected; that does not establish a universal fix. On read-only/FAT errors, stop, protect the latest saves and check the filesystem offline. Report version, firmware, power/touch conditions and minimal reproduction steps without game data or full diagnostics.
 
 **安装完成的目录只供个人合法使用，禁止作为“免导入版”“内置游戏版”再次分发。The prepared installation is for lawful personal use; do not redistribute it as a ready-to-play or game-bundled package.**
+
+## RC10 就地升级至 RC11 / Upgrade RC10 to RC11
+
+退出游戏并备份当前安装、saves 和 prefix。将 RC11 ZIP 的 Ports 合并到卡二根目录，只覆盖适配包自带文件；不要运行全新导入工具，也不要删除已有资源、存档或 prefix。新包不含这些私人文件。下次人工启动将自动校验并使用独立 ARM64 Python。
+
+Exit the game and back up the current installation, saves and prefix. Merge RC11 Ports into card two, replacing only supplied adapter files. Do not rerun the fresh importer or remove existing game/player files. Those private files are absent from the ZIP. The next manual launch verifies and uses private ARM64 Python.

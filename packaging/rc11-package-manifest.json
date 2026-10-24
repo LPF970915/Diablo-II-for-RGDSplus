@@ -1,0 +1,935 @@
+{
+  "build": "20261024-player-rc11",
+  "archive": "Diablo II for RGDSplus.zip",
+  "sha256": "409df4aba861e96a0e2a5c5bc9e288d3d66ca825d39c1ea532bb5c7e8e922fc6",
+  "files": {
+    "Ports/Diablo II for RGDSplus.sh": {
+      "size": 73,
+      "sha256": "1e95c8985c42b96e65283ccbeb42786fa113049ba55a447b50a9231a2d8b0d8b"
+    },
+    "Ports/Diablo II for RGDSplus/BASELINE.json": {
+      "size": 1590,
+      "sha256": "05caeb7db0d3698b19c2cfc41872e020e4c4792920e099ea1edd782b4fe095c9"
+    },
+    "Ports/Diablo II for RGDSplus/Core Download.url": {
+      "size": 86,
+      "sha256": "3d72eab59e7296a39388c92c786cdacd9526a70bcb081156a8a266645e813565"
+    },
+    "Ports/Diablo II for RGDSplus/Import Game Assets.cmd": {
+      "size": 571,
+      "sha256": "1676b281c6578a87794b5b93219a557907b64e38b1d40e9da7c51f8b50450941"
+    },
+    "Ports/Diablo II for RGDSplus/README.zh-CN.txt": {
+      "size": 4343,
+      "sha256": "7f5accd6ae1c3c6cd23429ce4358b4e585b68b8505d4b4abb2d420bb902f19df"
+    },
+    "Ports/Diablo II for RGDSplus/RELEASE.json": {
+      "size": 44276,
+      "sha256": "d7e152e6ad61220fc0dc466369b25b1dd1e9f58b6e3d691429255d45d679b577"
+    },
+    "Ports/Diablo II for RGDSplus/SHA256SUMS.txt": {
+      "size": 29693,
+      "sha256": "f730ad1ff02c3f2b10033420870ef9dddb90a2d08eb9f14ef0e75e53e2069114"
+    },
+    "Ports/Diablo II for RGDSplus/THIRD_PARTY_NOTICES.txt": {
+      "size": 3188,
+      "sha256": "e7a251a3ce8483f53a2af140753f1c31b1ec328dffd5a7b2c0dc5bb12624f26e"
+    },
+    "Ports/Diablo II for RGDSplus/adapter-source/retail_mpq.c": {
+      "size": 1622,
+      "sha256": "3eea21b358cf738e39f1321596994a00dfc1c22f53a2c92271d12bde91200e57"
+    },
+    "Ports/Diablo II for RGDSplus/adapter-source/retail_probe.c": {
+      "size": 2504,
+      "sha256": "c6f24d2d4280612af8b3606840df19a0874bd1e1bab248ca9c2936cefe6013ff"
+    },
+    "Ports/Diablo II for RGDSplus/alsa.conf": {
+      "size": 159,
+      "sha256": "cc8f718da64714054dcfbee6fff73ab3cd3b73b39e6ae6609e31852cf11f3fa8"
+    },
+    "Ports/Diablo II for RGDSplus/audio-session.pa": {
+      "size": 428,
+      "sha256": "270b1b64fce0593db2e20712b8bece9ae1dede2ee7bc4eabb14db87046f9acc8"
+    },
+    "Ports/Diablo II for RGDSplus/audio_preflight.py": {
+      "size": 4200,
+      "sha256": "1d516e2c43f3d8f9b3c00015c00d01fbf097642d92b518659da22d060d8dd048"
+    },
+    "Ports/Diablo II for RGDSplus/bin/mount": {
+      "size": 575,
+      "sha256": "26f39348402e739cd0d89fe11d5429f4da97ec8e693f1756b0793d1a5b1e4bcf"
+    },
+    "Ports/Diablo II for RGDSplus/clear-exec-stack.py": {
+      "size": 1142,
+      "sha256": "5bee348501c490df3f7444157079554a9a9698194ce666d0affd9f62c9e3bb44"
+    },
+    "Ports/Diablo II for RGDSplus/combat.py": {
+      "size": 1970,
+      "sha256": "1b72c8d2cb66d14593d6c2dc33798b8bed931b59a0782a159a0b8c583a74387f"
+    },
+    "Ports/Diablo II for RGDSplus/controller-font.bin": {
+      "size": 92160,
+      "sha256": "ef921a4d537cc7ae399b466bcff8ab92aea5943ee4d48bdfc61db99f26c26c1a"
+    },
+    "Ports/Diablo II for RGDSplus/controller-layout.json": {
+      "size": 109836,
+      "sha256": "ee80624ea44069f01eabe59ed06c38d7bb15e5f267ce2cbdb93d2bd828efc7cb"
+    },
+    "Ports/Diablo II for RGDSplus/create-prefix.py": {
+      "size": 938,
+      "sha256": "be16459b094d513314a3aa73357c2fc39e874eaa7d600cc9527b41dfea15e991"
+    },
+    "Ports/Diablo II for RGDSplus/diablo2-direct.gptk": {
+      "size": 482,
+      "sha256": "cd9e285b025ba621fe8e72b3fc48d457849c770b231847ff4fe3491255c250db"
+    },
+    "Ports/Diablo II for RGDSplus/display.py": {
+      "size": 26048,
+      "sha256": "ec3a52a7078c594d5272f63525696692e8c62892de3e829266e93bf14b104344"
+    },
+    "Ports/Diablo II for RGDSplus/frontend_panels.py": {
+      "size": 10492,
+      "sha256": "11b158f30339e261a6557e7e5f0c3c03cdd80dc4a0ca51ffa1cc6ee08ee1b5d8"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/Import Game Assets.ps1": {
+      "size": 13066,
+      "sha256": "fd6d83d414f97fed01d0757381df00e51f6e5e0b5b1e7adbc8ce2fc397248f6a"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/engine/classic.bsdiff": {
+      "size": 85561,
+      "sha256": "49d170eaf3a909a4ecb5e1b14373002cf47cd4b76d00fe1232b2e84a2762ff47"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/engine/recipe.json": {
+      "size": 928,
+      "sha256": "59cba68c5ceebb9c96f7939f5c39d4de13ee3f145868e714066411c3bad8b3b9"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/frontend/art/creation-upper-v2.png": {
+      "size": 1494547,
+      "sha256": "22baf5a36e976304eb748deb8e5bb91c41afd30adbf50bc8b65987872b271175"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/frontend/art/main-upper-v1.png": {
+      "size": 1861760,
+      "sha256": "bc8b37b5586bcb552d2a334fe7ef05d0b9ff04a00ee3c9edecc4ef82e219cd76"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/frontend/art/title-upper-v2.png": {
+      "size": 1855881,
+      "sha256": "5ad42b7d57d604dcf26e58f88b996a3e75252866f5a39fee8fc43ea95394d7fa"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/frontend/credit.bgra": {
+      "size": 33408,
+      "sha256": "528ca084c2065ecc6b5cbaaab589ae8335d7fe581129d38bc84e53404c3fdf85"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/frontend/recipe.json": {
+      "size": 3106,
+      "sha256": "bf945c0b1f59734faf653bac334cc5485cb50a79a26827faaa7145a9614723e6"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/frontend_decode.py": {
+      "size": 2454,
+      "sha256": "518178074f59e3323e4299e5e57d9414c742650f21123adc6a8c448db9a51202"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/install_assets.py": {
+      "size": 7839,
+      "sha256": "3cffed9539bdcd88afc7db75e50b543c4fdf16f959c05a15498c52e3483add1e"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/mpq_split.py": {
+      "size": 25468,
+      "sha256": "822c8f2c830bc4507440584adc1b6e78adf5e51a5ee18c6a3d66c55094de7d85"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/prepare_external_core.py": {
+      "size": 5664,
+      "sha256": "e2c1a3d00882b1eef41ed47addab7a59997c58eacb9d9ffded2e00a8e67f616b"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/prepare_frontend.py": {
+      "size": 10192,
+      "sha256": "c175393b7d818d47b2f7dc7c719656626b60f38d2f41972d43c435b8ffd9b7a0"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/prepare_inventory.py": {
+      "size": 3766,
+      "sha256": "5fc5f9867a38be01c30a25c04e0e5170dac458a823058bab94ac42d62cdfc49d"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/profiles/retail-enUS-1.14b.json": {
+      "size": 2001,
+      "sha256": "c008b5919a1c7e0171252139561700b866eb905b30cc1ce3c7129b37432e214e"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/LICENSE.txt": {
+      "size": 36874,
+      "sha256": "e502c6b880ff58d614901495a9009c136539cd0b1e2a2abb8fc00b934c203419"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/AvifImagePlugin.py": {
+      "size": 9323,
+      "sha256": "602c37986b198aef0b0e9bbc79466e7f8a3eee7b8f4ce5ba08503a1483e45933"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/BdfFontFile.py": {
+      "size": 3407,
+      "sha256": "6c0a5b325daf61171e40a22448315ad34d98c2bf65695ae9d8d18af71ce54bff"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/BlpImagePlugin.py": {
+      "size": 17066,
+      "sha256": "1291e85528585f2a6ac671288924a19e00fb08f842798f1e7f0487d46e659d79"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/BmpImagePlugin.py": {
+      "size": 20442,
+      "sha256": "34cce2e9f88565253122e610448a0e594a2d74f5e95d94bccd60726d2dca77ec"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/BufrStubImagePlugin.py": {
+      "size": 1841,
+      "sha256": "b94f671ba4079ee29ea9929df270119563d4ea86b6d796350d796676a29b9cc2"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ContainerIO.py": {
+      "size": 4777,
+      "sha256": "23ac8efd814412a30a035724804133176aff224e69fc68ccf91ad63896234a56"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/CurImagePlugin.py": {
+      "size": 1866,
+      "sha256": "3bf6c5b56f3662100cf3f17cb69af73b952bcca3cfca257d4b6ce357d430a9a2"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/DcxImagePlugin.py": {
+      "size": 2264,
+      "sha256": "2f6d5cde0557e883e6938cee7ff96db779807917dcb8209c5e1902569b9e7765"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/DdsImagePlugin.py": {
+      "size": 19556,
+      "sha256": "d89c73bd3b276a2684e71584f9b523363bae37a1e3842695ba8cd8ef8325f585"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/EpsImagePlugin.py": {
+      "size": 17107,
+      "sha256": "e5c1f3cf18f5bd47df70b62bf8c10ee53935cd378b63833fb4c37c6f00d4c69a"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ExifTags.py": {
+      "size": 10313,
+      "sha256": "c46e8fb9920949793b6df9017d7875d5880a9565641751d643f23b5f2c0504cb"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/FitsImagePlugin.py": {
+      "size": 4796,
+      "sha256": "bf8a5e2c0eb021dc928c70730cccd5239516c7ccebd23236037a9865268c8b1b"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/FliImagePlugin.py": {
+      "size": 5113,
+      "sha256": "2f5bdfe108ec68c57479141399fcb5c27a89f65f61195e65bd320b5bbce7cc3f"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/FontFile.py": {
+      "size": 3711,
+      "sha256": "88b495df6c907ad2e71384a01bc1e71dbd8576a92a1418d8f67fbe13abb9504d"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/FpxImagePlugin.py": {
+      "size": 7622,
+      "sha256": "e0d01d888b99fd517a397ada602b75dafcd0a84844252bbbb3769a325c431694"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/FtexImagePlugin.py": {
+      "size": 3685,
+      "sha256": "fb32afbe131373351ede8d1fe07a430bdfc32ba94a1d3e4b0017f4af9fb797ee"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/GbrImagePlugin.py": {
+      "size": 3156,
+      "sha256": "21bff2df967334e98ca86d92b8eca3c518773b1b78d90a5c11c80b6ba0619ad0"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/GdImageFile.py": {
+      "size": 2890,
+      "sha256": "2e331a94aefb570f54e69047e0a4256e2d8f688afbdeef43aadc4de7c3b5ac1b"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/GifImagePlugin.py": {
+      "size": 43521,
+      "sha256": "d510a1d1b588c61fd5705f33b539737c11ed86ecc4a0bca5ad613d411a670d25"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/GimpGradientFile.py": {
+      "size": 4135,
+      "sha256": "91b5d9a2326ca2428102077f28e5fd2c093669a6c8216269770675e9e2afc537"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/GimpPaletteFile.py": {
+      "size": 1935,
+      "sha256": "126047710f44c42e1fe3bb5a0fb4bb1ba55a324afd1e3ca7955f0d7535d5e624"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/GribStubImagePlugin.py": {
+      "size": 1870,
+      "sha256": "372a7987997e7f080183a28161707ac2ac59580233e90fb67b6b137a50db7eed"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/Hdf5StubImagePlugin.py": {
+      "size": 1852,
+      "sha256": "a029d7a5f2cf091cdce6fadae9871b1fdbc72d7cbf89059b8dad5dd0f97e4a03"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/IcnsImagePlugin.py": {
+      "size": 12842,
+      "sha256": "596e864f48dc61c1bf33bb7e69bdb149bf523090af8eca79d6522f7e0492bc61"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/IcoImagePlugin.py": {
+      "size": 13499,
+      "sha256": "0d9a018f6ccabfbe9293de8f2aaf1e97d69900cd89df050b56a3dea27a3fd33d"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImImagePlugin.py": {
+      "size": 11992,
+      "sha256": "5fd881490e31eeb6aec5b3889fbda3eefe9301481995da580f970073a67530d0"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/Image.py": {
+      "size": 153145,
+      "sha256": "472fb0b48fa29aaae8b2aa1f648007979f8e4490b9798d1b8c87709565023fec"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageChops.py": {
+      "size": 8257,
+      "sha256": "859f043d43e5408cee82c11e755f2dae4297d230420c66fa0acce66ba65e3194"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageCms.py": {
+      "size": 41752,
+      "sha256": "e6b0cdf8588b1de6ca9563f690dea36ef0c417d8dc6f7b289a405a0d7f1d15bb"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageColor.py": {
+      "size": 9761,
+      "sha256": "295faeec79d95abacbdf3b8100e2ea7ab23eeef15c5d3c5d2dea1a6158ec9f02"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageDraw.py": {
+      "size": 37323,
+      "sha256": "f8227b1cca67bda8f65b29d9f0e694a0de630b6433fd18867a857862020449e1"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageDraw2.py": {
+      "size": 7470,
+      "sha256": "fdee88da73f17a26708ce8c1109cd4bf1a3202497399cfb117a47ccfc89e3800"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageEnhance.py": {
+      "size": 3740,
+      "sha256": "ba00d4d2c963691ff369389bb6e9a54ef7fea851f5c755ba97640ca5cdfce975"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageFile.py": {
+      "size": 30910,
+      "sha256": "13c0d72a8bdc0bd8779610133a4b5e613b2fcf8ff6bb0d1e5b3e0f96056c1421"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageFilter.py": {
+      "size": 19336,
+      "sha256": "9f7693d4c91b2aba863dea12baac665a5895aa19213a02d9de2c632e7f2fa8af"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageFont.py": {
+      "size": 64573,
+      "sha256": "1a73a8e72363d030d1748a725c423ed251e4b46be9800cc5ed6f6c1302998a22"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageGrab.py": {
+      "size": 7974,
+      "sha256": "54a9a8ac63d57d660634e21c6121332ec022385bc084d37611050b0b8968a266"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageMath.py": {
+      "size": 10683,
+      "sha256": "c6118186f7addafedb8322d197f69dcd55a7999ef355c6d3f1dd6ad5ca491c52"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageMode.py": {
+      "size": 2480,
+      "sha256": "50b900fa3b02806c31563af62cf48fe367439a3ea759a424f4be142a3eca7d28"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageMorph.py": {
+      "size": 10673,
+      "sha256": "56bd50401e6f198a4655f7d11894287781fbfc095098ede5f81961a5a61e0f22"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageOps.py": {
+      "size": 26313,
+      "sha256": "d107343d3839afcb7c25281a2a4cddf9c8d8306b4c5143120645e699a266f895"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImagePalette.py": {
+      "size": 9379,
+      "sha256": "b7054aa89162e92132b3fafb6d5ba169aa0f4dd8b72a68dcda51c041c08064db"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImagePath.py": {
+      "size": 391,
+      "sha256": "6679c9baf40db5b2918429abeb54c4984875bd5579ffdd163043cbf0ea72e65f"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageQt.py": {
+      "size": 6903,
+      "sha256": "4a9c4778f81687981d8d5206342e061b9bfd577b26426fe73e224372b8671d77"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageSequence.py": {
+      "size": 2341,
+      "sha256": "82e64751da56af39f3664718d0e6290f3b85d2e15794212edbad283feedefdf2"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageShow.py": {
+      "size": 10468,
+      "sha256": "4ea3ba9f38f910cc29e5d1316a0de3841257747a2371c9c5c79f4b3a73106a8d"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageStat.py": {
+      "size": 5662,
+      "sha256": "5b4b946bc60d0babe1a3095ead2cd923013b46ef8aa76ad6baa18d2c114b672a"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageText.py": {
+      "size": 12440,
+      "sha256": "62180d4d1ba650596492494766a2e5e7c4f24426360641513dec105e62f7c834"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageTk.py": {
+      "size": 8398,
+      "sha256": "4f1d337fd913681b801af66ea342401eb35b9379fa7b0af86677569d6c592b44"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageTransform.py": {
+      "size": 4052,
+      "sha256": "66eea8c925c436dabbd76fa792a14ba9a7d83ef891020b209337cb586d0add5f"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImageWin.py": {
+      "size": 8332,
+      "sha256": "6fe7ceea49f889c1e9cbece4f9783e9cedfcdb33d797e30a8d972cdef0179754"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/ImtImagePlugin.py": {
+      "size": 2768,
+      "sha256": "afe643cf75e38ba10117c7949caea2b8211912d965a74c4b452210d3f875e141"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/IptcImagePlugin.py": {
+      "size": 6812,
+      "sha256": "020bf4599377b5058fe57f5ffed9281452a0bfb053767910fc02b7dbc5717463"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/Jpeg2KImagePlugin.py": {
+      "size": 14450,
+      "sha256": "2e38bf178d8b93980888a4a79036f2235d66a77f1a560f2e2261485ae68c4a09"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/JpegImagePlugin.py": {
+      "size": 32438,
+      "sha256": "06fd7382455908153398460c25a199b13eb4226aebeb6799f33acaad6eb32dfd"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/JpegPresets.py": {
+      "size": 12621,
+      "sha256": "51422c2b3bf2cdd3f3b2774e0ddf747aefe5b8ca9ab86d4f261d7450eb90be68"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/McIdasImagePlugin.py": {
+      "size": 1955,
+      "sha256": "3fd77592be12b5ed10564c5faa2c77d6c7c60fcb169fe7959982b4c20e83bc8c"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/MicImagePlugin.py": {
+      "size": 2702,
+      "sha256": "b82c463389652053e37eed8a8e2fb34a73da727aa2194646aacfc3b5bdc992d2"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/MpegImagePlugin.py": {
+      "size": 2094,
+      "sha256": "91e9bdce87ec06d22aeb194c25cb0590e5d370908f1080a4f657214df47da432"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/MpoImagePlugin.py": {
+      "size": 6996,
+      "sha256": "cde7396b13654702167d7d7e657cc38b5bba01c4895066c13ec3e2b39e135da5"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/MspImagePlugin.py": {
+      "size": 6092,
+      "sha256": "5bcaee33ad0e6546e23ee50143b041905ce49757e268f12fb2f44cc8dae0d7c0"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/PSDraw.py": {
+      "size": 7155,
+      "sha256": "b80afe320e63f7f1b744bc16c78fc9d70bad260fc355e0c0138a9677732f8bd5"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/PaletteFile.py": {
+      "size": 1270,
+      "sha256": "41d11af7d8cb0be3cf844a86cbaff87c3b9af13cca4925339007987029455fb3"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/PalmImagePlugin.py": {
+      "size": 8965,
+      "sha256": "7cd221587d3a577e6e2e0c081d430c73fdb1ba67a520426c982c21c36c210712"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/PcdImagePlugin.py": {
+      "size": 1842,
+      "sha256": "819b027170c8a845532b6cfe1962a9b53db9a455350143a0a6bdc9d3a7233c28"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/PcfFontFile.py": {
+      "size": 7481,
+      "sha256": "2da12e68a90669a8738c2912ecfec96dda0ee17401f71ecd8dcdf176f01ba248"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/PcxImagePlugin.py": {
+      "size": 6473,
+      "sha256": "3a2362597db89396ad5d924d6d2d172f1a7e122925240c32b992ae93d8f1a8a1"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/PdfImagePlugin.py": {
+      "size": 9632,
+      "sha256": "80932bd2c4845b3ca7ecb9cae4fe56408f7de42bbf97e5b74fc157e2356061ff"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/PdfParser.py": {
+      "size": 39071,
+      "sha256": "d23c9aba2b1add56c05f18a7b66c636d2770ee6d71b9a0106e2b7ef72b6efc13"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/PixarImagePlugin.py": {
+      "size": 1830,
+      "sha256": "f919ee2521a1185f0cb14b221d9ab757307157e04d9cadf99018c97e1633c17b"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/PngImagePlugin.py": {
+      "size": 53285,
+      "sha256": "243250ec47deaa482f83c61eedc8aaecf4316b282e1c303195d90200352bf30b"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/PpmImagePlugin.py": {
+      "size": 12766,
+      "sha256": "5a1b4294614c00ef1565953d9850597cc8fb0db932b59f173fb9d06d5b593795"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/PsdImagePlugin.py": {
+      "size": 9054,
+      "sha256": "7c3295ccca255235650204bd799a41660e770fa9ee41058a0a66251164e1b257"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/QoiImagePlugin.py": {
+      "size": 8842,
+      "sha256": "5ca593eafe5fee5ff75a64d6c5b9a6356b0c9339798fe521e699c9c15db26c58"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/SgiImagePlugin.py": {
+      "size": 6620,
+      "sha256": "c35c55e3e10b6011ca2ff01a19ff68252609cc1c13a5d27eacd3ea880aca806b"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/SpiderImagePlugin.py": {
+      "size": 10638,
+      "sha256": "277571b4117e4aa79889ebbcec858a3b7e095d186745c2e8753993e49fd0b1c9"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/SunImagePlugin.py": {
+      "size": 4734,
+      "sha256": "60a604bee1b84149227acdf838ab5758a4d8499f14deacdc13fbdd4eb3ae46cc"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/TarIO.py": {
+      "size": 1503,
+      "sha256": "2bab4b9050dc69aaf7bdbe84c986fb1b8a15101e35c7f2ccb8625e513f70e434"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/TgaImagePlugin.py": {
+      "size": 7244,
+      "sha256": "38cbd99ffc4a8c1d5d675ff83243aabb32411e949422901fe6650425988b0532"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/TiffImagePlugin.py": {
+      "size": 87340,
+      "sha256": "9425464d8407c4dc6370a7049a4d8d98082885e1eba09f4d38d9dc39701e114d"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/TiffTags.py": {
+      "size": 17772,
+      "sha256": "16c76a6c8409388ee2846ecc67f2b8614403678ce8fab6986e28550dee3653d1"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/WalImageFile.py": {
+      "size": 5889,
+      "sha256": "a5a1e48269a05b6fcb5e080f493c613e24715bee81db004a456dc614eef43dc9"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/WebPImagePlugin.py": {
+      "size": 10171,
+      "sha256": "9aa75b945dd4459fd5d9d8a3597b65a0cdf6f3f25afadc4c51eaefcc4548d169"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/WmfImagePlugin.py": {
+      "size": 5504,
+      "sha256": "8bcc3b9cdd4a0b54db1a2cf4e0f94dd61c376c445d2b7f5d62427ec4b41d0a96"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/XVThumbImagePlugin.py": {
+      "size": 2209,
+      "sha256": "384b448508022cb82fc7c275888f75d533338c9e624e538ea90a4b431d5bcd0e"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/XbmImagePlugin.py": {
+      "size": 2767,
+      "sha256": "c1cd0da5f4f3952871f589a2d33c28d1a5598c36b8fc1ecd1221b64e008eeb94"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/XpmImagePlugin.py": {
+      "size": 4557,
+      "sha256": "c187fb43b4c6a3824bea7e68b90c7ca5b4cc9cc655b21829fb1c2800c64450a8"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/__init__.py": {
+      "size": 2118,
+      "sha256": "67eb17066b48015983c2ac01748e8be115a35b172056f437bf8486d0dc4a7965"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/__main__.py": {
+      "size": 140,
+      "sha256": "5fc788a469661df9e9ef36b3a7999d6afdb6f08b5c7f696488c3f4b4b53a5fd7"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_avif.cp312-win_amd64.pyd": {
+      "size": 7834112,
+      "sha256": "cffe39c00f3e6b0413b75e1af040f3ce78ff285cbee43e190b0d31b226ed6cfe"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_avif.pyi": {
+      "size": 66,
+      "sha256": "cc3f2f0283c2f1a1085637dc90bb45b24456e6c6a255e977fac254036a476867"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_binary.py": {
+      "size": 2662,
+      "sha256": "71bf69fbf9b0cc162e9a556c59b9e84d6b2b2e8e7db68c00e9ab4b399be33b7c"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_deprecate.py": {
+      "size": 2106,
+      "sha256": "522ac3970b3279feaeeac2ffae51379a72ad45fd666af9a7864b7fd4f03b43c0"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_imaging.cp312-win_amd64.pyd": {
+      "size": 2588160,
+      "sha256": "743c7c051b47d60a6bba4b3537e564f1f2e745e342e7351cab5fbe2d0bb96594"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_imaging.pyi": {
+      "size": 924,
+      "sha256": "8d2446dead5dc2204ca8ec0884bb5305edcb30ac2c8b76244dc0dfb0a577d84d"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_imagingcms.cp312-win_amd64.pyd": {
+      "size": 269824,
+      "sha256": "37b041bb3825b57058409f2efdb06e3c2277a1453341517c67227bb954f6b58b"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_imagingcms.pyi": {
+      "size": 4576,
+      "sha256": "e7f48329eecac13f5a6f911e1bec27e85e6cbff7ecd28db5db1a0f066dc7f88a"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_imagingft.cp312-win_amd64.pyd": {
+      "size": 2170368,
+      "sha256": "49cac633aff7c10037c096c03dabc42efb574b89088ccef1538f2d19833be617"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_imagingft.pyi": {
+      "size": 1903,
+      "sha256": "535ae9c2a417d6150bbd3028f1f634fc8ad79e0f953ee09755a581523da9d73d"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_imagingmath.cp312-win_amd64.pyd": {
+      "size": 25088,
+      "sha256": "fad420b8ee80f83f6ed0e7086adbb51914a15ed410707a5ac44649d5186f2d6b"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_imagingmath.pyi": {
+      "size": 66,
+      "sha256": "cc3f2f0283c2f1a1085637dc90bb45b24456e6c6a255e977fac254036a476867"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_imagingmorph.cp312-win_amd64.pyd": {
+      "size": 13824,
+      "sha256": "6af0549a1c4e4a6561012a0cee3495fc0edeade6a40cea54581d79adca87d105"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_imagingmorph.pyi": {
+      "size": 66,
+      "sha256": "cc3f2f0283c2f1a1085637dc90bb45b24456e6c6a255e977fac254036a476867"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_imagingtk.cp312-win_amd64.pyd": {
+      "size": 14848,
+      "sha256": "516fb8d72d95b6faee76cefe65a9afc2fecc997b3dcc6df1777b3cb4bded1bf8"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_imagingtk.pyi": {
+      "size": 66,
+      "sha256": "cc3f2f0283c2f1a1085637dc90bb45b24456e6c6a255e977fac254036a476867"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_tkinter_finder.py": {
+      "size": 558,
+      "sha256": "1f5530ddd57b8161c88ffa2c527245c56875691b10d8c74aa4d3f7bd0c10716d"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_typing.py": {
+      "size": 964,
+      "sha256": "b7e3154b97ffa5174bf8cd3bd9866a957141fc3f33d4a3a5f0470ab13fddf6ce"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_util.py": {
+      "size": 713,
+      "sha256": "78ff087e658999b13f3ea6d425be2a4ea18d2e2e334f44d369daebaa6ca483b6"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_version.py": {
+      "size": 91,
+      "sha256": "e0e7d0c66307f8caa7833c1b161e6c53467bf66d3526a9343a6c8f80c7f26902"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_webp.cp312-win_amd64.pyd": {
+      "size": 410112,
+      "sha256": "1d62fc8cd51d4ef310e497e31b122da6c5f7722a28ab916c84ae6d683c03f68a"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/_webp.pyi": {
+      "size": 66,
+      "sha256": "cc3f2f0283c2f1a1085637dc90bb45b24456e6c6a255e977fac254036a476867"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/features.py": {
+      "size": 11118,
+      "sha256": "cbf7a5342ce007a46030ff4031fdc274e3f78dda0de21a38bf1a122b383a7967"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/py.typed": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/PIL/report.py": {
+      "size": 105,
+      "sha256": "ea6ecd3afd5adb8e7bed9889a315fcf62a7925e3a07f63b517de5febed4ae5a3"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_asyncio.pyd": {
+      "size": 74096,
+      "sha256": "c77de90cad749087a0c5dc5e19d78d24f6ef44e7e5ac19b8420cfc0cea62395d"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_bz2.pyd": {
+      "size": 86896,
+      "sha256": "65f610646d10d5babea080e060d244b546ec52c54012e5e937dc72dcc2e2e7bc"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_ctypes.pyd": {
+      "size": 127480,
+      "sha256": "0e56107a891100535f2da79d85a5ae65ff1227b4765bd108f8593ac1a1110d81"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_decimal.pyd": {
+      "size": 262000,
+      "sha256": "aeacfead2befcc0768063a037bb64bd32109ae09cb144e5f571b04dd7965db9d"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_elementtree.pyd": {
+      "size": 135160,
+      "sha256": "5009a9a53c03ef8387443b5cf6ce08e5c3a79727466a0b931c5bbca915bf89ca"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_hashlib.pyd": {
+      "size": 68976,
+      "sha256": "03d233dbace599168eaffec823de6ed7beec8c2a4ebfe9b8a3d8e042a59af3ba"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_lzma.pyd": {
+      "size": 161136,
+      "sha256": "e3deecc1f59a3b811c608861decd84de1e8df8bafd5e2b39188861318c5a38cf"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_msi.pyd": {
+      "size": 46584,
+      "sha256": "b49332bae154ebdd8c3d5e7ddfdde336d9c47f91ba028dc67bafb2420b3dbb5c"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_multiprocessing.pyd": {
+      "size": 37368,
+      "sha256": "2c636df7059cb0dd7e978dd735c7c5c8ddb09cf94754cf9e232296b96c5c545a"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_overlapped.pyd": {
+      "size": 57336,
+      "sha256": "662126ff80c3a1b4cedf74074029c12ae4743e6d3b37376e39ac70aacb7d4d3c"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_queue.pyd": {
+      "size": 33784,
+      "sha256": "48e76e0ad63f6932b4a77b5819f41c1e7595636ca8d9e824f0943a14b8bb5035"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_socket.pyd": {
+      "size": 85496,
+      "sha256": "3efa4636cf9e350856f6927d67a4c2564bf9bd2758a00bbf17d3aece5b60016d"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_sqlite3.pyd": {
+      "size": 126184,
+      "sha256": "64b51df2805c58b023a875e8ae3be7ac7f61ef664f32ca6c90f6315da47ef0bc"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_ssl.pyd": {
+      "size": 179432,
+      "sha256": "0bc527d2dbc50009f43b2ed5d5982c4f63f4b647647ffa9eda612dcda80f6040"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_uuid.pyd": {
+      "size": 27128,
+      "sha256": "acce4f281d7ffb2dec0997527faf25b1df62ad7bd3032c568ddcf65c90edc867"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_wmi.pyd": {
+      "size": 40304,
+      "sha256": "a980f1e7a29842bd946863fc2693fbeb555a9dc0f9e1630dfed9a2fcdef3ece2"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/_zoneinfo.pyd": {
+      "size": 49656,
+      "sha256": "76f1439cda82ab6976df6ba505c4079444703f6d44d8b0259ce59c0ff4279fb4"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/libcrypto-3.dll": {
+      "size": 5231472,
+      "sha256": "ccfffddcd3defb8d899026298af9af43bc186130f8483d77e97c93233d5f27d7"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/libffi-8.dll": {
+      "size": 39696,
+      "sha256": "eff52743773eb550fcc6ce3efc37c85724502233b6b002a35496d828bd7b280a"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/libssl-3.dll": {
+      "size": 794992,
+      "sha256": "007142039f04d04e0ed607bda53de095e5bc6a8a10d26ecedde94ea7d2d7eefe"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/pillow-12.1.1.dist-info/METADATA": {
+      "size": 8983,
+      "sha256": "247d2ed799677a25a7b07d672f2d59c945427965f4a8d41c13b2e2b261c533a8"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/pillow-12.1.1.dist-info/RECORD": {
+      "size": 9268,
+      "sha256": "888bbabe1bf6c363b3c0a4960dc92242652be3fad69f846eed072f19cca44dd6"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/pillow-12.1.1.dist-info/WHEEL": {
+      "size": 101,
+      "sha256": "f861e96b233ca3199543a9700593825018a1ca66607461abea9f7c453ef8e38e"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/pillow-12.1.1.dist-info/licenses/LICENSE": {
+      "size": 78078,
+      "sha256": "926df5f888a7337fd4126a435202edf2847312be81a167df91a6d70cfa3f2ed3"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/pillow-12.1.1.dist-info/top_level.txt": {
+      "size": 4,
+      "sha256": "ae266aae4fa1c99aa1e5fd59d19c228b774a7f112c07286ef5c53d20e0c5f8d6"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/pillow-12.1.1.dist-info/zip-safe": {
+      "size": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/pyexpat.pyd": {
+      "size": 205304,
+      "sha256": "d615e193d1affcdbfe504e90d3621cbdcff94bf72b79d899126534507fd6d27a"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/python.cat": {
+      "size": 574231,
+      "sha256": "5d85439736ae088d9680b391e2bca55ca7e9cc5b41a12ebe8e2f554506c7e72e"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/python.exe": {
+      "size": 104952,
+      "sha256": "4d6f5f81a4bca11191c4c7c6b43632694d0a4ce74e068619d8fdc161d469859a"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/python3.dll": {
+      "size": 70376,
+      "sha256": "fb975a606e7fbf74f64260e3f60c3490b4f74a183c0926fd6ed1ac4c52ac7b1c"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/python312._pth": {
+      "size": 80,
+      "sha256": "2820f241bc9d6810d4db21c21cca3845799367fbdf0199620fb37c86a74b945c"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/python312.dll": {
+      "size": 6945272,
+      "sha256": "9a0e3435aaa680d868150f87ab3e388ad2eebc22f87e036155c7b4eda8cd2120"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/python312.zip": {
+      "size": 3835482,
+      "sha256": "fb131c0ef7e35cc5250a74c8cd18744bf4115fb8163710711f3758d7df3d1f88"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/select.pyd": {
+      "size": 33136,
+      "sha256": "d4d7181b11db0bd22a6cd5cda6f8583d1f5c77615fd0a6ca33350619d6e0438a"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/sqlite3.dll": {
+      "size": 1583608,
+      "sha256": "8daa45684bf6688fca28d956b2e8942f2fa98f656675ce68e6d61dd869848a7a"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/unicodedata.pyd": {
+      "size": 1140592,
+      "sha256": "208ee1cd3cbad0828433ca7246b05be2b1ff5569983d27d296c0b38888585488"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/vcruntime140.dll": {
+      "size": 120400,
+      "sha256": "052ad6a20d375957e82aa6a3c441ea548d89be0981516ca7eb306e063d5027f4"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/vcruntime140_1.dll": {
+      "size": 49776,
+      "sha256": "6a99bc0128e0c7d6cbbf615fcc26909565e17d4ca3451b97f8987f9c6acbc6c8"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/python/winsound.pyd": {
+      "size": 31736,
+      "sha256": "100e8d676777603c7258daf9b2f23ef001f09f1596d8708de359326fff72bddd"
+    },
+    "Ports/Diablo II for RGDSplus/game-import/stormlib/x64/StormLib.dll": {
+      "size": 569856,
+      "sha256": "93321f6f030be5d7d79eb4cbf433d6ef7e83ce20d47d8963717f207d54afbe16"
+    },
+    "Ports/Diablo II for RGDSplus/game-session.bash": {
+      "size": 1469,
+      "sha256": "86cc05273e13991d4fe0754c1b2daec24d3b55e06e2a3cb04d239f7ef3548c7b"
+    },
+    "Ports/Diablo II for RGDSplus/gptokeyb-d2": {
+      "size": 55840,
+      "sha256": "cc31877af0a245b4428170283b4f8c9fa41b5228b584bc8e6a9e197d0efc981a"
+    },
+    "Ports/Diablo II for RGDSplus/indexed_display.py": {
+      "size": 4141,
+      "sha256": "8b598ba9542f49acb24e257affcf3f1fedfe5ffb48a634abdc592392a3bed61f"
+    },
+    "Ports/Diablo II for RGDSplus/indexed_gpu.so": {
+      "size": 72664,
+      "sha256": "9937996046907c65d491e73d262cb57b10c940e24f83697fae5d60c4a8605db5"
+    },
+    "Ports/Diablo II for RGDSplus/joystick.py": {
+      "size": 13281,
+      "sha256": "634ff59f66abdb422703fdd27b4cbd7c29288c9d178b33080bec339acb6f1678"
+    },
+    "Ports/Diablo II for RGDSplus/launch-runtime.bash": {
+      "size": 6809,
+      "sha256": "8cb0e59a64d48b76efdaf6019615b6d747740e12c561372da271f2d577cc3815"
+    },
+    "Ports/Diablo II for RGDSplus/launch.bash": {
+      "size": 3409,
+      "sha256": "88f1c8800d7c6c7ca2e0c96aa8be81d3bb5187802c759d767bcddd4041c3d35d"
+    },
+    "Ports/Diablo II for RGDSplus/licenses/MIT-StormLib.txt": {
+      "size": 1087,
+      "sha256": "03904ca91c8e16cf68e2adc36026cca457ae0a39e5a4359fbf99124529c974d4"
+    },
+    "Ports/Diablo II for RGDSplus/licenses/armhf-audio-source.json": {
+      "size": 284,
+      "sha256": "862881879788d58727fcb297aeea03072cbcfd910c57326ddc2a06344840c028"
+    },
+    "Ports/Diablo II for RGDSplus/licenses/armhf-libc-source.json": {
+      "size": 270,
+      "sha256": "3169fda5d5fa138579c309b41a4b7d07ff227ef78a270a4103291be3909f6691"
+    },
+    "Ports/Diablo II for RGDSplus/licenses/gpl-2.0-gptokeyb.txt": {
+      "size": 18009,
+      "sha256": "204d8eff92f95aac4df6c8122bc1505f468f3a901e5a4cc08940e0ede1938994"
+    },
+    "Ports/Diablo II for RGDSplus/licenses/native-libs-source.json": {
+      "size": 509,
+      "sha256": "35ef188f2eb6faf15b6afce6095807f3c0e3df0f5ba1ecc8c7e38361db89cc97"
+    },
+    "Ports/Diablo II for RGDSplus/licenses/python-aarch64-source.json": {
+      "size": 392,
+      "sha256": "687c5d14c0bded751aa271dbb9a882e9b0d31a5c09180aebcc339ed97148c72d"
+    },
+    "Ports/Diablo II for RGDSplus/linux32.py": {
+      "size": 557,
+      "sha256": "a60386fb0570bf1dad96e27de60e7e631ecdb1d51167be5247d1561cc2132dd4"
+    },
+    "Ports/Diablo II for RGDSplus/platform.bash": {
+      "size": 3294,
+      "sha256": "e7998f2985df78ada3431515ae7841bee06ff6f8de762e8431d7fb675916867f"
+    },
+    "Ports/Diablo II for RGDSplus/port-env.conf": {
+      "size": 744,
+      "sha256": "382a4ca1e6ca47d29b1261fcd5337695c4dff80c6f575ecef671ad3962a3b686"
+    },
+    "Ports/Diablo II for RGDSplus/prefix-empty.ext4.gz": {
+      "size": 522810,
+      "sha256": "a763bdcd85a7c0b589a0276d8cd2d2c719b645c56b73cbdf82b127aec92ac48d"
+    },
+    "Ports/Diablo II for RGDSplus/present-session.bash": {
+      "size": 2252,
+      "sha256": "3fc433ceaf876aea80e409f9d176ce2b6d49445129cd0e9ade70516df70e0e6f"
+    },
+    "Ports/Diablo II for RGDSplus/python-runtime.bash": {
+      "size": 1249,
+      "sha256": "99304ea924c4abd1f4cbba9cd66ccc99f822dc8b4be808d15c44f42e3faf0fc0"
+    },
+    "Ports/Diablo II for RGDSplus/retail_mpq.build.json": {
+      "size": 580,
+      "sha256": "8b485d72247d723b85e132e796ffa78270c26b4583613d6f88eb0d39d02c2743"
+    },
+    "Ports/Diablo II for RGDSplus/retail_mpq.so": {
+      "size": 8056,
+      "sha256": "a25e8fc08925e09f0b5cc2059c1aabc41d70856e017e072dab388a8fda025a7d"
+    },
+    "Ports/Diablo II for RGDSplus/runtime-manifest.json": {
+      "size": 36141,
+      "sha256": "e9725652f9b46620ea0ab394b3faa091cc7f72c107b580b0d90c35b782a28622"
+    },
+    "Ports/Diablo II for RGDSplus/runtime/offline/armhf-audio.tar.gz": {
+      "size": 96583,
+      "sha256": "f74234054a74646ad9a5ff37c3cbc04baf628db483ab502890d1e5754ea51af5"
+    },
+    "Ports/Diablo II for RGDSplus/runtime/offline/armhf-libc.tar.gz": {
+      "size": 3674354,
+      "sha256": "ed34c3a15fdaa17710326d6f6ab7fe6f88a089424523ef2f6a57adba35d690f2"
+    },
+    "Ports/Diablo II for RGDSplus/runtime/offline/native-libs.tar.gz": {
+      "size": 124188,
+      "sha256": "1555d052a6622c2e068c14dd8a755d4072b97a124ed9cfce2a5cfa2d8c5f3460"
+    },
+    "Ports/Diablo II for RGDSplus/runtime/offline/python-aarch64.tar.gz": {
+      "size": 30911751,
+      "sha256": "a2364356a17f63de74120a55d5af1f8ae56b8e700c9d43f478ba90e2f543f3a6"
+    },
+    "Ports/Diablo II for RGDSplus/runtime/offline/weston.runtime": {
+      "size": 55398400,
+      "sha256": "0bccaeebc11296bb1fe4278c9677cb82965c5a04bcd63745fa09d78228bc1a93"
+    },
+    "Ports/Diablo II for RGDSplus/runtime/offline/wine-armhf.runtime": {
+      "size": 75403264,
+      "sha256": "50889acb801b022ed28520b46f626e24938549f5e560cb25164e1d207d354d01"
+    },
+    "Ports/Diablo II for RGDSplus/touch.py": {
+      "size": 20852,
+      "sha256": "79457a115cb57139707b8ee5aa492cc1b53b976657613eb3b6486a3382025d9d"
+    },
+    "Ports/Diablo II for RGDSplus/touch_keyboard.py": {
+      "size": 3427,
+      "sha256": "4a70293f97702bc1d61bcbcdb4b493725fa4a0b83950755a6cc4d0e05ad2f6ba"
+    },
+    "Ports/Diablo II for RGDSplus/ui_controller.py": {
+      "size": 12373,
+      "sha256": "110a0270df92e38ca745486955374d6c5bbf3880852fbb8ce0f72026369ea8d6"
+    },
+    "Ports/Diablo II for RGDSplus/ui_navigation.py": {
+      "size": 24975,
+      "sha256": "2d5184b19206b119d39674f9d4c4234701d55cff7b5ad8040a5045424c679f88"
+    },
+    "Ports/Diablo II for RGDSplus/verify-installation.py": {
+      "size": 1564,
+      "sha256": "1420adf1a3ed24184ab9592ce3f1966942cdad279f3c50c248ebc6020cef3fbd"
+    },
+    "Ports/Diablo II for RGDSplus/verify-resources.py": {
+      "size": 2009,
+      "sha256": "73322d31fff23e7c3edf12f502426ff50ab40ed037ff75fffcc3ebf35cbaf195"
+    },
+    "Ports/Diablo II for RGDSplus/weston-session.bash": {
+      "size": 4108,
+      "sha256": "281ba0783fb702dca87137d77cc9611302c5890e363a4600d48308ad85b1a91c"
+    },
+    "Ports/Diablo II for RGDSplus/weston.ini": {
+      "size": 77,
+      "sha256": "e3ba686767b9f76aed1d129c05ef93fe40c842d7dddd3037d2ad9e5e66822df3"
+    },
+    "Ports/Diablo II for RGDSplus/wine-loader.bash": {
+      "size": 134,
+      "sha256": "12b46f6a61770ebcd1e7136d9699cb7ee802c3106bf72b596952914974ebfd00"
+    },
+    "Ports/Diablo II for RGDSplus/wine-run.bash": {
+      "size": 4352,
+      "sha256": "3ed4b6e7dbea9d86db0ae5c4652d186fe8db1d76c1d10e5f2abdce6562cc8991"
+    },
+    "Ports/Diablo II for RGDSplus/wineserver.bash": {
+      "size": 142,
+      "sha256": "f0aa6aa0b44d0f08ce95dc6cfbb52f469343abb79b6ef67e3fa8e5d096844a75"
+    },
+    "Ports/Diablo II for RGDSplus/world_probe.so": {
+      "size": 50341,
+      "sha256": "d2e354af9f17dcc9bbb999918a47dbaa030885c13c5b986d8a1716f312c90e9e"
+    }
+  }
+}

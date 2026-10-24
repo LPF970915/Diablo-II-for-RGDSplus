@@ -13,6 +13,10 @@ This is an unofficial device adaptation for the RGDSplus, its two 1024×768 disp
 
 ## 下载与当前基线 / Download and baseline
 
+**2026-10-24 RC11 启动修复：** 一台设备的固件 Python 库含损坏的 AST 描述字符串，导致原样 RC10 触摸模块导入时报 UnicodeDecodeError。RC11 增加哈希固定的独立 ARM64 CPython，不修改固件 Python；同机原模块导入及 59 项本地回归、全新导入检查通过。RC10 仍保留为历史用户接受基线，用户已确认 RC11 可以进入游戏，详情见 Release；不将导入成功冒充完整实机游戏验收。
+
+**RC11 startup fix (2026-10-24):** a device firmware Python library contained damaged AST description strings, causing UnicodeDecodeError while importing unchanged RC10 code. RC11 adds a hash-pinned private ARM64 CPython runtime without changing firmware Python. Module imports on the affected device, 59 local regressions and fresh import checks pass. RC10 remains the historical accepted baseline; the user confirmed successful entry with RC11; see its Release. Import checks do not certify full hardware gameplay validation.
+
 正式包名称为 **Diablo II for RGDSplus.zip**。GitHub 附件显示此名称，但平台自动将实际下载文件名中的空格替换为点号，得到 `Diablo.II.for.RGDSplus.zip`；两者内容相同。包内入口固定为 `Ports/Diablo II for RGDSplus.sh`，目录为 `Ports/Diablo II for RGDSplus/`。
 
 The official package is **Diablo II for RGDSplus.zip**. GitHub displays that label but normalizes spaces to dots in the actual download filename, `Diablo.II.for.RGDSplus.zip`. Contents are identical. The internal launcher and directory retain the exact spaced names above.
@@ -25,8 +29,9 @@ Download **Diablo.II.for.RGDSplus.zip**, its checksum and the bilingual installa
 | --- | --- |
 | 用户接受基线 / User-accepted baseline | `20261023-player-rc10` |
 | 接受日期 / Acceptance date | 2026-10-23 |
-| 适配 ZIP 大小 / Adapter ZIP size | 158,250,551 bytes |
-| SHA256 | `c72543438ae4a89a2d836c604eb6f373f917aec7e4ce778fbe2a1a133dc18c83` |
+| 最新修复包 / Latest fixed package | `20261024-player-rc11` |
+| 适配 ZIP 大小 / Adapter ZIP size | 189,021,197 bytes |
+| RC11 SHA256 | `409df4aba861e96a0e2a5c5bc9e288d3d66ca825d39c1ea532bb5c7e8e922fc6` |
 | 核心组合 / Engine combination | Player-supplied pinned notaz 1.13d ARM core + local adaptation delta |
 | 正版资源 / Retail assets | Exact supported classic enUS 1.14b profile; player supplied |
 
@@ -62,11 +67,11 @@ These functions depend on the external core and lawful game data. This project s
 
 | 位置 / Location | 内容 / Contents |
 | --- | --- |
-| `adapter/Ports/` | RC10 的 Python/Bash、导入器、按键/显示配置及现存 C 源码快照 / RC10 scripts, import tools, configuration and available C sources |
-| `packaging/` | 固定基线、229 项 ZIP 文件白名单与源码哈希 / Pinned baseline, 229-file ZIP allowlist and source hashes |
+| `adapter/Ports/` | RC11 的 Python/Bash、导入器、按键/显示配置及现存 C 源码快照 / RC10 scripts, import tools, configuration and available C sources |
+| `packaging/` | 固定基线、各版本 ZIP 文件白名单与源码哈希 / Pinned baseline, versioned ZIP allowlists and source hashes |
 | `tools/audit_public.py` | 白名单、完整性和禁止内容审计工具 / Allowlist, integrity and prohibited-content audit |
 | `docs/` | 双语安装、范围、权利与依赖说明 / Bilingual installation, scope and rights documentation |
-| Releases | 原始 RC10 适配 ZIP、SHA256 与双语说明 / Unmodified RC10 adapter ZIP, checksum and bilingual guides |
+| Releases | RC11 适配 ZIP 及保留的 RC10 原包、SHA256 与双语说明 / RC11 adapter ZIP and retained RC10 archive, checksum and bilingual guides |
 
 适配 ZIP 包含离线 Wine/Weston 等运行组件、Windows Python/Pillow/StormLib、空的 ext4 文件系统模板、原生适配库、局部核心差分和新增上屏扩展图。上屏 PNG 为基于本地游戏画面参考生成的扩展素材，不是原版隐藏场景，也不代表获得游戏美术权利。原版场景、Logo、字幕及游戏缓存只在玩家本地生成。空 ext4 模板不是带注册表、玩家设置或存档的初始化 Wine prefix。
 

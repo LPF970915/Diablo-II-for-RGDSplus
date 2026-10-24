@@ -19,6 +19,7 @@ export D2_FRONTEND_REPORT=/tmp/d2-frontend-state.json
 mkdir -p "$payload/logs"
 exec >> "$payload/logs/launcher.log" 2>&1
 printf '\nDiablo II classic controller preflight: %s\n' "$(date -Iseconds)"
+source "$payload/python-runtime.bash"
 python3 "$payload/audio_preflight.py"
 
 [[ -d "$payload/gamedata" && -f "$payload/gamedata/Patch_D2.mpq" ]] || { echo 'Imported game resources are missing; run Import Game Assets.cmd first.'; exit 1; }

@@ -12,6 +12,7 @@ This is an unofficial adaptation. Third-party licenses remain applicable. Source
 | gptokeyb | [PortsMaster/gptokeyb](https://github.com/PortsMaster/gptokeyb), GPL; bundled GPL notice retained / 包内保留 GPL 文本 |
 | StormLib | [ladislav-zezula/StormLib](https://github.com/ladislav-zezula/StormLib), MIT; bundled notice retained / 保留 MIT 文本 |
 | Python 3.12.10 embedded x64 | [Python](https://www.python.org/), licensing in `game-import/python/LICENSE.txt` |
+| RC11 ARM64 CPython 3.11.17 | [python-build-standalone 20261021](https://github.com/astral-sh/python-build-standalone/releases/tag/20261021), pinned unmodified upstream archive; original license files retained inside the runtime / 固定原始归档，保留运行库内许可 |
 | Pillow 12.1.1 | [Pillow](https://python-pillow.org/), wheel metadata/licenses and dependency notices retained under `pillow-12.1.1.dist-info` / 保留 wheel 原有许可 |
 | zlib | [zlib](https://zlib.net/), runtime component notice retained / 运行镜像内保留声明 |
 | supplementary Linux libraries | Package URLs/hashes in `adapter/Ports/Diablo II for RGDSplus/licenses/*-source.json`; archive package copyright files retained / 归档保留包版权文件 |

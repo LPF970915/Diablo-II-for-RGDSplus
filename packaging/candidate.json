@@ -1,0 +1,10 @@
+{
+  "build": "20261024-player-rc11",
+  "parentAcceptedBaseline": "20261023-player-rc10",
+  "sha256": "409df4aba861e96a0e2a5c5bc9e288d3d66ca825d39c1ea532bb5c7e8e922fc6",
+  "size": 189021197,
+  "status": "user-confirmed-startup-fixed",
+  "firmwarePythonModified": false,
+  "chineseSupplementPublished": false,
+  "manualFeedback": "可以进入，将修复打入最终包"
+}

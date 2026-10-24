@@ -8,8 +8,8 @@
     "sha256": "1676b281c6578a87794b5b93219a557907b64e38b1d40e9da7c51f8b50450941"
   },
   "adapter/Ports/Diablo II for RGDSplus/THIRD_PARTY_NOTICES.txt": {
-    "size": 2892,
-    "sha256": "35a45041ec9d588a3f6f03669b235b366732dd17806f1dcaff708d7a0b634101"
+    "size": 3188,
+    "sha256": "e7a251a3ce8483f53a2af140753f1c31b1ec328dffd5a7b2c0dc5bb12624f26e"
   },
   "adapter/Ports/Diablo II for RGDSplus/adapter-source/retail_mpq.c": {
     "size": 1622,
@@ -120,8 +120,8 @@
     "sha256": "8cb0e59a64d48b76efdaf6019615b6d747740e12c561372da271f2d577cc3815"
   },
   "adapter/Ports/Diablo II for RGDSplus/launch.bash": {
-    "size": 3371,
-    "sha256": "ddc5ae077ca21800d59ecffaa2dd38a3d25699441e9ce5caf92eca19e51ab54c"
+    "size": 3409,
+    "sha256": "88f1c8800d7c6c7ca2e0c96aa8be81d3bb5187802c759d767bcddd4041c3d35d"
   },
   "adapter/Ports/Diablo II for RGDSplus/licenses/MIT-StormLib.txt": {
     "size": 1087,
@@ -143,6 +143,10 @@
     "size": 509,
     "sha256": "35ef188f2eb6faf15b6afce6095807f3c0e3df0f5ba1ecc8c7e38361db89cc97"
   },
+  "adapter/Ports/Diablo II for RGDSplus/licenses/python-aarch64-source.json": {
+    "size": 392,
+    "sha256": "687c5d14c0bded751aa271dbb9a882e9b0d31a5c09180aebcc339ed97148c72d"
+  },
   "adapter/Ports/Diablo II for RGDSplus/linux32.py": {
     "size": 557,
     "sha256": "a60386fb0570bf1dad96e27de60e7e631ecdb1d51167be5247d1561cc2132dd4"
@@ -158,6 +162,10 @@
   "adapter/Ports/Diablo II for RGDSplus/present-session.bash": {
     "size": 2252,
     "sha256": "3fc433ceaf876aea80e409f9d176ce2b6d49445129cd0e9ade70516df70e0e6f"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/python-runtime.bash": {
+    "size": 1249,
+    "sha256": "99304ea924c4abd1f4cbba9cd66ccc99f822dc8b4be808d15c44f42e3faf0fc0"
   },
   "adapter/Ports/Diablo II for RGDSplus/retail_mpq.build.json": {
     "size": 580,

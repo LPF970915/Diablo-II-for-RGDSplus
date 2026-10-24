@@ -42,3 +42,7 @@ hidden scenery extracted from the original game. Original menu backgrounds,
 subtitles and animated logo frames are generated from player-owned MPQs at import.
 The Chinese inventory background correction likewise reads the player's retail
 panel; no complete patched MPQ or derived original-game frontend cache is shipped.
+ARM64 runtime: CPython 3.11.17, python-build-standalone release 20261021.
+https://github.com/astral-sh/python-build-standalone/releases/tag/20261021
+Original upstream archive and its license files are preserved unchanged.
+This private runtime avoids dependence on the firmware's Python compiler.
