@@ -19,16 +19,22 @@ Download **Diablo II for RGDSplus adapter.zip**, its checksum and the bilingual 
 
 | 项目 / Item | 值 / Value |
 | --- | --- |
-| 用户接受基线 / User-accepted baseline | `20261023-player-rc10` |
-| 接受日期 / Acceptance date | 2026-10-23 |
-| 适配 ZIP 大小 / Adapter ZIP size | 158,250,551 bytes |
-| SHA256 | `c72543438ae4a89a2d836c604eb6f373f917aec7e4ce778fbe2a1a133dc18c83` |
+| 用户接受基线 / User-accepted baseline | `20261025-player-rc37` |
+| 接受日期 / Acceptance date | 2026-10-25 |
+| 适配 ZIP 大小 / Adapter ZIP size | 188,997,179 bytes |
+| SHA256 | `02b9653feb07c337cf90d31385713812813bd8b4240ac41ca4cfd9361a6eae2d` |
 | 核心组合 / Engine combination | Player-supplied pinned notaz 1.13d ARM core + local adaptation delta |
 | 正版资源 / Retail assets | Exact supported classic enUS 1.14b profile; player supplied |
 
-**公开下载的安装边界：RC10 导入器强制要求其匹配的独立中文分片。本仓库及 Releases 不提供该分片**：现有记录不能确认其中全部候选内容的原创性及再分发授权。拥有正版游戏并不自动取得该社区分片的再分发权。没有合法取得且哈希匹配的配套分片时，RC10 会停止导入；当前没有已验收的免中文分片/纯英文安装路径。请勿下载未知“整合包”补齐，也不要把普通中文补丁随意改名代替。
+**公开下载的安装边界：RC37 导入器强制要求其匹配的独立中文分片。本仓库及 Releases 不提供该分片**：现有记录不能确认其中全部候选内容的原创性及再分发授权。拥有正版游戏并不自动取得该社区分片的再分发权。没有合法取得且哈希匹配的配套分片时，RC37 会停止导入；当前没有已验收的免中文分片/纯英文安装路径。请勿下载未知“整合包”补齐，也不要把普通中文补丁随意改名代替。
 
-**Public installation limitation: RC10 requires its matching separate Chinese supplement. That supplement is NOT distributed in this repository or its Releases**, because the available provenance does not establish redistribution permission for all its candidate content. Owning the game does not automatically grant rights to redistribute that community supplement. Without a lawfully obtained, hash-matching supplement the importer stops. There is currently no accepted supplement-free/English-only installation path. Do not substitute an unknown prepacked game or rename an arbitrary translation patch.
+**Public installation limitation: RC37 requires its matching separate Chinese supplement. That supplement is NOT distributed in this repository or its Releases**, because the available provenance does not establish redistribution permission for all its candidate content. Owning the game does not automatically grant rights to redistribute that community supplement. Without a lawfully obtained, hash-matching supplement the importer stops. There is currently no accepted supplement-free/English-only installation path. Do not substitute an unknown prepacked game or rename an arbitrary translation patch.
+
+## 2026-10-25 RC37 最新基线 / Latest baseline
+
+RC37 在 RC10 的双屏与触摸路径上增加了两项修复：启动时仅在原 `tpctrl=1` 的游戏会话内切到 `0`，退出时恢复；触摸解析器要求新触点同时具备新鲜 X/Y、`ABS_MT_TOUCH_MAJOR/WIDTH` 在 25–100 之间，并持续至少 45 ms。静止点按在抬起时会补发一次点击，不再使用整会话熔断或固定 Y 行锁死。无触摸实机会话中收到 83 个原始 evdev 批次，但过滤后为 0 次 move/button；正常触摸轨迹仍保留。硬件级幽灵仍可能在系统界面/其他游戏中出现，本适配器只做游戏内最佳努力过滤。
+
+RC37 adds a session-scoped `tpctrl` handoff and a per-contact ghost admission filter: fresh X/Y, touch-major width 25–100, and a 45 ms confirmation window, with stationary taps replayed on release. It no longer latches an entire game session on a fixed scanline. A no-touch device session saw 83 raw evdev batches but produced 0 move/button reports; normal physical touch was preserved. Hardware ghosting can still affect the system UI or other games; in-game filtering is best-effort.
 
 ## 适配范围 / What the adapter does
 
@@ -58,11 +64,11 @@ These functions depend on the external core and lawful game data. This project s
 
 | 位置 / Location | 内容 / Contents |
 | --- | --- |
-| `adapter/Ports/` | RC10 的 Python/Bash、导入器、按键/显示配置及现存 C 源码快照 / RC10 scripts, import tools, configuration and available C sources |
-| `packaging/` | 固定基线、229 项 ZIP 文件白名单与源码哈希 / Pinned baseline, 229-file ZIP allowlist and source hashes |
+| `adapter/Ports/` | RC37 的 Python/Bash、导入器、按键/显示配置及现存 C 源码快照 / RC37 scripts, import tools, configuration and available C sources |
+| `packaging/` | 固定基线、230 项 ZIP 文件白名单与源码哈希 / Pinned baseline, 230-file ZIP allowlist and source hashes |
 | `tools/audit_public.py` | 白名单、完整性和禁止内容审计工具 / Allowlist, integrity and prohibited-content audit |
 | `docs/` | 双语安装、范围、权利与依赖说明 / Bilingual installation, scope and rights documentation |
-| Releases | 原始 RC10 适配 ZIP、SHA256 与双语说明 / Unmodified RC10 adapter ZIP, checksum and bilingual guides |
+| Releases | 原始 RC37 适配 ZIP、SHA256 与双语说明 / Unmodified RC37 adapter ZIP, checksum and bilingual guides |
 
 适配 ZIP 包含离线 Wine/Weston 等运行组件、Windows Python/Pillow/StormLib、空的 ext4 文件系统模板、原生适配库、局部核心差分和新增上屏扩展图。上屏 PNG 为基于本地游戏画面参考生成的扩展素材，不是原版隐藏场景，也不代表获得游戏美术权利。原版场景、Logo、字幕及游戏缓存只在玩家本地生成。空 ext4 模板不是带注册表、玩家设置或存档的初始化 Wine prefix。
 
@@ -74,11 +80,11 @@ No complete core, MPQ/Chinese supplement, retail game files, private caches, ful
 
 ## 验收与源码限制 / Validation and source limitations
 
-RC10 于 2026-10-23 经用户从正式入口人工运行后被指定为最新基线。已有本地导入/回归和独立设备检查记录，但这不等于全部流程、长期稳定性、所有固件、所有真实手势/物品拖放或硬件延迟已经完整验证；充电相关触摸异常的根因没有独立证明，不承诺永不复发。请备份存档并按自己的实际环境验证。
+RC37 于 2026-10-25 经用户从正式入口人工运行后被指定为最新基线。已有本地导入/回归和独立设备检查记录，但这不等于全部流程、长期稳定性、所有固件、所有真实手势/物品拖放或硬件延迟已经完整验证；充电相关触摸异常的根因没有独立证明，不承诺永不复发。请备份存档并按自己的实际环境验证。
 
-RC10 was accepted by the user after manually running the normal launcher on 2026-10-23. Local import/regression and isolated device checks exist, but do not establish exhaustive gameplay, long-term stability, all firmware compatibility, every physical gesture/item drag, or measured end-to-end hardware latency. The cause of charging-related touch anomalies was not independently established; permanent elimination is not claimed.
+RC37 was accepted by the user after manually running the normal launcher on 2026-10-25. Local import/regression and isolated device checks exist, but do not establish exhaustive gameplay, long-term stability, all firmware compatibility, every physical gesture/item drag, or measured end-to-end hardware latency. The cause of charging-related touch anomalies was not independently established; permanent elimination is not claimed.
 
-**`world_probe.so` 与 `indexed_gpu.so` 的完整精确源码及原始工具链未恢复。** 本仓库不以历史实验源码冒充它们，不承诺从源码完整重建所有二进制。已有 `retail_mpq.c`、`retail_probe.c` 按实际恢复状态提供。可用 `python tools/audit_public.py --archive "path/to/Diablo II for RGDSplus adapter.zip"` 检查固定产物；后续修改需要新 build ID 与相应验证，不能覆盖 RC10 并沿用旧验收结论。
+**`world_probe.so` 与 `indexed_gpu.so` 的完整精确源码及原始工具链未恢复。** 本仓库不以历史实验源码冒充它们，不承诺从源码完整重建所有二进制。已有 `retail_mpq.c`、`retail_probe.c` 按实际恢复状态提供。可用 `python tools/audit_public.py --archive "path/to/Diablo II for RGDSplus adapter.zip"` 检查固定产物；后续修改需要新 build ID 与相应验证，不能覆盖 RC37 并沿用旧验收结论。
 
 **The exact full sources/toolchain for `world_probe.so` and `indexed_gpu.so` were not recovered.** Historical prototypes are not passed off as those sources. Full binary reproducibility is not claimed. Available C files are supplied as recovered. Use the audit command above for the pinned artifact; future changes require a new build ID and appropriate validation.
 

@@ -66,7 +66,6 @@ printf '\nDiablo II launch: %s\n' "$(date -Iseconds)"
 [[ ! -f "$port/port-env.conf" ]] || source "$port/port-env.conf"
 source "$port/platform.bash"
 d2_platform_setup "$base" "$port"
-[[ -x "$port/gptokeyb-d2" ]] || { echo 'Port input helper gptokeyb-d2 is missing'; exit 1; }
 [[ $(uname -m) = aarch64 ]] || { echo 'This build requires aarch64 firmware with ARM32 support'; exit 1; }
 for required in python3 mount umount; do
     command -v "$required" >/dev/null || { echo "Required firmware command missing: $required"; exit 1; }
@@ -137,27 +136,7 @@ is_mounted "$weston" || mount -t squashfs -o loop,ro "$D2_WESTON_IMAGE" "$weston
 export SDL_GAMECONTROLLERCONFIG_FILE="$controlfolder/gamecontrollerdb.txt"
 export TEXTINPUTINTERACTIVE=Y
 # -k enables Start + Select; match only the game, not this mapper's arguments.
-# The input mapper types on a virtual keyboard it creates through /dev/uinput.
-# This firmware ships that node as 0600 root:root, so the mapper starts, reads
-# the gamepad, and then silently fails to inject anything -- every button looks
-# dead while the log only says "[GPTK]: Unable to open /dev/uinput". Hand the
-# node to the input group, which ark belongs to, before starting the mapper.
-# devtmpfs forgets the change at the next boot, so nothing persists.
-if [[ -c /dev/uinput && ! -w /dev/uinput ]]; then
-    # Ask for the absolute path: frontends do not always put sudo on PATH.
-    d2_sudo=/usr/bin/sudo
-    [[ -x $d2_sudo ]] || d2_sudo=$(command -v sudo 2>/dev/null || true)
-    [[ -n $d2_sudo ]] && {
-        "$d2_sudo" chgrp input /dev/uinput 2>/dev/null || true
-        "$d2_sudo" chmod 0660 /dev/uinput 2>/dev/null || true
-        [[ -w /dev/uinput ]] || "$d2_sudo" chmod 0666 /dev/uinput 2>/dev/null || true
-    }
-    printf 'uinput node: writable=%s mode=%s owner=%s\n' \
-        "$( [[ -w /dev/uinput ]] && echo yes || echo no )" \
-        "$(stat -c %a /dev/uinput 2>/dev/null)" \
-        "$(stat -c %U:%G /dev/uinput 2>/dev/null)"
-fi
-D2_R2_LAYER=Y "$port/gptokeyb-d2" -hotkey back -k '^/tmp/diablo2-armhf/lib/ld-linux-armhf[.]so[.]3 .* /tmp/diablo2-bin/libd2game_sa_arm[.]exe[.]so([[:space:]]|$)' -c "$port/diablo2.gptk" &
-mapper_pid=$!
+# Controller and touch input are routed by the private game bridge.
+mapper_pid=
 cd "$port"
 bash "$port/weston-session.bash" bash "$port/present-session.bash"

@@ -1,4 +1,4 @@
-# 安装说明 / Installation guide — RC10
+# 安装说明 / Installation guide — RC37
 
 ## 前提 / Prerequisites
 
@@ -6,13 +6,13 @@
 
 This is an RGDSplus dual-screen adapter only, with no retail game assets. Piracy and redistribution with bundled games are prohibited. You need compatible RGDSplus Linux/Wayland/PortMaster firmware and a Windows x64 PC. Embedded Python/Pillow are supplied for import; system Python is unnecessary. Offline runtimes do not replace firmware or GPU drivers.
 
-**先检查资源前提再下载：** 需要自己的正版传统 PC 版 Diablo II + Lord of Destruction、导入器支持的精确英文 enUS 1.14b 资源，以及合法取得且匹配 RC10 的独立中文分片。核心版本仍是 1.13d，1.14b 指资源版本；不是重制版、安装器目录或任意其他语言/补丁版本。
+**先检查资源前提再下载：** 需要自己的正版传统 PC 版 Diablo II + Lord of Destruction、导入器支持的精确英文 enUS 1.14b 资源，以及合法取得且匹配 RC37 的独立中文分片。核心版本仍是 1.13d，1.14b 指资源版本；不是重制版、安装器目录或任意其他语言/补丁版本。
 
-**Check dependencies first:** your lawful classic Diablo II + Lord of Destruction installation, the exact supported enUS 1.14b data profile, and the lawfully obtained matching RC10 Chinese supplement are required. The engine remains 1.13d; 1.14b describes the imported data. Resurrected, installer folders and arbitrary locales/patch versions are unsupported.
+**Check dependencies first:** your lawful classic Diablo II + Lord of Destruction installation, the exact supported enUS 1.14b data profile, and the lawfully obtained matching RC37 Chinese supplement are required. The engine remains 1.13d; 1.14b describes the imported data. Resurrected, installer folders and arbitrary locales/patch versions are unsupported.
 
-中文分片未公开发布，因现有来源记录不足以证明全部内容的再分发授权。RC10 对该分片有硬性校验；缺少时会停止，当前没有已验收的英文替代路径。普通中文补丁或自己拥有正版不等于满足其固定内容要求，不能通过关闭校验解决。
+中文分片未公开发布，因现有来源记录不足以证明全部内容的再分发授权。RC37 对该分片有硬性校验；缺少时会停止，当前没有已验收的英文替代路径。普通中文补丁或自己拥有正版不等于满足其固定内容要求，不能通过关闭校验解决。
 
-The supplement is withheld because complete redistribution permission has not been established. RC10 checks it strictly and stops if missing. No accepted English-only alternative exists. An arbitrary translation patch or game ownership alone does not satisfy the fixed-content dependency; do not disable validation.
+The supplement is withheld because complete redistribution permission has not been established. RC37 checks it strictly and stops if missing. No accepted English-only alternative exists. An arbitrary translation patch or game ownership alone does not satisfy the fixed-content dependency; do not disable validation.
 
 ## 1. 解压 / Extract
 
@@ -24,7 +24,7 @@ Download the adapter ZIP and checksum from Releases, verify it, then extract int
 Get-FileHash -Algorithm SHA256 '.\Diablo II for RGDSplus adapter.zip'
 ```
 
-应为 / Expected: `c72543438ae4a89a2d836c604eb6f373f917aec7e4ce778fbe2a1a133dc18c83`。
+应为 / Expected: `02b9653feb07c337cf90d31385713812813bd8b4240ac41ca4cfd9361a6eae2d`。
 
 将自己合法取得的匹配中文分片放在同一个新目录的 `Ports\Diablo II for RGDSplus\game-import\chinese-patch\`。不要直接将分片改名为 `Patch_D2.mpq`，也不要放入 `gamedata`。公开 Releases 不提供中文包；ZIP 内提及“两个 ZIP”的旧说明是私有验收流程背景，以本说明的公开依赖限制为准。
 

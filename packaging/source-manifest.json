@@ -1,16 +1,4 @@
 {
-  "adapter/Ports/Diablo II for RGDSplus.sh": {
-    "size": 73,
-    "sha256": "1e95c8985c42b96e65283ccbeb42786fa113049ba55a447b50a9231a2d8b0d8b"
-  },
-  "adapter/Ports/Diablo II for RGDSplus/Import Game Assets.cmd": {
-    "size": 571,
-    "sha256": "1676b281c6578a87794b5b93219a557907b64e38b1d40e9da7c51f8b50450941"
-  },
-  "adapter/Ports/Diablo II for RGDSplus/THIRD_PARTY_NOTICES.txt": {
-    "size": 2892,
-    "sha256": "35a45041ec9d588a3f6f03669b235b366732dd17806f1dcaff708d7a0b634101"
-  },
   "adapter/Ports/Diablo II for RGDSplus/adapter-source/retail_mpq.c": {
     "size": 1622,
     "sha256": "3eea21b358cf738e39f1321596994a00dfc1c22f53a2c92271d12bde91200e57"
@@ -51,21 +39,13 @@
     "size": 938,
     "sha256": "be16459b094d513314a3aa73357c2fc39e874eaa7d600cc9527b41dfea15e991"
   },
-  "adapter/Ports/Diablo II for RGDSplus/diablo2-direct.gptk": {
-    "size": 482,
-    "sha256": "cd9e285b025ba621fe8e72b3fc48d457849c770b231847ff4fe3491255c250db"
-  },
   "adapter/Ports/Diablo II for RGDSplus/display.py": {
-    "size": 26048,
-    "sha256": "ec3a52a7078c594d5272f63525696692e8c62892de3e829266e93bf14b104344"
+    "size": 27110,
+    "sha256": "0729581b39bd1587547b9d12158fadeb2f7980ba6ec693f06a2916e3f459ec06"
   },
   "adapter/Ports/Diablo II for RGDSplus/frontend_panels.py": {
-    "size": 10492,
-    "sha256": "11b158f30339e261a6557e7e5f0c3c03cdd80dc4a0ca51ffa1cc6ee08ee1b5d8"
-  },
-  "adapter/Ports/Diablo II for RGDSplus/game-import/Import Game Assets.ps1": {
-    "size": 13066,
-    "sha256": "fd6d83d414f97fed01d0757381df00e51f6e5e0b5b1e7adbc8ce2fc397248f6a"
+    "size": 11150,
+    "sha256": "e7d12c63e88dd0539f87cd7d45c767e24b9d6f09b65b5b98e7fbf21118609996"
   },
   "adapter/Ports/Diablo II for RGDSplus/game-import/engine/recipe.json": {
     "size": 928,
@@ -78,6 +58,10 @@
   "adapter/Ports/Diablo II for RGDSplus/game-import/frontend_decode.py": {
     "size": 2454,
     "sha256": "518178074f59e3323e4299e5e57d9414c742650f21123adc6a8c448db9a51202"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/game-import/Import Game Assets.ps1": {
+    "size": 13066,
+    "sha256": "fd6d83d414f97fed01d0757381df00e51f6e5e0b5b1e7adbc8ce2fc397248f6a"
   },
   "adapter/Ports/Diablo II for RGDSplus/game-import/install_assets.py": {
     "size": 7839,
@@ -107,6 +91,10 @@
     "size": 1469,
     "sha256": "86cc05273e13991d4fe0754c1b2daec24d3b55e06e2a3cb04d239f7ef3548c7b"
   },
+  "adapter/Ports/Diablo II for RGDSplus/Import Game Assets.cmd": {
+    "size": 571,
+    "sha256": "1676b281c6578a87794b5b93219a557907b64e38b1d40e9da7c51f8b50450941"
+  },
   "adapter/Ports/Diablo II for RGDSplus/indexed_display.py": {
     "size": 4141,
     "sha256": "8b598ba9542f49acb24e257affcf3f1fedfe5ffb48a634abdc592392a3bed61f"
@@ -116,16 +104,12 @@
     "sha256": "634ff59f66abdb422703fdd27b4cbd7c29288c9d178b33080bec339acb6f1678"
   },
   "adapter/Ports/Diablo II for RGDSplus/launch-runtime.bash": {
-    "size": 6809,
-    "sha256": "8cb0e59a64d48b76efdaf6019615b6d747740e12c561372da271f2d577cc3815"
+    "size": 5440,
+    "sha256": "18c5be2ea3aa69d5c8bcf02923f691a3c732d3a5e0277053d0d0e5c35f729515"
   },
   "adapter/Ports/Diablo II for RGDSplus/launch.bash": {
-    "size": 3371,
-    "sha256": "ddc5ae077ca21800d59ecffaa2dd38a3d25699441e9ce5caf92eca19e51ab54c"
-  },
-  "adapter/Ports/Diablo II for RGDSplus/licenses/MIT-StormLib.txt": {
-    "size": 1087,
-    "sha256": "03904ca91c8e16cf68e2adc36026cca457ae0a39e5a4359fbf99124529c974d4"
+    "size": 3336,
+    "sha256": "0f4640f304d0dbc661a127080c2502f13050676b9841e47153a39d5d703a6584"
   },
   "adapter/Ports/Diablo II for RGDSplus/licenses/armhf-audio-source.json": {
     "size": 284,
@@ -138,6 +122,10 @@
   "adapter/Ports/Diablo II for RGDSplus/licenses/gpl-2.0-gptokeyb.txt": {
     "size": 18009,
     "sha256": "204d8eff92f95aac4df6c8122bc1505f468f3a901e5a4cc08940e0ede1938994"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/licenses/MIT-StormLib.txt": {
+    "size": 1087,
+    "sha256": "03904ca91c8e16cf68e2adc36026cca457ae0a39e5a4359fbf99124529c974d4"
   },
   "adapter/Ports/Diablo II for RGDSplus/licenses/native-libs-source.json": {
     "size": 509,
@@ -156,16 +144,24 @@
     "sha256": "382a4ca1e6ca47d29b1261fcd5337695c4dff80c6f575ecef671ad3962a3b686"
   },
   "adapter/Ports/Diablo II for RGDSplus/present-session.bash": {
-    "size": 2252,
-    "sha256": "3fc433ceaf876aea80e409f9d176ce2b6d49445129cd0e9ade70516df70e0e6f"
+    "size": 2849,
+    "sha256": "0afacd060b415a4b8ac34eadf98a7df6d17bd8b3aac45f3382f338e347eeeb23"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/python-runtime.bash": {
+    "size": 1249,
+    "sha256": "99304ea924c4abd1f4cbba9cd66ccc99f822dc8b4be808d15c44f42e3faf0fc0"
   },
   "adapter/Ports/Diablo II for RGDSplus/retail_mpq.build.json": {
     "size": 580,
     "sha256": "8b485d72247d723b85e132e796ffa78270c26b4583613d6f88eb0d39d02c2743"
   },
+  "adapter/Ports/Diablo II for RGDSplus/THIRD_PARTY_NOTICES.txt": {
+    "size": 3188,
+    "sha256": "e7a251a3ce8483f53a2af140753f1c31b1ec328dffd5a7b2c0dc5bb12624f26e"
+  },
   "adapter/Ports/Diablo II for RGDSplus/touch.py": {
-    "size": 20852,
-    "sha256": "79457a115cb57139707b8ee5aa492cc1b53b976657613eb3b6486a3382025d9d"
+    "size": 37591,
+    "sha256": "cd73a4f0da49686ccc80b7cbabae5858e5a97cae29ef3ad94933e312ee9ddfbd"
   },
   "adapter/Ports/Diablo II for RGDSplus/touch_keyboard.py": {
     "size": 3427,
@@ -188,8 +184,8 @@
     "sha256": "73322d31fff23e7c3edf12f502426ff50ab40ed037ff75fffcc3ebf35cbaf195"
   },
   "adapter/Ports/Diablo II for RGDSplus/weston-session.bash": {
-    "size": 4108,
-    "sha256": "281ba0783fb702dca87137d77cc9611302c5890e363a4600d48308ad85b1a91c"
+    "size": 3632,
+    "sha256": "05c8f19d9448a54bbd2fb87f65b95d833a651e3e6cfadb6a7f34ef77d9a74294"
   },
   "adapter/Ports/Diablo II for RGDSplus/weston.ini": {
     "size": 77,
@@ -206,5 +202,9 @@
   "adapter/Ports/Diablo II for RGDSplus/wineserver.bash": {
     "size": 142,
     "sha256": "f0aa6aa0b44d0f08ce95dc6cfbb52f469343abb79b6ef67e3fa8e5d096844a75"
+  },
+  "adapter/Ports/Diablo II for RGDSplus.sh": {
+    "size": 73,
+    "sha256": "1e95c8985c42b96e65283ccbeb42786fa113049ba55a447b50a9231a2d8b0d8b"
   }
 }

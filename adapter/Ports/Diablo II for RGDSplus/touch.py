@@ -48,6 +48,15 @@ class TouchDiagnostics:
             self.enabled = False
 
 
+# The lower panel reports short ghost contacts on a few fixed rows. Treat a
+# short contact on one of these rows as hardware noise, not game input.
+NOISE_ROWS = ((466, 2), (730, 12))
+
+
+def on_noise_row(row):
+    return row is not None and any(abs(row-center) <= tolerance for center, tolerance in NOISE_ROWS)
+
+
 def panel_point(x, y, logical_size, ranges=(0, 1024, 0, 768)):
     width, height = logical_size
     xmin, xmax, ymin, ymax = ranges
@@ -76,6 +85,9 @@ class TouchPackets:
         self.x, self.y = x, y
         self.last = (False, x, y)
         self.dropped = False
+        self.contact_started = {}
+        self.scanline_noise_history = deque(maxlen=16)
+        self.ignored_contacts = set()
 
     def cancel(self, reason):
         self.active = None
@@ -93,18 +105,49 @@ class TouchPackets:
         self.slot = selected
         self.mt = True
         self.active = None
+        self.contact_started.clear()
+        self.ignored_contacts = {(slot, values.get(57)) for slot, values in slots.items() if values.get(57,-1)>=0}
         self.blocked = any(values.get(57,-1)>=0 for values in slots.values())
         self.clear_since = None
         self.dropped = self.needs_resync = False
         self.last = (None if self.blocked else False, self.x, self.y)
 
-    def commit(self):
+    def commit(self, stamp=None):
         now = self.clock()
+        if stamp is not None and stamp > 0:
+            now = stamp
         if not self.mt:
             state = (self.legacy_down, self.x, self.y)
         else:
-            live = [(slot,values) for slot,values in self.slots.items() if values.get(57,-1)>=0]
+            current = {(slot, values.get(57)) for slot, values in self.slots.items() if values.get(57,-1)>=0}
+            self.ignored_contacts.intersection_update(current)
+            live = [(slot,values) for slot,values in self.slots.items()
+                    if values.get(57,-1)>=0 and (slot,values.get(57)) not in self.ignored_contacts]
+            stamp_now = stamp if stamp is not None else now
+            # Recurring short contacts on the measured scanline are classified
+            # per tracking ID before multi-touch cancellation can poison the
+            # RC10 gesture state. A released contact is removed immediately.
+            for slot,values in live:
+                key=(slot,values.get(57))
+                started,row=self.contact_started.get(key,(None,None))
+                age=stamp_now-started if started is not None else None
+                history=[t for t in self.scanline_noise_history if 0<=stamp_now-t<=.75]
+                if (row is not None and on_noise_row(row) and age is not None and
+                        0<=age<=.05 and len(history)>=2):
+                    self.ignored_contacts.add(key)
+            current={(slot,values.get(57)) for slot,values in self.slots.items() if values.get(57,-1)>=0}
+            self.ignored_contacts.intersection_update(current)
+            live=[(slot,values) for slot,values in live if (slot,values.get(57)) not in self.ignored_contacts]
+            live = [(slot,values) for slot,values in live
+                    if not self._is_suppressed((slot,values.get(57)), values, stamp_now)]
             if len(live)>1:
+                known_rows=[values.get(54) for _,values in live if values.get(54) is not None]
+                scanline_cluster=(known_rows and max(known_rows)-min(known_rows)<=2 and
+                                  any(on_noise_row(row) for row in known_rows))
+                if scanline_cluster:
+                    # Leave this transient multi-slot scanline frame out of
+                    # the pointer path without latching blocked state.
+                    return []
                 return self.cancel('multiple-contacts')
             if self.blocked:
                 if not live:
@@ -143,7 +186,7 @@ class TouchPackets:
         self.buffer.extend(data)
         reports = []
         while len(self.buffer) >= self.event.size:
-            _, _, kind, code, value = self.event.unpack_from(self.buffer)
+            seconds, micros, kind, code, value = self.event.unpack_from(self.buffer)
             del self.buffer[:self.event.size]
             if kind == 0 and code == 3:
                 self.legacy_down = False
@@ -163,7 +206,30 @@ class TouchPackets:
                 elif code in (53, 54, 57):
                     self.mt = True
                     if 0<=self.slot<32:
+                        stamp=seconds+micros/1_000_000
+                        if code==57 and value>=0:
+                            key=(self.slot,value)
+                            if key not in self.contact_started:
+                                self.contact_started[key]=(stamp,self.slots.get(self.slot,{}).get(54))
+                        elif code==57 and value==-1:
+                            old_id=self.slots.get(self.slot,{}).get(57,-1)
+                            started,row=self.contact_started.pop((self.slot,old_id),(None,None))
+                            if (started is not None and row is not None and on_noise_row(row) and
+                                    0<=stamp-started<=.05):
+                                self.scanline_noise_history.append(stamp)
+                        elif code==54:
+                            tracking=self.slots.get(self.slot,{}).get(57,-1)
+                            key=(self.slot,tracking)
+                            if tracking>=0 and key in self.contact_started:
+                                self.contact_started[key]=(self.contact_started[key][0],value)
                         self.slots.setdefault(self.slot,{})[code] = value
+                        tracking=self.slots[self.slot].get(57,-1)
+                        if tracking>=0:
+                            key=(self.slot,tracking)
+                            if self._is_suppressed(key,self.slots[self.slot],seconds+micros/1_000_000):
+                                # Suppress only this tracking ID. It is removed
+                                # from the live set again on the next SYN.
+                                self.ignored_contacts.add(key)
                     else:
                         reports.extend(self.cancel('invalid-slot'))
                 elif not self.mt:
@@ -172,8 +238,250 @@ class TouchPackets:
             elif kind == 1 and code == 330:
                 self.legacy_down = bool(value)
             elif kind == 0 and code == 0:
-                reports.extend(self.commit())
+                reports.extend(self.commit(seconds+micros/1_000_000))
         return reports
+
+    def _is_suppressed(self, contact, values, stamp):
+        started,row=self.contact_started.get(contact,(None,None))
+        if (values.get(54) is None or not on_noise_row(values.get(54)) or
+                started is None or not 0<=stamp-started<=.05):
+            return False
+        recent=[t for t in self.scanline_noise_history if 0<=stamp-t<=.75]
+        return len(recent)>=4
+
+
+class GhostFilteredTouchPackets:
+    """Admit only finger-like contacts and drop short/noisy ghost contacts.
+
+    A new contact must report both a fresh X and a fresh Y, its touch-major
+    width must be in the human-finger range, and it must remain down for a
+    short confirmation interval. A stationary tap is emitted on release so
+    it is not lost while waiting for a second SYN.
+    """
+    event = struct.Struct('<qqHHi')
+    minimum_seconds = .045
+    width_minimum = 25
+    width_maximum = 100
+
+    def __init__(self, x=0, y=0, clock=time.monotonic, bounds=None, require_width=True):
+        self.buffer = bytearray()
+        self.slot = 0
+        self.mt = False
+        self.slots = {0: {53: x, 54: y, 57: -1}}
+        self.active = None
+        self.blocked = False
+        self.clear_since = None
+        self.clock = clock
+        self.bounds = bounds
+        self.require_width = require_width
+        self.reason = None
+        self.needs_resync = False
+        self.legacy_down = False
+        self.x, self.y = x, y
+        self.last = (False, x, y)
+        self.dropped = False
+        self.contact_meta = {}
+        self.ignored_contacts = set()
+
+    def cancel(self, reason):
+        self.active = None
+        self.blocked = True
+        self.clear_since = None
+        self.reason = reason
+        self.contact_meta.clear()
+        state = (None, self.x, self.y)
+        changed = state != self.last
+        self.last = state
+        return [state] if changed else []
+
+    def resync(self, slots, selected):
+        self.buffer.clear()
+        self.slots = {slot: dict(values) for slot, values in slots.items()}
+        self.slot = selected
+        self.mt = True
+        self.active = None
+        self.contact_meta.clear()
+        self.ignored_contacts = {(slot, values.get(57)) for slot, values in slots.items()
+                                 if values.get(57, -1) >= 0}
+        self.blocked = bool(self.ignored_contacts)
+        self.clear_since = None
+        self.dropped = self.needs_resync = False
+        self.last = (None if self.blocked else False, self.x, self.y)
+
+    def _meta(self, key, stamp):
+        if key not in self.contact_meta:
+            self.contact_meta[key] = {
+                'start': stamp, 'x': None, 'y': None, 'width': None,
+                'fresh_x': False, 'fresh_y': False, 'forwarded': False,
+            }
+        return self.contact_meta[key]
+
+    def _valid(self, key, values):
+        meta = self.contact_meta.get(key)
+        if meta is None or not (meta['fresh_x'] and meta['fresh_y']):
+            return False
+        width = meta['width']
+        if width is None:
+            return not self.require_width
+        return self.width_minimum <= width <= self.width_maximum
+
+    def _release(self, now):
+        key = self.active
+        if key is None:
+            return []
+        meta = self.contact_meta.pop(key, None)
+        self.ignored_contacts.discard(key)
+        self.active = None
+        if meta is None:
+            return []
+        x = meta['x'] if meta['x'] is not None else self.x
+        y = meta['y'] if meta['y'] is not None else self.y
+        if meta['forwarded']:
+            state = (False, x, y)
+            self.last = state
+            return [state]
+        if (meta['width'] is not None and meta['fresh_x'] and meta['fresh_y']
+                and now - meta['start'] >= self.minimum_seconds):
+            self.last = (False, x, y)
+            return [(True, x, y), (False, x, y)]
+        self.last = (False, x, y)
+        return []
+
+    def commit(self, stamp=None):
+        now = stamp if stamp is not None and stamp > 0 else self.clock()
+        if not self.mt:
+            state = (self.legacy_down, self.x, self.y)
+        else:
+            current = {(slot, values.get(57)) for slot, values in self.slots.items()
+                       if values.get(57, -1) >= 0}
+            self.ignored_contacts.intersection_update(current)
+            live = [(slot, values) for slot, values in self.slots.items()
+                    if values.get(57, -1) >= 0
+                    and (slot, values.get(57)) not in self.ignored_contacts]
+            for slot, values in live:
+                if 53 not in values or 54 not in values:
+                    return self.cancel('missing-coordinates')
+            for slot, values in live:
+                key = (slot, values.get(57))
+                if not self._valid(key, values):
+                    self.ignored_contacts.add(key)
+            live = [(slot, values) for slot, values in live
+                    if (slot, values.get(57)) not in self.ignored_contacts]
+            if len(live) > 1:
+                return self.cancel('multiple-contacts')
+            if self.blocked:
+                if not live:
+                    if self.clear_since is None:
+                        self.clear_since = now
+                    return []
+                if self.clear_since is None or now - self.clear_since < .25:
+                    self.clear_since = None
+                    return []
+                self.blocked = False
+                self.clear_since = None
+            if not live:
+                reports = self._release(now)
+                if reports:
+                    return reports
+                if self.last[0] is None:
+                    return []
+                state = (False, self.x, self.y)
+            else:
+                slot, values = live[0]
+                key = (slot, values.get(57))
+                if self.active is not None and self.active != key:
+                    return self.cancel('contact-replaced')
+                if 53 not in values or 54 not in values:
+                    return self.cancel('missing-coordinates')
+                column, row = values[53], values[54]
+                if self.bounds:
+                    xmin, xmax, ymin, ymax = self.bounds
+                    if not xmin <= column <= xmax or not ymin <= row <= ymax:
+                        return self.cancel('invalid-coordinates')
+                meta = self.contact_meta.get(key)
+                if meta is None:
+                    meta = self._meta(key, now)
+                self.active = key
+                self.x, self.y = column, row
+                if meta['forwarded']:
+                    state = (True, column, row)
+                elif meta['width'] is None:
+                    # Legacy/synthetic contacts without width are trusted.
+                    meta['forwarded'] = True
+                    state = (True, column, row)
+                elif now - meta['start'] < self.minimum_seconds:
+                    # Hold the down until the contact proves it is not a
+                    # short controller glitch. A release after the threshold
+                    # is converted to a tap in _release().
+                    self.last = (False, column, row)
+                    return []
+                else:
+                    meta['forwarded'] = True
+                    state = (True, column, row)
+        if state == self.last:
+            return []
+        self.last = state
+        return [state]
+
+    def feed(self, data):
+        self.buffer.extend(data)
+        reports = []
+        while len(self.buffer) >= self.event.size:
+            seconds, micros, kind, code, value = self.event.unpack_from(self.buffer)
+            del self.buffer[:self.event.size]
+            stamp = seconds + micros / 1_000_000
+            if kind == 0 and code == 3:
+                self.legacy_down = False
+                reports.extend(self.cancel('syn-dropped'))
+                self.dropped = True
+                self.needs_resync = True
+                continue
+            if self.needs_resync:
+                continue
+            if self.dropped:
+                if kind == 0 and code == 0:
+                    self.dropped = False
+                continue
+            if kind == 3:
+                if code == 47:
+                    self.slot = value
+                elif code in (53, 54, 48, 50, 57):
+                    self.mt = True
+                    if not 0 <= self.slot < 32:
+                        reports.extend(self.cancel('invalid-slot'))
+                        continue
+                    slot_values = self.slots.setdefault(self.slot, {})
+                    if code == 57:
+                        slot_values[57] = value
+                        if value >= 0:
+                            self._meta((self.slot, value), stamp)
+                    else:
+                        slot_values[code] = value
+                        tracking = slot_values.get(57, -1)
+                        if tracking >= 0:
+                            meta = self.contact_meta.get((self.slot, tracking))
+                            if meta is not None:
+                                if code == 53:
+                                    meta['x'] = value
+                                    meta['fresh_x'] = True
+                                elif code == 54:
+                                    meta['y'] = value
+                                    meta['fresh_y'] = True
+                                elif code in (48, 50):
+                                    meta['width'] = value
+                elif not self.mt:
+                    if code == 0:
+                        self.x = value
+                    elif code == 1:
+                        self.y = value
+            elif kind == 1 and code == 330:
+                self.legacy_down = bool(value)
+            elif kind == 0 and code == 0:
+                reports.extend(self.commit(stamp))
+        return reports
+
+
+TouchPackets = GhostFilteredTouchPackets
 
 
 class MouseGesture:
@@ -274,6 +582,9 @@ class LowerTouch:
     def __init__(self, xlib, display, library_root):
         self.diagnostics = TouchDiagnostics()
         self.fd = None
+        self.xtest = None
+        self.active = False
+        self.library_root = Path(library_root)
         self.packets = TouchPackets()
         self.ranges = (0, 1024, 0, 768)
         self.logical_size = (800, 600)
@@ -288,13 +599,20 @@ class LowerTouch:
         self.qa_stamp=0; self.qa_down=False
         self.waiting_for_release = False
         self.physical_activity = False
+
+    def activate(self):
+        """Enable game input inside the private game display session."""
+        if self.active:
+            return
         try:
             import fcntl
-            xtest = C.CDLL(str(Path(library_root) / 'libXtst.so.6'))
+            xtest = C.CDLL(str(self.library_root / 'libXtst.so.6'))
             xtest.XTestFakeMotionEvent.argtypes = [C.c_void_p, C.c_int, C.c_int, C.c_int, C.c_ulong]
             xtest.XTestFakeButtonEvent.argtypes = [C.c_void_p, C.c_uint, C.c_int, C.c_ulong]
-            xlib.XFlush.argtypes = [C.c_void_p]
+            xtest.XTestFakeKeyEvent.argtypes = [C.c_void_p, C.c_uint, C.c_int, C.c_ulong]
+            self.xlib.XFlush.argtypes = [C.c_void_p]
             self.xtest = xtest
+            self.active = True
             for name in Path('/sys/class/input').glob('event*/device/name'):
                 if name.read_text().strip().lower() != 'gt9xx-0': continue
                 path = '/dev/input/' + name.parents[1].name
@@ -320,6 +638,11 @@ class LowerTouch:
                                     break
                             except OSError: pass
                         else: raise RuntimeError('Touch axis capability unavailable')
+                    # Grab only this touch device for the lifetime of the game
+                    # session. This is per-file-descriptor isolation, not a
+                    # firmware/system touch-mode change; without it the
+                    # desktop and the private game X session both receive the
+                    # same finger and the desktop pointer jumps.
                     fcntl.ioctl(fd, 0x40044590, struct.pack('i', 1))
                     self.fd, self.ranges = fd, tuple(limits)
                     # The kernel omits unchanged ABS values. Seed the first
@@ -334,17 +657,24 @@ class LowerTouch:
                     os.close(fd)
                     self.fd = None
                     raise
-            if self.fd is None: print('TOUCH: gt9xx-0 unavailable', flush=True)
+            if self.fd is None:
+                print('TOUCH: gt9xx-0 unavailable; controller XTest remains available', flush=True)
         except (OSError, RuntimeError) as error:
-            print(f'TOUCH: disabled {error}', flush=True)
+            self.active = False
+            self.xtest = None
+            print(f'TOUCH: game bridge unavailable {error}', flush=True)
 
     def move(self, px, py):
+        if not self.xtest:
+            return
         self.diagnostics.record('move',point=[px,py],logicalSize=list(self.logical_size))
         if self.full_ui: px,py=self.full_ui.to_native(px,py)
         self.xtest.XTestFakeMotionEvent(self.display, 0, px + self.origin[0], py + self.origin[1], 0)
         self.xlib.XFlush(self.display)
 
     def button(self, down):
+        if not self.xtest:
+            return
         self.diagnostics.record('button',down=bool(down),point=list(self.gesture.position))
         self.xtest.XTestFakeButtonEvent(self.display, 1, int(down), 0)
         self.xlib.XFlush(self.display)
@@ -386,10 +716,18 @@ class LowerTouch:
         return reports
 
     def prepare(self):
+        if self.fd is None and not getattr(self, 'active', False):
+            print('TOUCH: waiting for native game window', flush=True)
+            return
         if self.fd is None:
-            raise RuntimeError('Touch device is not ready')
-        self.read_reports()
+            print('TOUCH: game touch unavailable; controller remains active', flush=True)
+            return
         self.gesture.cancel()
+        # Observe before the native game starts. Never forward boot-time noise.
+        deadline = time.monotonic()+1.0
+        while time.monotonic()<deadline:
+            self.read_reports()
+            time.sleep(.01)
         self.resync()
         self.waiting_for_release = False
         print('TOUCH: ready; startup input discarded', flush=True)
@@ -398,6 +736,8 @@ class LowerTouch:
         self.key_queue.extend(keys)
 
     def poll_keys(self):
+        if not self.xtest:
+            return
         now=time.monotonic()
         if self.key_pending is not None and now>=self.key_due:
             self.xtest.XTestFakeKeyEvent(self.display,self.key_pending,0,0); self.xlib.XFlush(self.display)
@@ -409,7 +749,7 @@ class LowerTouch:
             self.key_pending=code; self.key_due=now+.08
 
     def poll(self):
-        if self.fd is None: return
+        if self.fd is None or ('active' in self.__dict__ and not self.active): return
         self.diagnostics.poll()
         self.poll_keys()
         if os.environ.get('D2_QA_INPUT')=='1': self.poll_qa()
@@ -429,6 +769,8 @@ class LowerTouch:
             self.close()
 
     def report(self,down,x,y):
+        if not self.xtest or not self.gesture:
+            return
         if self.waiting_for_release:
             if not down:
                 self.waiting_for_release = False
@@ -438,6 +780,9 @@ class LowerTouch:
             self.gesture.cancel();self.ui_consumed=False
             return
         point=panel_point(x,y,self.logical_size,self.ranges)
+        self._gesture_report(down, point)
+
+    def _gesture_report(self, down, point):
         if down is None:
             self.gesture.cancel(); self.ui_consumed=False
         elif self.ui_consumed:
@@ -480,10 +825,12 @@ class LowerTouch:
     def close(self):
         if self.gesture: self.gesture.cancel()
         self.diagnostics.flush(force=True)
-        if self.key_pending is not None:
+        if self.key_pending is not None and self.xtest:
             self.xtest.XTestFakeKeyEvent(self.display,self.key_pending,0,0); self.xlib.XFlush(self.display)
             self.key_pending=None
         self.key_queue.clear()
         if self.fd is not None:
             os.close(self.fd)  # releases EVIOCGRAB
             self.fd = None
+        self.active = False
+        self.xtest = None

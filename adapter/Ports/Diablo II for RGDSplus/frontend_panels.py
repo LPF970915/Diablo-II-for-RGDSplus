@@ -26,6 +26,7 @@ class FrontendPanels:
         self.textures = []
         self.logo_frames = []
         self.page = None
+        self.inferred = False
         self.frame = None
         self.started = time.monotonic()
         self.last_report = 0
@@ -91,6 +92,7 @@ class FrontendPanels:
     def classify(self, size, address, pitch, gui=None):
         if size != (800,600) or not self.lower:
             self.page = None
+            self.inferred = False
             return None
         samples = [C.string_at(address+row*pitch+column*4,3)
                    for column,row in self.anchors]
@@ -123,6 +125,15 @@ class FrontendPanels:
             scores[name] = matches/len(samples)
             self.gains[name] = gain
         page = native_page if native_page and scores[native_page] >= .50 else None
+        inferred = False
+        if page is None and native_page is None:
+            menu_pages = ('main-menu','character-select')
+            other_score = max(scores[name] for name in scores if name not in menu_pages)
+            menu_page = max(menu_pages,key=scores.get)
+            if scores[menu_page] >= .65 and scores[menu_page]-other_score >= .20:
+                page = menu_page
+                inferred = True
+        self.inferred = inferred
         if page and abs(self.gains[page]-self.backgrounds[page]['gain'])>=.03:
             background = self.backgrounds[page]
             gain = self.gains[page]
@@ -137,7 +148,8 @@ class FrontendPanels:
                     raise RuntimeError('Cannot match extension brightness')
             background['gain'] = gain
         if page != self.page:
-            print('FRONTEND: page='+str(page)+' matches='+str(scores),flush=True)
+            detail=' background-fallback' if inferred else ''
+            print('FRONTEND: page='+str(page)+detail+' matches='+str(scores),flush=True)
         self.page = page
         self.scores = scores
         self.report()
@@ -147,7 +159,7 @@ class FrontendPanels:
         now = time.monotonic()
         if self.report_path and now-self.last_report >= .25:
             background = self.backgrounds.get(self.page,{})
-            report = {'stamp':time.monotonic_ns(),'page':self.page,'logoFrame':self.frame,
+            report = {'stamp':time.monotonic_ns(),'page':self.page,'inferred':self.inferred,'logoFrame':self.frame,
                       'backgroundScores':self.scores,'brightnessGains':self.gains,
                       'extension':bool(background.get('upper'))}
             path = self.report_path
@@ -167,7 +179,7 @@ class FrontendPanels:
         destination = self.Rect(0,0,1024,768)
         if background.get('upper'):
             self.sdl.SDL_RenderCopy(self.upper,background['upper'],None,C.byref(destination))
-        if 'logoErase' in self.manifest['pages'][self.page]:
+        if not self.inferred and 'logoErase' in self.manifest['pages'][self.page]:
             source = self.Rect(*self.manifest['pages'][self.page]['logoErase'])
             target = self.Rect(round(source.x*1.28),round(source.y*1.28),
                                round(source.w*1.28),round(source.h*1.28))
@@ -184,7 +196,7 @@ class FrontendPanels:
         destination = self.Rect(round((1024-subtitle_width*1.28)/2),round(group_top+(height+gap)*1.28),
                                 round(subtitle_width*1.28),round(subtitle_height*1.28))
         self.sdl.SDL_RenderCopy(self.upper,self.subtitle,None,C.byref(destination))
-        if self.page=='main-menu':
+        if self.page=='main-menu' and not self.inferred:
             credit = self.manifest['credit']
             width,height = credit['size']
             destination = self.Rect(1024-credit['right']-width,credit['top'],width,height)

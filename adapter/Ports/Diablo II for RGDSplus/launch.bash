@@ -19,6 +19,7 @@ export D2_FRONTEND_REPORT=/tmp/d2-frontend-state.json
 mkdir -p "$payload/logs"
 exec >> "$payload/logs/launcher.log" 2>&1
 printf '\nDiablo II classic controller preflight: %s\n' "$(date -Iseconds)"
+source "$payload/python-runtime.bash"
 python3 "$payload/audio_preflight.py"
 
 [[ -d "$payload/gamedata" && -f "$payload/gamedata/Patch_D2.mpq" ]] || { echo 'Imported game resources are missing; run Import Game Assets.cmd first.'; exit 1; }
@@ -40,7 +41,7 @@ mkdir -p "$work" "$payload/saves"
 python3 "$payload/create-prefix.py" "$payload"
 runtime_files=(platform.bash wine-run.bash wine-loader.bash wineserver.bash
     linux32.py clear-exec-stack.py create-prefix.py prefix-empty.ext4.gz
-    weston-session.bash weston.ini gptokeyb-d2 alsa.conf port-env.conf bin
+    weston-session.bash weston.ini alsa.conf port-env.conf bin
     libd2game_sa_arm.exe.so)
 adapter_files=(gamedata prefix.ext4 saves display.py touch.py joystick.py combat.py
     frontend_panels.py ui_controller.py ui_navigation.py indexed_display.py indexed_gpu.so controller-font.bin
@@ -56,7 +57,6 @@ for name in "${offline_files[@]}"; do
     ln -sfnT "$payload/runtime/offline/$name" "$work/$name"
 done
 ln -sfnT "$payload/launch-runtime.bash" "$work/launch.bash"
-ln -sfnT "$payload/diablo2-direct.gptk" "$work/diablo2.gptk"
 rm -f -- "$D2_WORLD_FRAME" "$D2_STICK_FRAME" "$D2_COMBAT_STATUS" "$D2_UI_STATUS" "$D2_GUI_STATUS"
 
 # The runtime launcher is copied from the tested release package. This script

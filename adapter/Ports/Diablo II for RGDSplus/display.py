@@ -106,6 +106,12 @@ class WorldFrames:
         self.libc.syscall(C.c_long(number),C.c_void_p(self.address+8),C.c_int(0),C.c_uint(expected),C.byref(timeout),C.c_void_p(0),C.c_uint(0))
 
 
+def is_dual_screen_world_frame(frame):
+    """Return true only for a complete 640x480-per-panel world frame."""
+    return (frame is not None and frame is not WorldFrames.busy and
+            tuple(frame[:2]) == (640, 480))
+
+
 class Attributes(C.Structure):
     _fields_ = [(n, C.c_int) for n in ('x', 'y', 'width', 'height', 'border_width', 'depth')] + [
         ('visual', C.c_void_p), ('root', C.c_ulong), ('class_', C.c_int),
@@ -279,11 +285,15 @@ def main():
         s.SDL_GetRendererOutputSize(renderer, C.byref(actual_width), C.byref(actual_height))
         print(f'DISPLAY: panel={display_index} renderer={actual_width.value}x{actual_height.value} lower-UI', flush=True)
         touch = LowerTouch(x, display, weston / 'lib_aarch64')
+        # The private X11 session is ready before the native game starts.
+        # Grab and resynchronise the game touch device here so the vendor logo
+        # and title screen receive input from their first frame. The grab is
+        # scoped to this game fd and does not change firmware touch policy.
+        touch.activate()
+        touch.prepare()
         if os.environ.get('D2_FRONTEND_ASSETS') and blank_renderer:
             from frontend_panels import FrontendPanels
             frontend = FrontendPanels(s,renderer,blank_renderer,Rect,os.environ['D2_FRONTEND_ASSETS'],os.environ.get('D2_FRONTEND_REPORT'))
-        stick = LeftStick(touch)
-        touch.prepare()
         if os.environ.get('D2_INPUT_READY'):
             Path(os.environ['D2_INPUT_READY']).write_text(str(os.getpid()))
         root = x.XDefaultRootWindow(display)
@@ -335,12 +345,17 @@ def main():
             read_started = time.monotonic()
             world = world_frames.read(direct=True)
             read_done = time.monotonic()
-            if native_size and native_size != (640, 480):
-                world = None  # scene exit: show the new menu immediately
-            stick.poll(world is not None, world_frames.movement_blocked,world_frames.movement_rearm)
             if world is WorldFrames.busy:
                 world_frames.wait()
                 continue
+            # The native game window remains 800x600 while the menu/X11
+            # surface is alive. That size must not suppress a valid world
+            # frame: the world path owns both 640x480 panels and scales each
+            # one to its physical fullscreen renderer.
+            if not is_dual_screen_world_frame(world):
+                world = None
+            if stick:
+                stick.poll(world is not None, world_frames.movement_blocked,world_frames.movement_rearm)
             if world and blank_renderer:
                 width, height, upper_pixels, lower_pixels = world
                 touch.cursor_item = world_frames.cursor_item
@@ -448,12 +463,16 @@ def main():
                         if target != xid:
                             print(f'DISPLAY: window={xid} size={width}x{height}', flush=True)
                             target = xid
+                            if stick is None:
+                                stick = LeftStick(touch)
+                                print('INPUT: game controls loaded for native game window', flush=True)
                         if s.SDL_UpdateTexture(texture, None, img.data, img.bytes_per_line) != 0:
                             raise RuntimeError(s.SDL_GetError().decode())
                         if frontend:
-                            frontend.classify(size,img.data,img.bytes_per_line,stick.ui.last_gui if stick.ui else None)
+                            frontend.classify(size,img.data,img.bytes_per_line,
+                                              stick.ui.last_gui if stick and stick.ui else None)
                         present_native_frame(s, renderer, blank_renderer, texture,
-                                             destination, size, stick.ui, frontend)
+                                             destination, size, stick.ui if stick else None, frontend)
                         frames += 1
                     finally:
                         x.XDestroyImage(pic)

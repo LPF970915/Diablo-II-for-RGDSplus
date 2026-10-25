@@ -1,4 +1,4 @@
-"""Audit the curated public snapshot and the immutable RC10 release archive."""
+"""Audit the curated public snapshot and the immutable accepted release archive."""
 import argparse
 import hashlib
 import json
@@ -15,6 +15,7 @@ def digest(data):
 
 def audit(archive=None):
     expected = json.loads((ROOT/'packaging/source-manifest.json').read_text(encoding='utf-8'))
+    baseline = json.loads((ROOT/'packaging/accepted-baseline.json').read_text(encoding='utf-8'))
     actual = {p.relative_to(ROOT).as_posix():p for p in (ROOT/'adapter').rglob('*') if p.is_file()}
     if set(actual) != set(expected):
         raise ValueError('Source allowlist mismatch')
@@ -36,10 +37,12 @@ def audit(archive=None):
         if re.search(rb'(?:gh[pousr]_[A-Za-z0-9]{30,}|-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----)',data):
             raise ValueError('Possible credential: '+str(relative))
     if archive:
-        manifest = json.loads((ROOT/'packaging/rc10-package-manifest.json').read_text(encoding='utf-8'))
+        manifest = json.loads((ROOT/'packaging'/baseline['packageManifest']).read_text(encoding='utf-8'))
         path = Path(archive)
+        if baseline.get('adapter',{}).get('sha256') != manifest.get('sha256'):
+            raise ValueError('Accepted baseline and package manifest disagree')
         if digest(path.read_bytes()) != manifest['sha256']:
-            raise ValueError('Not the immutable RC10 ZIP')
+            raise ValueError('Not the accepted release ZIP')
         with zipfile.ZipFile(path) as z:
             if z.testzip() is not None:
                 raise ValueError('ZIP CRC failure')
@@ -57,7 +60,8 @@ def audit(archive=None):
                 data = z.read(member)
                 if {'size':len(data),'sha256':digest(data)} != manifest['files'][member.filename]:
                     raise ValueError('ZIP member mismatch')
-    print('PASS: curated source allowlist and credential checks'+('; 229 RC10 ZIP files verified' if archive else ''))
+    print('PASS: curated source allowlist and credential checks'+(
+        f"; {len(manifest['files'])} {manifest['build']} ZIP files verified" if archive else ''))
 
 
 if __name__ == '__main__':
