@@ -164,8 +164,8 @@
     "sha256": "8b485d72247d723b85e132e796ffa78270c26b4583613d6f88eb0d39d02c2743"
   },
   "adapter/Ports/Diablo II for RGDSplus/touch.py": {
-    "size": 20852,
-    "sha256": "79457a115cb57139707b8ee5aa492cc1b53b976657613eb3b6486a3382025d9d"
+    "size": 27768,
+    "sha256": "b1f891c5cdf5b0a534a3c011ceae8684b7a0933587c663ac8b6e388eaaf154f6"
   },
   "adapter/Ports/Diablo II for RGDSplus/touch_keyboard.py": {
     "size": 3427,

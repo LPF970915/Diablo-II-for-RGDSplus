@@ -1,0 +1,13 @@
+{
+  "build": "20261025-player-rc34",
+  "parentAcceptedBaseline": "20261023-player-rc10",
+  "status": "test-candidate-not-deployed",
+  "touchSource": "adapter/Ports/Diablo II for RGDSplus/touch.py",
+  "adapterZipSha256": "82760960a49b73d7559be61ed9ea8c66be72417ab83438bce11474fd11c1a457",
+  "chineseSupplementSha256": "aab327b8b3d3131723271a5719ca78fc137eda087af46ef0054f0b351f3a9b46",
+  "touchReplayTests": "passed-using-saved-real-device-event-captures",
+  "fullLocalTests": "69-passed",
+  "freshImport": "passed",
+  "deviceDeploymentTested": false,
+  "manualPhysicalTouchAcceptance": false
+}
