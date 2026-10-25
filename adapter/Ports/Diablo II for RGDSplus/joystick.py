@@ -13,6 +13,7 @@ from ui_controller import UIControllerBridge
 EVENT=struct.Struct('<qqHHi')
 MAGIC=0x44325349
 R3_CODE=316  # PortMaster rightstick:b12; JS button map b12 -> evdev 316.
+X_CODE=306
 
 def radial(x,y,deadzone=.18):
     length=math.hypot(x,y)
@@ -161,6 +162,12 @@ class LeftStick:
         py=max(0,min(height-1,round(cy+y*360*elapsed)))
         self.touch.move(px,py)
 
+    def click_cursor(self,down):
+        t=self.touch
+        if not t.xtest: return
+        t.xtest.XTestFakeButtonEvent(t.display,1,int(down),0)
+        t.xlib.XFlush(t.display)
+
     def ui_route(self,edges):
         for code,down in edges:
             if code==305 and self.touch.full_ui and self.touch.full_ui.page:
@@ -233,6 +240,14 @@ class LeftStick:
             if busy: self.last_touch=now
             busy=busy or now-self.last_touch<.3
             self.qa_input()
+            # Minimal world interaction: X sends one left click at the
+            # current game cursor. Dialogs/panels keep their normal X action.
+            if world and self.ui and self.ui.logic.page=='world':
+                interact=[edge for edge in self.state.ui_edges if edge[0]==X_CODE]
+                self.state.ui_edges=[edge for edge in self.state.ui_edges if edge[0]!=X_CODE]
+                self.state.combat.edges=[edge for edge in self.state.combat.edges if edge[0]!=X_CODE]
+                for code,down in interact:
+                    self.click_cursor(down)
             if self.ui:self.ui.poll(self.state,world,busy)
             if world and require_neutral: self.state.rearm=True
             allowed=bool(world and not blocked and not busy and self.state.direct and (not self.ui or not self.ui.logic.active))

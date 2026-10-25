@@ -25,6 +25,5 @@ The recovered native adaptation binaries have missing exact sources/toolchains. 
 
 Upper extensions were generated with local decoded scenes as references; reference lower-screen screenshots are excluded. Retail backgrounds/logo/subtitles are generated locally from MPQs. Generated extensions confer no rights in the game. Inherited font bitmaps/components are retained as part of the existing adapter payload without a claim of exclusive original authorship.
 
-中文社区分片及其中“未匹配候选”未确认完整权属，**不在公开仓库或 Releases 中**。旧 ZIP 声明中的“separate Chinese supplement”仅说明导入依赖，不表示本次提供或认证授权。核心差分继承四处历史社区字节修改及适配 hook，历史目的未完全确定；它不是游戏本体，不能将“差分”认定为自动免责。
-
-The Chinese community supplement is **not publicly distributed here** because complete rights/provenance were not established. References inside the unchanged ZIP describe a dependency, not an included download or certification. The core delta inherits four community byte changes and an adaptation hook; their historical purpose is not fully established. Delta distribution is not automatic legal clearance.
+RC41 主包按项目要求包含中文社区补丁数据。其完整权属/来源未独立确认；包含不等于认证或权利背书。旧 ZIP 中的“separate Chinese supplement”是历史依赖说明，RC41 已改为内置。核心差分继承四处历史社区字节修改及适配 hook，历史目的未完全确定；它不是游戏本体，不能将“差分”认定为自动免责。
+The RC41 main package includes Chinese community patch data at project direction. Complete rights/provenance were not independently established; inclusion is not a certification or endorsement. The older “separate Chinese supplement” wording describes a historical dependency; RC41 embeds it. The core delta inherits four community byte changes and an adaptation hook; their historical purpose is not fully established. Delta distribution is not automatic legal clearance.

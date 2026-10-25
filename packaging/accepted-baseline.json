@@ -1,16 +1,18 @@
 {
-  "build": "20261025-player-rc37",
+  "build": "20261025-player-rc41",
   "acceptedDate": "2026-10-25",
   "status": "user-accepted-latest-baseline",
   "adapter": {
     "name": "Diablo II for RGDSplus adapter.zip",
-    "size": 188997179,
-    "sha256": "02b9653feb07c337cf90d31385713812813bd8b4240ac41ca4cfd9361a6eae2d"
+    "size": 211738945,
+    "sha256": "9e5057e7eb76e60179e54ed12fd929bb110e6eabdd6322ec412adca899a0a973"
   },
-  "packageManifest": "rc37-package-manifest.json",
+  "packageManifest": "rc41-package-manifest.json",
   "completeCoreIncluded": false,
   "retailAssetsIncluded": false,
+  "chinesePatchIncluded": true,
+  "chinesePatchSeparate": false,
   "chineseSupplementPublished": false,
   "chineseSupplementSha256": "aab327b8b3d3131723271a5719ca78fc137eda087af46ef0054f0b351f3a9b46",
-  "sourceCompleteness": "RC37 Python/Bash/importer and available C sources; exact world_probe/indexed_gpu sources unavailable"
+  "sourceCompleteness": "RC41 Python/Bash/importer and available C sources; exact world_probe/indexed_gpu sources unavailable"
 }

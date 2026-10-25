@@ -19,22 +19,26 @@ Download **Diablo II for RGDSplus adapter.zip**, its checksum and the bilingual 
 
 | 项目 / Item | 值 / Value |
 | --- | --- |
-| 用户接受基线 / User-accepted baseline | `20261025-player-rc37` |
+| 用户接受基线 / User-accepted baseline | `20261025-player-rc41` |
 | 接受日期 / Acceptance date | 2026-10-25 |
-| 适配 ZIP 大小 / Adapter ZIP size | 188,997,179 bytes |
-| SHA256 | `02b9653feb07c337cf90d31385713812813bd8b4240ac41ca4cfd9361a6eae2d` |
+| 适配 ZIP 大小 / Adapter ZIP size | 211,738,945 bytes |
+| SHA256 | `9e5057e7eb76e60179e54ed12fd929bb110e6eabdd6322ec412adca899a0a973` |
 | 核心组合 / Engine combination | Player-supplied pinned notaz 1.13d ARM core + local adaptation delta |
 | 正版资源 / Retail assets | Exact supported classic enUS 1.14b profile; player supplied |
 
-**公开下载的安装边界：RC37 导入器强制要求其匹配的独立中文分片。本仓库及 Releases 不提供该分片**：现有记录不能确认其中全部候选内容的原创性及再分发授权。拥有正版游戏并不自动取得该社区分片的再分发权。没有合法取得且哈希匹配的配套分片时，RC37 会停止导入；当前没有已验收的免中文分片/纯英文安装路径。请勿下载未知“整合包”补齐，也不要把普通中文补丁随意改名代替。
+**RC41 起中文补丁直接包含在主适配 ZIP 中**：`game-import/chinese-patch/` 已随包提供，不再需要单独下载或放置中文分片。主包仍不含完整核心、正版游戏 MPQ、prefix、存档或游戏派生缓存。
 
-**Public installation limitation: RC37 requires its matching separate Chinese supplement. That supplement is NOT distributed in this repository or its Releases**, because the available provenance does not establish redistribution permission for all its candidate content. Owning the game does not automatically grant rights to redistribute that community supplement. Without a lawfully obtained, hash-matching supplement the importer stops. There is currently no accepted supplement-free/English-only installation path. Do not substitute an unknown prepacked game or rename an arbitrary translation patch.
+**Starting with RC41 the Chinese patch is included in the main adapter ZIP** under `game-import/chinese-patch/`; no separate Chinese supplement is required. The package still contains no complete core, retail game MPQs, prefix, saves or game-derived caches.
 
-## 2026-10-25 RC37 最新基线 / Latest baseline
+## 2026-10-25 RC41 最新基线 / Latest baseline
 
-RC37 在 RC10 的双屏与触摸路径上增加了两项修复：启动时仅在原 `tpctrl=1` 的游戏会话内切到 `0`，退出时恢复；触摸解析器要求新触点同时具备新鲜 X/Y、`ABS_MT_TOUCH_MAJOR/WIDTH` 在 25–100 之间，并持续至少 45 ms。静止点按在抬起时会补发一次点击，不再使用整会话熔断或固定 Y 行锁死。无触摸实机会话中收到 83 个原始 evdev 批次，但过滤后为 0 次 move/button；正常触摸轨迹仍保留。硬件级幽灵仍可能在系统界面/其他游戏中出现，本适配器只做游戏内最佳努力过滤。
+RC41 以 RC37 为基线，主包直接集成中文补丁，并补上 **X 键世界交互**：在洞穴入口/NPC 处按 X 发送一次鼠标左键，用于进入副本或对话；A/B、Y 地图、双屏显示、触摸和 RC37 幽灵过滤保持原样。此前的 L3 光标模式和“世界空地触摸禁用”实验已撤销。
 
-RC37 adds a session-scoped `tpctrl` handoff and a per-contact ghost admission filter: fresh X/Y, touch-major width 25–100, and a 45 ms confirmation window, with stationary taps replayed on release. It no longer latches an entire game session on a fixed scanline. A no-touch device session saw 83 raw evdev batches but produced 0 move/button reports; normal physical touch was preserved. Hardware ghosting can still affect the system UI or other games; in-game filtering is best-effort.
+RC41 uses RC37 as its baseline, embeds the Chinese patch in the main package, and adds **X world interaction**: pressing X at a cave entrance or NPC sends one left mouse click. A/B combat, Y map, dual-screen presentation, touch and the RC37 ghost filter are unchanged. The L3 cursor-mode and world-touch suppression experiments were reverted.
+
+RC37 历史基线的会话级 `tpctrl` 和幽灵准入过滤继续保留：启动时仅在原 `tpctrl=1` 的游戏会话内切到 `0`，退出恢复；触摸解析器要求新触点同时具备新鲜 X/Y、`ABS_MT_TOUCH_MAJOR/WIDTH` 在 25–100 之间，并持续至少 45 ms。静止点按在抬起时补发一次点击。硬件级幽灵仍可能在系统界面/其他游戏出现，本适配器只做游戏内最佳努力过滤。
+
+The RC37 session-scoped `tpctrl` handoff and per-contact ghost admission filter remain: `tpctrl` is switched to `0` only inside an originally-`1` game session and restored on exit; contacts require fresh X/Y, width 25–100 and a 45 ms confirmation, with stationary taps replayed on release. Hardware ghosting can still affect the system UI or other games; in-game filtering is best-effort.
 
 ## 适配范围 / What the adapter does
 
@@ -52,8 +56,8 @@ These functions depend on the external core and lawful game data. This project s
 
 完整步骤、目录示例和故障边界见 **[中英双语安装说明 / Bilingual installation guide](docs/INSTALL.md)**。
 
-1. 先确认拥有合法的受支持 PC 资源及合法取得的匹配中文分片。Confirm access to lawful supported PC files and the required lawfully obtained matching supplement.
-2. 在 Windows x64 PC 的全新空目录解压适配 ZIP，再放入匹配分片。Extract into a new empty folder on Windows x64, then supply the matching supplement.
+1. 先确认拥有合法的受支持 PC 资源；RC41 主包已包含中文补丁，无需另找分片。Confirm access to lawful supported PC files; RC41 already contains the Chinese patch, so no separate supplement is needed.
+2. 在 Windows x64 PC 的全新空目录解压适配 ZIP。Extract the adapter ZIP into a new empty folder on Windows x64.
 3. 自行从 [notaz 作者地址](https://notaz.gp2x.de/misc/starec/libd2game_sa_arm.exe.so.xz) 获取固定核心并放入 `engine-input/`；不使用当前 Pandora PND r4 或自编 1.14 核心。Obtain the pinned core separately and place it in `engine-input/`; the current Pandora PND r4 and custom 1.14 cores are incompatible with this adapter.
 4. 双击 `Import Game Assets.cmd`，指定自己的正版目录，等待 `INSTALLATION READY`。Run the importer against your own lawful installation and wait for `INSTALLATION READY`.
 5. 退出设备游戏，备份旧安装、`saves/` 与 `prefix.ext4`；把新生成的 `Ports` 放到卡二根目录，保持至少 4 GiB 可用空间，从固件 Ports 手动启动。Exit the device game, back up the old installation and player state, copy the locally prepared `Ports` to card two, keep at least 4 GiB free, then launch manually from the firmware's Ports menu.
@@ -64,27 +68,27 @@ These functions depend on the external core and lawful game data. This project s
 
 | 位置 / Location | 内容 / Contents |
 | --- | --- |
-| `adapter/Ports/` | RC37 的 Python/Bash、导入器、按键/显示配置及现存 C 源码快照 / RC37 scripts, import tools, configuration and available C sources |
-| `packaging/` | 固定基线、230 项 ZIP 文件白名单与源码哈希 / Pinned baseline, 230-file ZIP allowlist and source hashes |
+| `adapter/Ports/` | RC41 的 Python/Bash、导入器、按键/显示配置及现存 C 源码快照 / RC41 scripts, import tools, configuration and available C sources |
+| `packaging/` | 固定基线、236 项 ZIP 文件白名单与源码哈希 / Pinned baseline, 236-file ZIP allowlist and source hashes |
 | `tools/audit_public.py` | 白名单、完整性和禁止内容审计工具 / Allowlist, integrity and prohibited-content audit |
 | `docs/` | 双语安装、范围、权利与依赖说明 / Bilingual installation, scope and rights documentation |
-| Releases | 原始 RC37 适配 ZIP、SHA256 与双语说明 / Unmodified RC37 adapter ZIP, checksum and bilingual guides |
+| Releases | RC41 适配 ZIP、SHA256 与双语说明 / RC41 adapter ZIP, checksum and bilingual guides |
 
-适配 ZIP 包含离线 Wine/Weston 等运行组件、Windows Python/Pillow/StormLib、空的 ext4 文件系统模板、原生适配库、局部核心差分和新增上屏扩展图。上屏 PNG 为基于本地游戏画面参考生成的扩展素材，不是原版隐藏场景，也不代表获得游戏美术权利。原版场景、Logo、字幕及游戏缓存只在玩家本地生成。空 ext4 模板不是带注册表、玩家设置或存档的初始化 Wine prefix。
+适配 ZIP 包含离线 Wine/Weston 等运行组件、Windows Python/Pillow/StormLib、空的 ext4 文件系统模板、原生适配库、局部核心差分、新增上屏扩展图，以及 `game-import/chinese-patch/` 下的中文补丁数据。上屏 PNG 为基于本地游戏画面参考生成的扩展素材，不是原版隐藏场景，也不代表获得游戏美术权利。原版场景、Logo、字幕及游戏缓存只在玩家本地生成。空 ext4 模板不是带注册表、玩家设置或存档的初始化 Wine prefix。
 
-The adapter ZIP includes offline runtime components, Windows Python/Pillow/StormLib, an empty ext4 filesystem template, native adaptation libraries, a local core delta and generated upper-screen extensions. The extension PNGs were generated using local game scenes as references; they are not hidden original scenery or a grant of rights in game artwork. Original scenes, logos, subtitles and game caches are generated locally. The empty ext4 template is not an initialized Wine prefix containing registry/player data.
+The adapter ZIP includes offline runtime components, Windows Python/Pillow/StormLib, an empty ext4 filesystem template, native adaptation libraries, a local core delta, generated upper-screen extensions, and Chinese patch data under `game-import/chinese-patch/`. The extension PNGs were generated using local game scenes as references; they are not hidden original scenery or a grant of rights in game artwork. Original scenes, logos, subtitles and game caches are generated locally. The empty ext4 template is not an initialized Wine prefix containing registry/player data.
 
-不发布完整核心、任何 MPQ/中文分片、正版游戏文件、私有缓存、实机完整备份、QA 测试脚本/证据、日志、凭据、玩家存档和历史实验。仓库是经过筛选的单次公开快照，没有导入私有开发历史。
+不发布完整核心、正版游戏 MPQ、零售游戏文件、私有缓存、实机完整备份、QA 测试脚本/证据、日志、凭据、玩家存档和历史实验。中文补丁只作为主包内已记录的补丁数据发布；主包仍不包含游戏本体资源。仓库是经过筛选的单次公开快照，没有导入私有开发历史。
 
-No complete core, MPQ/Chinese supplement, retail game files, private caches, full device backups, QA scripts/evidence, logs, credentials, player saves or historical experiments are published. This is a curated public snapshot, without private development history.
+No complete core, retail game MPQs, retail game files, private caches, full device backups, QA scripts/evidence, logs, credentials, player saves or historical experiments are published. The Chinese patch is published only as recorded patch data inside the main package; the package still contains no retail game assets. This is a curated public snapshot, without private development history.
 
 ## 验收与源码限制 / Validation and source limitations
 
-RC37 于 2026-10-25 经用户从正式入口人工运行后被指定为最新基线。已有本地导入/回归和独立设备检查记录，但这不等于全部流程、长期稳定性、所有固件、所有真实手势/物品拖放或硬件延迟已经完整验证；充电相关触摸异常的根因没有独立证明，不承诺永不复发。请备份存档并按自己的实际环境验证。
+RC41 于 2026-10-25 由用户指定为最新基线；全新玩家导入验证通过：236 个包文件、12 个零售资源、12 张前端位图、固定核心和中文补丁哈希均校验通过。已有实机检查不证明全部流程、长期稳定性、所有固件或硬件延迟已经完全验证；请备份存档并按自己的实际环境验证。
 
-RC37 was accepted by the user after manually running the normal launcher on 2026-10-25. Local import/regression and isolated device checks exist, but do not establish exhaustive gameplay, long-term stability, all firmware compatibility, every physical gesture/item drag, or measured end-to-end hardware latency. The cause of charging-related touch anomalies was not independently established; permanent elimination is not claimed.
+RC41 was designated the latest baseline on 2026-10-25. The fresh-player import verification passed: 236 package files, 12 retail resources, 12 frontend bitmaps, the pinned core and the Chinese-patch hashes all verified. Existing device checks do not establish exhaustive gameplay, long-term stability, all firmware compatibility or measured end-to-end hardware latency; back up saves and validate in your own environment.
 
-**`world_probe.so` 与 `indexed_gpu.so` 的完整精确源码及原始工具链未恢复。** 本仓库不以历史实验源码冒充它们，不承诺从源码完整重建所有二进制。已有 `retail_mpq.c`、`retail_probe.c` 按实际恢复状态提供。可用 `python tools/audit_public.py --archive "path/to/Diablo II for RGDSplus adapter.zip"` 检查固定产物；后续修改需要新 build ID 与相应验证，不能覆盖 RC37 并沿用旧验收结论。
+**`world_probe.so` 与 `indexed_gpu.so` 的完整精确源码及原始工具链未恢复。** 本仓库不以历史实验源码冒充它们，不承诺从源码完整重建所有二进制。已有 `retail_mpq.c`、`retail_probe.c` 按实际恢复状态提供。可用 `python tools/audit_public.py --archive "path/to/Diablo II for RGDSplus adapter.zip"` 检查固定产物；后续修改需要新 build ID 与相应验证，不能覆盖 RC41 并沿用旧验收结论。
 
 **The exact full sources/toolchain for `world_probe.so` and `indexed_gpu.so` were not recovered.** Historical prototypes are not passed off as those sources. Full binary reproducibility is not claimed. Available C files are supplied as recovered. Use the audit command above for the pinned artifact; future changes require a new build ID and appropriate validation.
 

@@ -46,3 +46,12 @@ ARM64 runtime: CPython 3.11.17, python-build-standalone release 20261021.
 https://github.com/astral-sh/python-build-standalone/releases/tag/20261021
 Original upstream archive and its license files are preserved unchanged.
 This private runtime avoids dependence on the firmware's Python compiler.
+
+RC41+ Chinese patch packaging note:
+The Chinese patch data is included in the main adapter ZIP at
+game-import/chinese-patch/ at project direction. The older sentence about a
+"separate Chinese supplement" describes the historical package layout; it is
+not a current download requirement. Complete provenance/permission has not been
+independently established; inclusion is not a certification or endorsement.
+Rights holders may identify specific files and claimed rights through Issues;
+disputed material may be removed pending review.

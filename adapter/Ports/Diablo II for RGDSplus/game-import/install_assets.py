@@ -51,13 +51,13 @@ def install(payload,source):
     saves = local_path(payload/'saves')
     if saves.exists() and any(saves.iterdir()):
         raise ValueError('Existing saves detected. Use a new extracted folder.')
-    print('1/3 Checking adapter, downloaded core and separate Chinese supplement...',flush=True)
+    print('1/3 Checking adapter, downloaded core and embedded Chinese patch...',flush=True)
     runtime = verify_runtime(payload)
     bundle = payload/'game-import/chinese-patch'
     for name,record in runtime['supplementFiles'].items():
         path = local_path(bundle/name)
         if not path.is_file() or path.stat().st_size!=record['size'] or digest(path)!=record['sha256']:
-            raise ValueError('Extract the Chinese supplement into the SAME fresh folder: '+name)
+            raise ValueError('Re-extract the adapter ZIP; embedded Chinese patch is missing: '+name)
     engine = 'libd2game_sa_arm.exe.so'
     supplied = [payload/'engine-input'/name for name in (engine,engine+'.xz') if (payload/'engine-input'/name).is_file()]
     if len(supplied)!=1:

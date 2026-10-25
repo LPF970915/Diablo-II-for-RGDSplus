@@ -12,9 +12,8 @@ Names, marks, game code and assets belong to their respective rights holders. Na
 
 The public adapter includes runtimes, adaptation libraries, a core delta and upper-screen art generated with local game references. Their inclusion does not imply approval by the game's rights holders. The delta is not a complete core and requires the pinned external file. The historical purpose of four inherited community byte changes has not been independently established; they are not certified as exclusively display-related or legally reviewed. Exact sources for two native modules were not recovered, so complete reproducibility is not claimed.
 
-中文分片包含来源/授权未充分确认的候选内容，公开仓库与 Releases 均排除它。技术去重、拆分或不含完整游戏，不自动证明剩余内容具有再分发许可。自行获得该依赖时也须确保合法来源和适用许可。
-
-The Chinese supplement is excluded from public Git and Releases due to unresolved provenance/permission for candidate content. Deduplication, splitting or omitting the complete game does not itself establish redistribution rights. Ensure lawful provenance and applicable permission for any privately supplied dependency.
+RC41 主包按项目要求直接包含中文补丁数据。其来源/授权边界尚未完全独立确认；包含不等于原创性认证或权利背书。权利人可通过 Issues 提出具体文件与权利依据，核实期间可移除相关文件。
+The RC41 main package includes the Chinese patch data at project direction. Complete provenance/permission has not been independently established; inclusion is not a certification of authorship or an endorsement of rights. Rights holders may identify specific files and claimed rights through Issues; disputed material may be removed pending review.
 
 不得把本项目与游戏资源、生成后的核心、MPQ、私人缓存、prefix 或存档整合后对外分发；不得冒充官方、宣称已获得不存在的授权，或借作者名义提供收费游戏整合包。原创贡献的许可范围见根目录条款；第三方组件继续适用其原许可证，不能用本项目条款剥夺其合法权利。
 

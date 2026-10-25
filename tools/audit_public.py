@@ -55,7 +55,7 @@ def audit(archive=None):
                 name = PurePosixPath(member.filename)
                 if name.is_absolute() or '..' in name.parts or ':' in str(name) or '\\' in str(name):
                     raise ValueError('Unsafe ZIP member')
-                if name.suffix.lower() in {'.mpq','.d2s','.key','.ma0','.map','.log','.pyc'} or name.name in {'prefix.ext4','libd2game_sa_arm.exe.so'}:
+                if ((name.suffix.lower() in {'.mpq','.d2s','.key','.ma0','.map','.log','.pyc'} and 'game-import/chinese-patch' not in name.as_posix()) or name.name in {'prefix.ext4','libd2game_sa_arm.exe.so'}):
                     raise ValueError('Private/game file in ZIP')
                 data = z.read(member)
                 if {'size':len(data),'sha256':digest(data)} != manifest['files'][member.filename]:
