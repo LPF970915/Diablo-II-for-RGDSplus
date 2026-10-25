@@ -13,7 +13,9 @@ from ui_controller import UIControllerBridge
 EVENT=struct.Struct('<qqHHi')
 MAGIC=0x44325349
 R3_CODE=316  # PortMaster rightstick:b12; JS button map b12 -> evdev 316.
-X_CODE=306
+L3_CODE=313  # Left-stick click: run/walk toggle on this unit.
+X_CODE=307  # Hardware-reported X; the layout labels 306/307 are reversed on this unit.
+Y_CODE=306  # Hardware-reported Y; keep it routed to the native map action.
 
 def radial(x,y,deadzone=.18):
     length=math.hypot(x,y)
@@ -26,6 +28,7 @@ class StickState:
         self.axes={2:0.,3:0.,4:0.,5:0.}
         self.combat=CombatInput()
         self.direct=True
+        self.run=True
         self.rearm=True
         self.buffer=b''
         self.r3=False
@@ -79,7 +82,8 @@ class StickState:
             self.rearm=False
             return 0,0,0
         if self.rearm: return 0,0,0
-        flags=1 | (2 if length>=.65 else 0)
+        # L3 toggles run/walk; the direct-move packet carries the run bit.
+        flags=1 | (2 if self.run else 0)
         return flags,round(x/length*32767),round(y/length*32767)
 
 class LeftStick:
@@ -88,6 +92,7 @@ class LeftStick:
         self.state=StickState(); self.ranges={}; self.touch=touch
         self.last=time.monotonic(); self.last_touch=0.
         self.world=False; self.blocked=True
+        self.last_publish=0.; self.last_held=0
         self.ui_buttons=set(); self.qa_keys=set(); self.qa_active=False
         self.ui=None
         if os.environ.get('D2_DIRECT_MOVE','0')!='1': return
@@ -162,12 +167,6 @@ class LeftStick:
         py=max(0,min(height-1,round(cy+y*360*elapsed)))
         self.touch.move(px,py)
 
-    def click_cursor(self,down):
-        t=self.touch
-        if not t.xtest: return
-        t.xtest.XTestFakeButtonEvent(t.display,1,int(down),0)
-        t.xlib.XFlush(t.display)
-
     def ui_route(self,edges):
         for code,down in edges:
             if code==305 and self.touch.full_ui and self.touch.full_ui.page:
@@ -240,14 +239,19 @@ class LeftStick:
             if busy: self.last_touch=now
             busy=busy or now-self.last_touch<.3
             self.qa_input()
-            # Minimal world interaction: X sends one left click at the
-            # current game cursor. Dialogs/panels keep their normal X action.
-            if world and self.ui and self.ui.logic.page=='world':
-                interact=[edge for edge in self.state.ui_edges if edge[0]==X_CODE]
-                self.state.ui_edges=[edge for edge in self.state.ui_edges if edge[0]!=X_CODE]
-                self.state.combat.edges=[edge for edge in self.state.combat.edges if edge[0]!=X_CODE]
-                for code,down in interact:
-                    self.click_cursor(down)
+            # X stays in CombatInput: native event 3 resolves a nearby unit
+            # and calls the engine interaction pipeline, independent of X11
+            # pointer position and either screen's projection.
+            active=bool(self.ui and self.ui.logic.active)
+            if world and self.ui and not active:
+                l3=[edge for edge in self.state.ui_edges if edge[0]==L3_CODE]
+                for code,down in l3:
+                    if down and not self.state.ui_buttons.get(315,False):
+                        self.state.run=not self.state.run
+                        print('RUN: ' + ('run' if self.state.run else 'walk'),flush=True)
+                self.state.ui_edges=[edge for edge in self.state.ui_edges
+                                     if edge[0]!=X_CODE and
+                                     not (edge[0]==L3_CODE and not self.state.ui_buttons.get(315,False))]
             if self.ui:self.ui.poll(self.state,world,busy)
             if world and require_neutral: self.state.rearm=True
             allowed=bool(world and not blocked and not busy and self.state.direct and (not self.ui or not self.ui.logic.active))
@@ -258,7 +262,13 @@ class LeftStick:
                 if not busy: self.ui_route(edges)
                 else:self.ui_route([(code,False) for code in tuple(self.ui_buttons)])
             ax,ay=radial(self.state.axes[4],self.state.axes[5])
-            self.publish(*self.state.command(world,blocked,busy),round(ax*32767),round(ay*32767),held,event)
+            flags,dx,dy=self.state.command(world,blocked,busy)
+            # Publish a bounded 20 Hz movement heartbeat. The native adapter
+            # owns path requests and stamina eligibility; button edges stay
+            # immediate so this limit cannot defer interaction or attacks.
+            if event or held!=self.last_held or not flags or now-self.last_publish>=.05:
+                self.publish(flags,dx,dy,round(ax*32767),round(ay*32767),held,event)
+                self.last_publish=now; self.last_held=held
             if (not self.ui or not self.ui.logic.active) and (not world or blocked or not self.state.direct) and not busy:
                 self.cursor(*radial(self.state.axes[2],self.state.axes[3]),elapsed)
         except OSError as error:

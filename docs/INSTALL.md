@@ -1,4 +1,4 @@
-# 安装说明 / Installation guide — RC41
+# 安装说明 / Installation guide — RC49
 
 ## 前提 / Prerequisites
 
@@ -10,9 +10,9 @@ This is an RGDSplus dual-screen adapter only, with no retail game assets. Piracy
 
 You need your own lawful classic PC Diablo II + Lord of Destruction installation with the exact supported enUS 1.14b data profile. The engine remains 1.13d; 1.14b describes the imported data. Resurrected, installer folders and arbitrary locales/patch versions are unsupported.
 
-**RC41 主包已经包含中文补丁**，位于 `game-import/chinese-patch/`；不需要再单独下载或放置中文分片。主包仍不包含完整核心、正版游戏 MPQ、prefix、存档或游戏派生缓存。
+**主包自 RC41 起已包含中文补丁**，位于 `game-import/chinese-patch/`；不需要再单独下载或放置中文分片。主包仍不包含完整核心、正版游戏 MPQ、prefix、存档或游戏派生缓存。
 
-**RC41 already includes the Chinese patch** under `game-import/chinese-patch/`; no separate supplement download or placement is required. The package still contains no complete core, retail game MPQs, prefix, saves or game-derived caches.
+**The Chinese patch has been integrated since RC41** under `game-import/chinese-patch/`; no separate supplement download or placement is required. The package still contains no complete core, retail game MPQs, prefix, saves or game-derived caches.
 
 ## 1. 解压 / Extract
 
@@ -27,10 +27,10 @@ Get-FileHash -Algorithm SHA256 '.\Diablo II for RGDSplus adapter.zip'
 应为 / Expected:
 
 ```text
-9e5057e7eb76e60179e54ed12fd929bb110e6eabdd6322ec412adca899a0a973
+00c87b3fac6a2a541fa7c2d8937e0905494d81d8c602ed075f65490acf8a35c9
 ```
 
-大小 / Size: `211,738,945 bytes`。
+大小 / Size: `211,744,390 bytes`（RC49）。
 
 ## 2. 自备核心 / Supply the core
 
@@ -84,9 +84,9 @@ Ports/
 
 ## 使用与排查 / Use and troubleshooting
 
-世界页面按 **X** 会对当前鼠标指针位置发送一次左键，用于洞穴入口/NPC 交互；A/B 仍为战斗技能，Y 打开地图，双屏显示和 RC37 触摸过滤保持不变。打开窗口面板时，X 仍走面板原本操作。
+世界页面按 **X** 与附近 NPC、物品、交互物或副本入口进行原生交互，不依赖鼠标指针位置。**L3（左摇杆下压）切换走路/跑步**，耐力耗尽时按原生规则走路，动画继续正常循环。A/B 使用战斗技能，Y 打开地图。窗口面板保留原有操作。
 
-In the world, **X** sends one left click at the current mouse pointer for cave-entrance/NPC interaction; A/B remain combat skills, Y opens the map, and the RC37 dual-screen/touch filtering is unchanged. When a window panel is open, X keeps its normal panel action.
+In the world, **X** uses native interaction with nearby NPCs, items, objects and dungeon entrances, independently of the mouse pointer. **L3 toggles walk/run**; exhausted stamina falls back to native walking while animation keeps cycling. A/B use combat skills and Y opens the map. Window panels retain their existing controls.
 
 触控异常时可断开充电/USB 后对照复测，但不能据此断言所有故障已解决。若卡只读或出现 FAT 错误，先停止游戏、保护最新存档并离线检查文件系统；不要强行继续写入。反馈版本、固件、供电/触摸条件与最小复现步骤，不上传资源或完整诊断。
 
@@ -94,9 +94,9 @@ If touch behaves unexpectedly, compare with charging/USB disconnected; that does
 
 ## 验收与源码限制 / Validation and source limitations
 
-RC41 于 2026-10-25 被指定为最新基线；全新玩家导入验证通过：236 个包文件、12 个零售资源、12 张前端位图、固定核心和中文补丁哈希均通过。这不等同于全部流程、长期稳定性、所有固件或硬件延迟均已完整验证；请自行备份并按实际环境测试。
+RC49 于 2026-10-26 经用户肉眼确认并授权发布；74 项本地测试和全新玩家导入通过：239 个包文件、12 个零售资源、12 张前端位图、固定核心及中文补丁哈希均通过。NPC 对话、L3、邪恶洞窟入口及耐力耗尽动画经独立实机测试。详见 [RC49 验证记录与原生补丁边界](RC49.md)。
 
-RC41 was designated the latest baseline on 2026-10-25. Fresh-player import verification passed: 236 package files, 12 retail resources, 12 frontend bitmaps, the pinned core and the Chinese-patch hashes. This does not establish exhaustive gameplay, long-term stability, all firmware or measured end-to-end hardware latency; back up saves and test in your own environment.
+RC49 was visually accepted and authorized for publication on 2026-10-26. All 74 local tests and fresh-player import checks passed: 239 package files, 12 retail resources, 12 frontend bitmaps and pinned core/Chinese-patch hashes. NPC dialogue, L3, the Den of Evil entrance and stamina-exhaustion animation were tested on an independent device copy. See the [RC49 validation and native patch boundaries](RC49.md). These checks do not exhaust all gameplay or firmware conditions.
 
 `world_probe.so` 与 `indexed_gpu.so` 的完整精确源码及原始工具链未恢复；历史实验源码不代表它们。可用 `python tools/audit_public.py --archive "path/to/Diablo II for RGDSplus adapter.zip"` 检查固定产物。后续修改需要新 build ID 与相应验证，不能覆盖 RC41 并沿用旧验收结论。
 

@@ -100,8 +100,8 @@
     "sha256": "8b598ba9542f49acb24e257affcf3f1fedfe5ffb48a634abdc592392a3bed61f"
   },
   "adapter/Ports/Diablo II for RGDSplus/joystick.py": {
-    "size": 14054,
-    "sha256": "aed711982e4d071837587e8fa9e6fc4cbadbf2a85970f1b297092daedd83bca2"
+    "size": 14963,
+    "sha256": "0c9b161482e87bb2bfe18cd597788b89ea1faa0f2b2ff6acda63d78117533fe7"
   },
   "adapter/Ports/Diablo II for RGDSplus/launch-runtime.bash": {
     "size": 5440,
@@ -206,5 +206,17 @@
   "adapter/Ports/Diablo II for RGDSplus.sh": {
     "size": 73,
     "sha256": "1e95c8985c42b96e65283ccbeb42786fa113049ba55a447b50a9231a2d8b0d8b"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/adapter-source/world-actions-patch.py": {
+    "size": 2945,
+    "sha256": "48e23c18188977f67b28a3185bb0df30ca201fc9da62b6d681a97dce96f888ff"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/adapter-source/world-actions-patch.json": {
+    "size": 945,
+    "sha256": "b3be2175f8d9375df6bc16aaf7d75be3ef304dd881eca6289f36e2c30c8d7344"
+  },
+  "adapter/Ports/Diablo II for RGDSplus/adapter-source/world-actions.S": {
+    "size": 861,
+    "sha256": "f1eb33b204d4a68a614404a3a86202f4901cdecef89c5ee771fe35220775de1b"
   }
 }

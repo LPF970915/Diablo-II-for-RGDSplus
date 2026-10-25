@@ -1,18 +1,18 @@
 {
-  "build": "20261025-player-rc41",
-  "acceptedDate": "2026-10-25",
+  "build": "20261026-player-rc49",
+  "acceptedDate": "2026-10-26",
   "status": "user-accepted-latest-baseline",
+  "previousPublicBuild": "20261025-player-rc41",
   "adapter": {
     "name": "Diablo II for RGDSplus adapter.zip",
-    "size": 211738945,
-    "sha256": "9e5057e7eb76e60179e54ed12fd929bb110e6eabdd6322ec412adca899a0a973"
+    "size": 211744390,
+    "sha256": "00c87b3fac6a2a541fa7c2d8937e0905494d81d8c602ed075f65490acf8a35c9"
   },
-  "packageManifest": "rc41-package-manifest.json",
+  "packageManifest": "rc49-package-manifest.json",
   "completeCoreIncluded": false,
   "retailAssetsIncluded": false,
   "chinesePatchIncluded": true,
   "chinesePatchSeparate": false,
   "chineseSupplementPublished": false,
-  "chineseSupplementSha256": "aab327b8b3d3131723271a5719ca78fc137eda087af46ef0054f0b351f3a9b46",
-  "sourceCompleteness": "RC41 Python/Bash/importer and available C sources; exact world_probe/indexed_gpu sources unavailable"
+  "sourceCompleteness": "Python/Bash/importer, available C sources, and reproducible hash-gated ARM action patches; exact full world_probe/indexed_gpu sources unavailable"
 }

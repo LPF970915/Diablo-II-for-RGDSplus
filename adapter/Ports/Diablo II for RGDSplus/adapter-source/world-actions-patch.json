@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "origin": "minimal instruction patches, not recovered source",
+  "baseSha256": "d2e354af9f17dcc9bbb999918a47dbaa030885c13c5b986d8a1716f312c90e9e",
+  "sha256": "d632c124ade48673905345a214d0579090d3115ee7d3aeba7ee8447a926b8887",
+  "edits": [
+    {
+      "offset": 14028,
+      "before": 3814195205,
+      "after": 3814195206,
+      "purpose": "combat_pick loop includes UNIT_TILE (5) for native warp/entrance interaction"
+    },
+    {
+      "offset": 16320,
+      "before": 3778019128,
+      "after": 3942650386,
+      "purpose": "route WALK_PATH through the native stamina eligibility check"
+    }
+  ],
+  "coreModified": false,
+  "staminaThunk": {
+    "offset": 34832,
+    "bytes": 56,
+    "sha256": "44ea459ad4d190d5dc5b890d12483416b5bc0b1009be1ff9fa4b7b0ba2cd1e56",
+    "assembly": "world-actions.S",
+    "statId": 10,
+    "runRequires": "stamina > 0",
+    "rxSegmentSizeBefore": 34824,
+    "rxSegmentSizeAfter": 34896
+  }
+}

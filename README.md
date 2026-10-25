@@ -19,10 +19,10 @@ Download **Diablo II for RGDSplus adapter.zip**, its checksum and the bilingual 
 
 | 项目 / Item | 值 / Value |
 | --- | --- |
-| 用户接受基线 / User-accepted baseline | `20261025-player-rc41` |
-| 接受日期 / Acceptance date | 2026-10-25 |
-| 适配 ZIP 大小 / Adapter ZIP size | 211,738,945 bytes |
-| SHA256 | `9e5057e7eb76e60179e54ed12fd929bb110e6eabdd6322ec412adca899a0a973` |
+| 用户接受基线 / User-accepted baseline | `20261026-player-rc49` |
+| 接受日期 / Acceptance date | 2026-10-26 |
+| 适配 ZIP 大小 / Adapter ZIP size | 211,744,390 bytes |
+| SHA256 | `00c87b3fac6a2a541fa7c2d8937e0905494d81d8c602ed075f65490acf8a35c9` |
 | 核心组合 / Engine combination | Player-supplied pinned notaz 1.13d ARM core + local adaptation delta |
 | 正版资源 / Retail assets | Exact supported classic enUS 1.14b profile; player supplied |
 
@@ -30,11 +30,11 @@ Download **Diablo II for RGDSplus adapter.zip**, its checksum and the bilingual 
 
 **Starting with RC41 the Chinese patch is included in the main adapter ZIP** under `game-import/chinese-patch/`; no separate Chinese supplement is required. The package still contains no complete core, retail game MPQs, prefix, saves or game-derived caches.
 
-## 2026-10-25 RC41 最新基线 / Latest baseline
+## 2026-10-26 RC49 最新基线 / Latest baseline
 
-RC41 以 RC37 为基线，主包直接集成中文补丁，并补上 **X 键世界交互**：在洞穴入口/NPC 处按 X 发送一次鼠标左键，用于进入副本或对话；A/B、Y 地图、双屏显示、触摸和 RC37 幽灵过滤保持原样。此前的 L3 光标模式和“世界空地触摸禁用”实验已撤销。
+RC49 修复耐力耗尽后走路动画不断重置造成的静帧平移；**L3（左摇杆下压）切换走路/跑步**。**X 使用原生目标交互**，可与附近 NPC、物品、交互物及副本入口交互，解决旧跨窗口点击导致的闪退。中文补丁继续内置。修复原因、实机验证和原生补丁边界见 [RC49 说明](docs/RC49.md)。RC41 的旧鼠标点击交互并未正确验收，不能沿用旧说明判断它可用。
 
-RC41 uses RC37 as its baseline, embeds the Chinese patch in the main package, and adds **X world interaction**: pressing X at a cave entrance or NPC sends one left mouse click. A/B combat, Y map, dual-screen presentation, touch and the RC37 ghost filter are unchanged. The L3 cursor-mode and world-touch suppression experiments were reverted.
+RC49 fixes repeatedly restarted movement animation after stamina exhaustion. **L3 toggles walk/run**, and **X uses native target interaction** with nearby NPCs, items, objects and dungeon entrances, fixing the old cross-window click crash. The Chinese patch remains integrated. See the [RC49 notes](docs/RC49.md) for the cause, device validation and native patch boundaries. RC41's old mouse-click interaction was not correctly validated and should not be treated as working.
 
 RC37 历史基线的会话级 `tpctrl` 和幽灵准入过滤继续保留：启动时仅在原 `tpctrl=1` 的游戏会话内切到 `0`，退出恢复；触摸解析器要求新触点同时具备新鲜 X/Y、`ABS_MT_TOUCH_MAJOR/WIDTH` 在 25–100 之间，并持续至少 45 ms。静止点按在抬起时补发一次点击。硬件级幽灵仍可能在系统界面/其他游戏出现，本适配器只做游戏内最佳努力过滤。
 
@@ -68,11 +68,11 @@ These functions depend on the external core and lawful game data. This project s
 
 | 位置 / Location | 内容 / Contents |
 | --- | --- |
-| `adapter/Ports/` | RC41 的 Python/Bash、导入器、按键/显示配置及现存 C 源码快照 / RC41 scripts, import tools, configuration and available C sources |
-| `packaging/` | 固定基线、236 项 ZIP 文件白名单与源码哈希 / Pinned baseline, 236-file ZIP allowlist and source hashes |
+| `adapter/Ports/` | RC49 的 Python/Bash、导入器、配置、现存 C 源及 ARM 补丁 / RC49 scripts, import tools, configuration, available C sources and ARM patches |
+| `packaging/` | 固定基线、239 项 ZIP 文件白名单与源码哈希 / Pinned baseline, 239-file ZIP allowlist and source hashes |
 | `tools/audit_public.py` | 白名单、完整性和禁止内容审计工具 / Allowlist, integrity and prohibited-content audit |
 | `docs/` | 双语安装、范围、权利与依赖说明 / Bilingual installation, scope and rights documentation |
-| Releases | RC41 适配 ZIP、SHA256 与双语说明 / RC41 adapter ZIP, checksum and bilingual guides |
+| Releases | RC49 适配 ZIP、SHA256 与双语说明 / RC49 adapter ZIP, checksum and bilingual guides |
 
 适配 ZIP 包含离线 Wine/Weston 等运行组件、Windows Python/Pillow/StormLib、空的 ext4 文件系统模板、原生适配库、局部核心差分、新增上屏扩展图，以及 `game-import/chinese-patch/` 下的中文补丁数据。上屏 PNG 为基于本地游戏画面参考生成的扩展素材，不是原版隐藏场景，也不代表获得游戏美术权利。原版场景、Logo、字幕及游戏缓存只在玩家本地生成。空 ext4 模板不是带注册表、玩家设置或存档的初始化 Wine prefix。
 
@@ -84,9 +84,9 @@ No complete core, retail game MPQs, retail game files, private caches, full devi
 
 ## 验收与源码限制 / Validation and source limitations
 
-RC41 于 2026-10-25 由用户指定为最新基线；全新玩家导入验证通过：236 个包文件、12 个零售资源、12 张前端位图、固定核心和中文补丁哈希均校验通过。已有实机检查不证明全部流程、长期稳定性、所有固件或硬件延迟已经完全验证；请备份存档并按自己的实际环境验证。
+RC49 于 2026-10-26 经用户肉眼确认并授权发布；74 项本地测试、239 项包文件及全新玩家导入验证通过，固定核心、12 个零售资源、12 张前端位图和中文补丁哈希均校验通过。独立实机测试覆盖 NPC、L3、邪恶洞窟入口及耐力耗尽动画。已有检查不证明全部流程、长期稳定性、所有固件或硬件延迟已经完全验证。
 
-RC41 was designated the latest baseline on 2026-10-25. The fresh-player import verification passed: 236 package files, 12 retail resources, 12 frontend bitmaps, the pinned core and the Chinese-patch hashes all verified. Existing device checks do not establish exhaustive gameplay, long-term stability, all firmware compatibility or measured end-to-end hardware latency; back up saves and validate in your own environment.
+RC49 was visually accepted and authorized for publication on 2026-10-26. All 74 local tests and fresh-player import checks passed, verifying 239 package files, 12 retail resources, 12 frontend bitmaps and the pinned core/Chinese patch. Independent device tests covered NPCs, L3, the Den of Evil entrance and stamina-exhaustion animation. This does not establish exhaustive gameplay, long-term stability, all firmware compatibility or measured hardware latency.
 
 **`world_probe.so` 与 `indexed_gpu.so` 的完整精确源码及原始工具链未恢复。** 本仓库不以历史实验源码冒充它们，不承诺从源码完整重建所有二进制。已有 `retail_mpq.c`、`retail_probe.c` 按实际恢复状态提供。可用 `python tools/audit_public.py --archive "path/to/Diablo II for RGDSplus adapter.zip"` 检查固定产物；后续修改需要新 build ID 与相应验证，不能覆盖 RC41 并沿用旧验收结论。
 
